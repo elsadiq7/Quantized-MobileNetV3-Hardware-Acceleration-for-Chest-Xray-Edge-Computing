@@ -1,0 +1,40 @@
+2025-05-07 20:31:25,185 - INFO - 
+==================================================
+Training mobilenetv3_small
+==================================================
+2025-05-07 20:32:43,584 - INFO - Epoch 1/30 | Train Loss: 2.5408 | Train Acc: 15.24% | Val Loss: 2.4257 | Val Acc: 18.99% | LR: 1.10e-03 | Time: 78.37s
+2025-05-07 20:33:56,436 - INFO - Epoch 2/30 | Train Loss: 2.4009 | Train Acc: 19.64% | Val Loss: 2.3556 | Val Acc: 20.39% | LR: 1.10e-03 | Time: 72.81s
+2025-05-07 20:35:09,297 - INFO - Epoch 3/30 | Train Loss: 2.3129 | Train Acc: 22.84% | Val Loss: 2.2873 | Val Acc: 24.36% | LR: 1.10e-03 | Time: 72.83s
+2025-05-07 20:36:22,317 - INFO - Epoch 4/30 | Train Loss: 2.1920 | Train Acc: 26.99% | Val Loss: 2.1366 | Val Acc: 28.68% | LR: 1.10e-03 | Time: 72.99s
+2025-05-07 20:37:35,304 - INFO - Epoch 5/30 | Train Loss: 2.0555 | Train Acc: 31.21% | Val Loss: 2.0234 | Val Acc: 33.16% | LR: 1.10e-03 | Time: 72.95s
+2025-05-07 20:38:49,774 - INFO - Epoch 6/30 | Train Loss: 1.9404 | Train Acc: 35.10% | Val Loss: 1.9048 | Val Acc: 36.09% | LR: 1.10e-03 | Time: 74.44s
+2025-05-07 20:40:02,775 - INFO - Epoch 7/30 | Train Loss: 1.8317 | Train Acc: 38.54% | Val Loss: 1.9609 | Val Acc: 34.52% | LR: 1.10e-03 | Time: 72.97s
+2025-05-07 20:41:15,996 - INFO - Epoch 8/30 | Train Loss: 1.6852 | Train Acc: 43.38% | Val Loss: 1.6804 | Val Acc: 44.31% | LR: 1.10e-03 | Time: 73.22s
+2025-05-07 20:42:29,148 - INFO - Epoch 9/30 | Train Loss: 1.5360 | Train Acc: 48.43% | Val Loss: 1.5666 | Val Acc: 47.84% | LR: 1.10e-03 | Time: 73.12s
+2025-05-07 20:43:44,251 - INFO - Epoch 10/30 | Train Loss: 1.3920 | Train Acc: 53.23% | Val Loss: 1.4943 | Val Acc: 50.93% | LR: 1.10e-03 | Time: 75.07s
+2025-05-07 20:44:57,136 - INFO - Epoch 11/30 | Train Loss: 1.2372 | Train Acc: 58.37% | Val Loss: 1.4076 | Val Acc: 54.32% | LR: 1.10e-03 | Time: 72.85s
+2025-05-07 20:46:10,112 - INFO - Epoch 12/30 | Train Loss: 1.0786 | Train Acc: 63.55% | Val Loss: 1.3567 | Val Acc: 56.07% | LR: 1.10e-03 | Time: 72.94s
+2025-05-07 20:47:23,445 - INFO - Epoch 13/30 | Train Loss: 0.9503 | Train Acc: 68.03% | Val Loss: 1.2575 | Val Acc: 60.20% | LR: 1.10e-03 | Time: 73.30s
+2025-05-07 20:48:36,523 - INFO - Epoch 14/30 | Train Loss: 0.8389 | Train Acc: 71.66% | Val Loss: 1.1532 | Val Acc: 64.03% | LR: 1.10e-03 | Time: 73.04s
+2025-05-07 20:49:50,085 - INFO - Epoch 15/30 | Train Loss: 0.7151 | Train Acc: 75.79% | Val Loss: 1.1597 | Val Acc: 65.94% | LR: 1.10e-03 | Time: 73.53s
+2025-05-07 20:51:02,837 - INFO - Epoch 16/30 | Train Loss: 0.6379 | Train Acc: 78.55% | Val Loss: 1.0937 | Val Acc: 67.82% | LR: 1.10e-03 | Time: 72.75s
+2025-05-07 20:52:18,084 - INFO - Epoch 17/30 | Train Loss: 0.5618 | Train Acc: 80.99% | Val Loss: 1.1008 | Val Acc: 68.68% | LR: 1.10e-03 | Time: 75.21s
+2025-05-07 20:53:31,137 - INFO - Epoch 18/30 | Train Loss: 0.5112 | Train Acc: 82.57% | Val Loss: 1.0770 | Val Acc: 69.57% | LR: 1.10e-03 | Time: 73.05s
+2025-05-07 20:54:44,206 - INFO - Epoch 19/30 | Train Loss: 0.4504 | Train Acc: 84.63% | Val Loss: 1.0559 | Val Acc: 71.31% | LR: 1.10e-03 | Time: 73.04s
+2025-05-07 20:55:57,397 - INFO - Epoch 20/30 | Train Loss: 0.4085 | Train Acc: 86.02% | Val Loss: 1.0706 | Val Acc: 72.32% | LR: 1.10e-03 | Time: 73.16s
+2025-05-07 20:57:10,239 - INFO - Epoch 21/30 | Train Loss: 0.3775 | Train Acc: 87.08% | Val Loss: 1.0412 | Val Acc: 72.89% | LR: 1.10e-03 | Time: 72.84s
+2025-05-07 20:58:25,541 - INFO - Epoch 22/30 | Train Loss: 0.3486 | Train Acc: 88.11% | Val Loss: 1.1139 | Val Acc: 72.58% | LR: 1.10e-03 | Time: 75.27s
+2025-05-07 20:59:38,447 - INFO - Epoch 23/30 | Train Loss: 0.3263 | Train Acc: 88.90% | Val Loss: 1.0881 | Val Acc: 74.23% | LR: 1.10e-03 | Time: 72.91s
+2025-05-07 21:00:51,378 - INFO - Epoch 24/30 | Train Loss: 0.2931 | Train Acc: 89.99% | Val Loss: 1.0911 | Val Acc: 73.78% | LR: 1.10e-03 | Time: 72.93s
+2025-05-07 21:02:04,129 - INFO - Epoch 25/30 | Train Loss: 0.1210 | Train Acc: 95.92% | Val Loss: 1.1098 | Val Acc: 79.27% | LR: 5.50e-04 | Time: 72.75s
+2025-05-07 21:03:16,912 - INFO - Epoch 26/30 | Train Loss: 0.0974 | Train Acc: 96.61% | Val Loss: 1.1849 | Val Acc: 79.02% | LR: 5.50e-04 | Time: 72.78s
+2025-05-07 21:03:16,912 - INFO - Early stopping triggered at epoch 26
+2025-05-07 21:04:28,509 - INFO - 
+==================================================
+Training mobilenetv3_small
+==================================================
+2025-05-07 21:05:45,526 - INFO - Epoch 1/5 | Train Loss: 0.0390 | Train Acc: 98.77% | Val Loss: 1.1820 | Val Acc: 80.76% | LR: 1.00e-04 | Time: 77.01s
+2025-05-07 21:06:58,636 - INFO - Epoch 2/5 | Train Loss: 0.0178 | Train Acc: 99.49% | Val Loss: 1.2625 | Val Acc: 80.81% | LR: 1.00e-04 | Time: 73.07s
+2025-05-07 21:08:11,821 - INFO - Epoch 3/5 | Train Loss: 0.0125 | Train Acc: 99.68% | Val Loss: 1.3397 | Val Acc: 81.09% | LR: 1.00e-04 | Time: 73.18s
+2025-05-07 21:09:24,681 - INFO - Epoch 4/5 | Train Loss: 0.0113 | Train Acc: 99.69% | Val Loss: 1.4124 | Val Acc: 81.28% | LR: 1.00e-04 | Time: 72.86s
+2025-05-07 21:10:39,871 - INFO - Epoch 5/5 | Train Loss: 0.0081 | Train Acc: 99.80% | Val Loss: 1.4417 | Val Acc: 81.09% | LR: 5.00e-05 | Time: 75.19s
