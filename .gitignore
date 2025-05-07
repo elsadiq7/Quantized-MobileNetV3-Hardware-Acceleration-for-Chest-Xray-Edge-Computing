@@ -1,6 +1,8 @@
 .lightning_studio
 .keras
 .kaggle
+.idea
+.vscode 
 Software/data
 Software/kaggle_credentials.json
 
