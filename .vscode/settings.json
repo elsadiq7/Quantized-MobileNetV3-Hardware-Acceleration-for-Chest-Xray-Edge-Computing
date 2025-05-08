@@ -85,5 +85,6 @@
   "files.associations": {
     "*.studiorc": "shellscript"
   },
-  "files.enableTrash": false
+  "files.enableTrash": false,
+  "python.languageServer": "None"
 }

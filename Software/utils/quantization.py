@@ -1,11 +1,26 @@
+import torch
+import numpy as np
+import onnx
+import onnxruntime
+from onnxruntime.quantization import quantize_static, CalibrationDataReader, QuantType
+from onnx import numpy_helper
+from tqdm import tqdm
+from torch.utils.data import DataLoader
+from torchvision import transforms, datasets
+from .models import MobileNetV3_Small
 from binary_fractions import Binary
 import numpy as np
 import pandas as pd
-file_path_python = "D:/Way to  create brain/python/Machine-Learning-Specialization-Coursera-main/Machine-Learning-Specialization-Coursera-main/C2 - Advanced Learning Algorithms/week2/Handwritten digit classification using ANN/data/"
-path_viv = "D:/Way to  create brain/1-Abdulrahman_Elsadiq/ai_acc_without_sys/ai_acc.srcs/sources_1/new/"
-bias_const = {"l1": [8, 5, 8], "l2": [5, 5, 5], "l3": [3, 5, 3], "l4": [2, 5, 1]}
-weight_const = {"l1": [8, 16, 49, "no"], "l2": [5, 1, 40, "no"], "l3": [3, 1, 25, "no"], "l4": [2, 1, 15, "yes"]}
-
+#%% Entire Quantization Pipeline in One Cell
+import torch
+import numpy as np
+import onnx
+import onnxruntime
+from onnxruntime.quantization import quantize_static, CalibrationDataReader, QuantType
+from onnx import numpy_helper, helper, TensorProto
+from torch.utils.data import DataLoader
+from torchvision import transforms, datasets
+from tqdm import tqdm
 
 def float_bin(number, places_int, places_float):
     '''
@@ -77,22 +92,6 @@ def two_complement(res):
     return two_complement[::-1]  # Reverse the result to get the correct order
 
 
-def write_to_file(file_name, arr, mode="w"):
-    '''
-
-    :param file_name: file path
-    :param arr: lines to write in the file
-    :param mode: writing mode w or a
-    :return: no retwurn just write lines in the file
-    '''
-    with open(file_name, mode) as file:
-        file.writelines(arr)
-
-
-
-
-
-
 
 def convert_two_complement2decmail(bin_num, int_len, float_len):
     '''
@@ -133,263 +132,115 @@ def convert_big_num_to_binary(full_num, section_nums, int_len, float_len):
         decimal_nums.append(convert_two_complement2decmail(bin_num, int_len, float_len))
 
     return decimal_nums
-import matplotlib.pyplot as plt
-import seaborn as sns
-import pandas as pd
+
+
+
+
 import torch
-import torch.nn as nn
-from torchvision.models import mobilenet_v3_large
+import numpy as np
+import onnx
+import onnxruntime
+from onnxruntime.quantization import quantize_static, CalibrationDataReader, QuantType
+from onnx import numpy_helper
+from tqdm import tqdm
+from torch.utils.data import DataLoader
+from torchvision import transforms, datasets
+from .models import MobileNetV3_Small
 
-class CustomMobileNet(nn.Module):
-    def __init__(self, num_classes=15, pretrained=True):
-        super(CustomMobileNet, self).__init__()
-        # Load the pre-trained MobileNetV3
-        self.base_model = mobilenet_v3_large(pretrained=pretrained)
-        
-        # Modify the first convolutional layer to accept grayscale input
-        self.base_model.features[0][0] = nn.Conv2d(
-            in_channels=1,  # Grayscale input
-            out_channels=self.base_model.features[0][0].out_channels,
-            kernel_size=self.base_model.features[0][0].kernel_size,
-            stride=self.base_model.features[0][0].stride,
-            padding=self.base_model.features[0][0].padding,
-            bias=False
+class ONNXQuantizer:
+    def __init__(self, model, val_loader, test_loader, input_shape, input_name='input', output_name='output'):
+        self.model = model.eval()
+        self.val_loader = val_loader
+        self.test_loader = test_loader
+        self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        self.model.to(self.device)
+        self.input_shape = input_shape
+        self.input_name = input_name
+        self.output_name = output_name
+        self.onnx_fp32_path = "models/model_fp32.onnx"
+        self.onnx_int8_path = "models/model_int8.onnx"
+
+    def export_to_onnx(self):
+        dummy_input = torch.randn(*self.input_shape).to(self.device)
+        torch.onnx.export(
+            self.model, dummy_input, self.onnx_fp32_path,
+            export_params=True,
+            opset_version=11,
+            do_constant_folding=True,
+            input_names=[self.input_name], output_names=[self.output_name],
+            dynamic_axes={self.input_name: {0: 'batch_size'}, self.output_name: {0: 'batch_size'}}
         )
-        
-        # Modify the classifier for the desired number of classes
-        num_features = self.base_model.classifier[0].in_features
-        self.base_model.classifier = nn.Sequential(
-            nn.Linear(num_features, num_classes)
+        print(f"Model exported to {self.onnx_fp32_path}")
+
+    class DataLoaderCalibrationReader(CalibrationDataReader):
+        def __init__(self, data_loader, input_name):
+            self.input_name = input_name
+            self.enum_data = []
+            for images, _ in tqdm(data_loader, desc="Collecting calibration data"):
+                self.enum_data.append({self.input_name: images.numpy().astype(np.float32)})
+            self.data_iter = iter(self.enum_data)
+
+        def get_next(self):
+            return next(self.data_iter, None)
+
+        def rewind(self):
+            self.data_iter = iter(self.enum_data)
+
+    def quantize(self):
+        reader = self.DataLoaderCalibrationReader(self.val_loader, self.input_name)
+        quantize_static(
+            model_input=self.onnx_fp32_path,
+            model_output=self.onnx_int8_path,
+            calibration_data_reader=reader,
+            weight_type=QuantType.QInt8,
+            activation_type=QuantType.QUInt8
         )
+        print(f"Quantized model saved to {self.onnx_int8_path}")
+
+    def test_quantized_model(self):
+        session = onnxruntime.InferenceSession(self.onnx_int8_path, providers=['CPUExecutionProvider'])
+        input_name = session.get_inputs()[0].name
+        output_name = session.get_outputs()[0].name
+
+        correct = 0
+        total = 0
+
+        for images, labels in tqdm(self.test_loader, desc="Testing INT8 model"):
+            images_np = images.numpy().astype(np.float32)
+            outputs = session.run([output_name], {input_name: images_np})[0]
+            preds = torch.tensor(outputs).argmax(dim=1)
+            correct += (preds == labels).sum().item()
+            total += labels.size(0)
+
+        acc = correct / total
+        print(f"Quantized Model Accuracy: {acc:.4f}")
+        return acc
+
     
-    def forward(self, x):
-        return self.base_model(x)
 
-# Instantiate the model with 15 output classes
-model = CustomMobileNet(num_classes=15)
-model.load_state_dict(torch.load("trained_models/CustomMobileNet_best_model_v2.pth"))
-model.to("cpu")
-
-def quantize_to_fixed_point_int(tensor, bits=8, fractional_bits=4):
-    """
-    Quantize a tensor to true fixed-point integer representation
+def run_quantize(val_loader, test_loader):
+    # Initialize the model and load the pretrained weights
+    model = MobileNetV3_Small(in_channels=1, num_classes=15)
+    model.load_state_dict(torch.load("models/mobilenetv3_small_best_v2_0.pth"))
     
-    Args:
-        tensor: Input tensor
-        bits: Total number of bits
-        fractional_bits: Number of bits for fractional part
-    """
-    # Calculate scaling factor (2^fractional_bits)
-    scale = 2 ** fractional_bits
+    # Define the input shape
+    input_shape = (1, 1, 224, 224)  # Adjust as needed for your model's input
     
-    # Calculate the maximum and minimum representable values
-    n_integer_bits = bits - fractional_bits - 1  # -1 for sign bit
-    max_val = 2 ** n_integer_bits - 1 / scale
-    min_val = -(2 ** n_integer_bits)
-    
-    # Clamp values to representable range
-    tensor_clamped = torch.clamp(tensor, min_val, max_val)
-    
-    # Scale up to integer values
-    tensor_scaled = tensor_clamped * scale
-    
-    # Round to nearest integer
-    tensor_int = torch.round(tensor_scaled)
-    
-    # Convert back to fixed-point representation
-    return tensor_int / scale
+    # Initialize the ONNXQuantizer with the model, validation loader, and input shape
+    quantizer = ONNXQuantizer(model, val_loader, test_loader, input_shape=input_shape)
 
-def quantize_model_parameters_fixed_point(model, bits=8, fractional_bits=4):
-    """
-    Apply fixed-point integer quantization to model parameters
-    
-    Args:
-        model: PyTorch model
-        bits: Total number of bits
-        fractional_bits: Number of bits for fractional part
-    """
-    for name, param in model.named_parameters():
-            param.data = quantize_to_fixed_point_int(param.data, bits, fractional_bits)
-            
-    return model
+    # Export the model to ONNX
+    print("Exporting model to ONNX...")
+    quantizer.export_to_onnx()
 
-# Example usage with different bit configurations
-def print_tensor_stats(tensor, name="Tensor"):
-    """Helper function to print tensor statistics"""
-    print(f"\n{name} statistics:")
-    print(f"Min: {tensor.min().item():.6f}")
-    print(f"Max: {tensor.max().item():.6f}")
-    print(f"Mean: {tensor.mean().item():.6f}")
-    print(f"Sample values: {tensor.flatten()[:5].tolist()}")
+    # Perform quantization
+    print("Quantizing the model...")
+    quantizer.quantize()
 
-# Test the quantization
-def test_quantization():
-    # Create a sample tensor
-    original_tensor = torch.randn(5, 5) * 2
-    
-    print("Original tensor:")
-    print_tensor_stats(original_tensor, "Original")
-    
-    # Test different bit configurations
-    bit_configs = [
-        (8, 4),   # 8-bit total, 4-bit fractional
-        (16, 8),  # 16-bit total, 8-bit fractional
-        (8, 3),   # 8-bit total, 3-bit fractional
-    ]
-    
-    for total_bits, frac_bits in bit_configs:
-        quantized = quantize_to_fixed_point_int(
-            original_tensor, 
-            bits=total_bits, 
-            fractional_bits=frac_bits
-        )
-        print(f"\nQuantized ({total_bits}-bit, {frac_bits}-bit fractional):")
-        print_tensor_stats(quantized, f"Quantized_{total_bits}_{frac_bits}")
-
-# Use in your model evaluation loop
-def evaluate_different_bits(model_class, model_path, test_loader, bit_configs):
-    """
-    Evaluate model with different fixed-point configurations
-    
-    Args:
-        bit_configs: List of tuples (total_bits, fractional_bits)
-    """
-    results = {}
-    
-    for total_bits, frac_bits in tqdm(bit_configs, desc="Testing different bit configurations"):
-        print(f"\nTesting with {total_bits}-bit quantization ({frac_bits} fractional bits)")
-        
-        # Instantiate a fresh model
-        model = model_class(num_classes=15)
-        model.load_state_dict(torch.load(model_path))
-        model.to("cuda")
-        
-        # Apply quantization
-        model = quantize_model_parameters_fixed_point(
-            model, 
-            bits=total_bits, 
-            fractional_bits=frac_bits
-        )
-        
-        # Save the quantized model
-        save_path = f'trained_models/mobilenet_fixed_point_{total_bits}_{frac_bits}.pth'
-        torch.save(model.state_dict(), save_path)
-        
-        # Evaluate
-        accuracy, f1, report = evaluate_model(model, test_loader, "cuda")
-        
-        # Calculate model size
-        model_size = os.path.getsize(save_path) / (1024 * 1024)  # Size in MB
-        
-        # Store results
-        results[(total_bits, frac_bits)] = {
-            'accuracy': accuracy,
-            'f1_score': f1,
-            'model_size': model_size,
-            'report': report
-        }
-        
-        print(f"Model Size: {model_size:.2f} MB")
-        print(f"Test Accuracy: {accuracy:.4f}")
-        print(f"Test F1 Score: {f1:.4f}")
-        
-    return results
-
-# Example usage
-bit_configs = [
-    (4, 2),    # 8-bit total, 4-bit fractional
-    (8, 4),   # 16-bit total, 8-bit fractional
-    (12, 6),    # 8-bit total, 3-bit fractional
-    (16, 8),   # 12-bit total, 6-bit fractional
-    (18,9)
-]
-
-
-# Evaluate model with different configurations
-results = evaluate_different_bits(
-    CustomMobileNet,
-    "trained_models/CustomMobileNet_best_model_v2.pth",
-    test_loader,
-    bit_configs
-)
+    # Test the quantized model
+    print("Testing the quantized model...")
+    quantizer.test_quantized_model()
 
 
 
-# Convert results to a DataFrame for easier plotting
-def create_results_df(results):
-    data = []
-    for (total_bits, frac_bits), metrics in results.items():
-        data.append({
-            'Total Bits': total_bits,
-            'Fractional Bits': frac_bits,
-            'Integer Bits': total_bits - frac_bits,
-            'Accuracy': metrics['accuracy'],
-            'F1 Score': metrics['f1_score'],
-            'Model Size (MB)': metrics['model_size']
-        })
-    return pd.DataFrame(data)
 
-import matplotlib.pyplot as plt
-import seaborn as sns
-
-# After your evaluation loop, create simple plots
-def plot_quantization_results(results):
-    # Extract data
-    total_bits = [config[0] for config in results.keys()]
-    frac_bits = [config[1] for config in results.keys()]
-    accuracies = [data['accuracy'] for data in results.values()]
-    f1_scores = [data['f1_score'] for data in results.values()]
-    model_sizes = [data['model_size'] for data in results.values()]
-
-    # Create figure with 2x2 subplots
-    fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2, figsize=(15, 12))
-
-    # 1. Accuracy vs Total Bits
-    ax1.plot(total_bits, accuracies, 'bo-', label='Accuracy')
-    ax1.plot(total_bits, f1_scores, 'ro-', label='F1 Score')
-    ax1.set_xlabel('Total Bits')
-    ax1.set_ylabel('Score')
-    ax1.set_title('Performance vs Total Bits')
-    ax1.grid(True)
-    ax1.legend()
-
-    # 2. Model Size vs Total Bits
-    ax2.plot(total_bits, model_sizes, 'go-')
-    ax2.set_xlabel('Total Bits')
-    ax2.set_ylabel('Model Size (MB)')
-    ax2.set_title('Model Size vs Total Bits')
-    ax2.grid(True)
-
-    # 3. Accuracy vs Fractional Bits
-    ax3.plot(frac_bits, accuracies, 'bo-', label='Accuracy')
-    ax3.plot(frac_bits, f1_scores, 'ro-', label='F1 Score')
-    ax3.set_xlabel('Fractional Bits')
-    ax3.set_ylabel('Score')
-    ax3.set_title('Performance vs Fractional Bits')
-    ax3.grid(True)
-    ax3.legend()
-
-    # 4. Size vs Accuracy scatter plot
-    ax4.scatter(model_sizes, accuracies)
-    for i, (size, acc, bits) in enumerate(zip(model_sizes, accuracies, total_bits)):
-        ax4.annotate(f'{bits}bits', (size, acc))
-    ax4.set_xlabel('Model Size (MB)')
-    ax4.set_ylabel('Accuracy')
-    ax4.set_title('Accuracy vs Model Size')
-    ax4.grid(True)
-
-    plt.tight_layout()
-    plt.savefig('quantization_results.png')
-    plt.show()
-
-    # Print summary
-    print("\nResults Summary:")
-    print("-" * 50)
-    for (total_b, frac_b), metrics in results.items():
-        print(f"\nConfiguration: {total_b} total bits, {frac_b} fractional bits")
-        print(f"Accuracy: {metrics['accuracy']:.4f}")
-        print(f"F1 Score: {metrics['f1_score']:.4f}")
-        print(f"Model Size: {metrics['model_size']:.2f} MB")
-
-# Use the plotting function after your evaluation
-plot_quantization_results(results)
