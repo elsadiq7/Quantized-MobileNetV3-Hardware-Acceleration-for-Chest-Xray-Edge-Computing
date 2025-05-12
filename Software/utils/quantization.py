@@ -348,6 +348,26 @@ def qun_bn(model,layer_name,file_name,float_len=8,int_len=8):
     write_to_file(main_path+"/"+file_name, arr, "w")
     
 
+def qun_layer_op(output,file_name,float_len=8,int_len=8):
+    main_path="memory_files"
+    os.makedirs(main_path,exist_ok=True)
+    output=output[0]
+    weights_shape=output.shape
+
+    
+    arr=[]
+    for i in range (weights_shape[0]):
+      for j in range (weights_shape[1]):
+          it_raw=""
+          for k in range (weights_shape[2]):
+             rep=float_bin(output[i][j][k], int_len, float_len)
+             it_raw= rep+it_raw
+          #if i!=(weights_shape[0]-1) and j!=(weights_shape[1]-1):
+          it_raw+="\n"
+          arr.append(it_raw)
+    write_to_file(main_path+"/"+file_name, arr, "w")
+
+
 # class ONNXQuantizer:
 #     def __init__(self, model, val_loader, test_loader, input_shape, input_name='input', output_name='output'):
 #         self.model = model.eval()
