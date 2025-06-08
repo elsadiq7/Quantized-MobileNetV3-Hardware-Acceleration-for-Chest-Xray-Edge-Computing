@@ -1,0 +1,367 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+!s11f vlog 2021.1 2021.01, Jan 19 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dC:/Users/AhmedAli/Desktop/Quantized-MobileNetV3-Hardware-Acceleration-for-Chest-Xray-Edge-Computing/Hardware/First Block
+T_opt
+!s110 1747358033
+VX`CUVzQY9Rgn@OeELOGCP2
+Z2 04 14 4 work accelerator_tb fast 0
+=1-5405db1de0f4-68269151-24c-2f34
+Z3 !s124 OEM100
+Z4 o-quiet -auto_acc_if_foreign -work work +acc
+Z5 tCvgOpt 0
+n@_opt
+Z6 OL;O;2021.1;73
+R1
+T_opt2
+!s110 1747783666
+V9I24k4WGkVJ@6>b_D;Fo32
+R2
+=1-5405db1de0f4-682d0ff2-231-18a4
+R3
+R4
+R5
+n@_opt2
+R6
+R1
+T_opt3
+!s110 1747784025
+VA9<^k]kcSdUL[_iGPcQ`X3
+R2
+=1-5405db1de0f4-682d1159-1fb-28dc
+R3
+R4
+R5
+n@_opt3
+R6
+R1
+T_opt4
+!s110 1747784431
+VZYP@YGzTAcMhHiY6nN5GE3
+R2
+=1-5405db1de0f4-682d12ef-8-21cc
+R3
+R4
+R5
+n@_opt4
+R6
+R1
+T_opt5
+!s110 1747784669
+VKE<WzFG7=_<dgXaAH?=Df2
+R2
+=1-5405db1de0f4-682d13dd-c5-1e04
+R3
+R4
+R5
+n@_opt5
+R6
+R1
+T_opt6
+!s110 1747786324
+V?QE[N<k<=;MbGPYKTPM2H2
+R2
+=1-5405db1de0f4-682d1a53-2fc-4e84
+R3
+R4
+R5
+n@_opt6
+R6
+R1
+T_opt7
+!s110 1747802687
+VjNAB5HRSkEVhJXJK_]A8k1
+R2
+=1-5405db1de0f4-682d5a3e-31a-1348
+R3
+R4
+R5
+n@_opt7
+R6
+R1
+T_opt8
+!s110 1747801513
+V2NWeBdHU`Z0`HScg78Ij83
+R2
+=1-5405db1de0f4-682d55a8-297-4d18
+R3
+R4
+R5
+n@_opt8
+R6
+R1
+vaccelerator
+Z7 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z8 !s110 1747802726
+!i10b 1
+!s100 ZTIn1@[`RQU?5^h`^T@4P0
+I1YWYBgJeFUkC]gKW>R<H?1
+S1
+R1
+w1747802609
+8accelerator.sv
+Faccelerator.sv
+!i122 117
+L0 1 227
+Z9 VDg1SIo80bB@j0V0VzS_@n1
+Z10 OL;L;2021.1;73
+r1
+!s85 0
+31
+Z11 !s108 1747802726.000000
+!s107 image_handler_send.sv|convolver.sv|batchnorm_top.sv|batchnorm_normalizer.sv|batchnorm_accumulator.sv|accelerator_tb.sv|accelerator.sv|Relu6.sv|HSwish.sv|
+Z12 !s90 -reportprogress|300|-sv|HSwish.sv|Relu6.sv|accelerator.sv|accelerator_tb.sv|batchnorm_accumulator.sv|batchnorm_normalizer.sv|batchnorm_top.sv|convolver.sv|image_handler_send.sv|
+!i113 0
+Z13 o-sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R5
+vaccelerator_tb
+R7
+R8
+!i10b 1
+!s100 QFc9nf`LIHGC]e2cTX5092
+I8D<6B2n@oK=nHWQmbDJVZ3
+S1
+R1
+w1747802673
+8accelerator_tb.sv
+Faccelerator_tb.sv
+!i122 117
+L0 6 229
+R9
+R10
+r1
+!s85 0
+31
+R11
+Z14 !s107 image_handler_send.sv|convolver.sv|batchnorm_top.sv|batchnorm_normalizer.sv|batchnorm_accumulator.sv|accelerator_tb.sv|accelerator.sv|Relu6.sv|HSwish.sv|
+R12
+!i113 0
+R13
+R5
+vbatchnorm_accumulator
+R7
+R8
+!i10b 1
+!s100 @J3?jd]A7dHBF_b75?oU91
+ICjil4BRPi3]YXWL4NbDMR3
+S1
+R1
+w1747800724
+8batchnorm_accumulator.sv
+Fbatchnorm_accumulator.sv
+!i122 117
+L0 1 150
+R9
+R10
+r1
+!s85 0
+31
+R11
+R14
+R12
+!i113 0
+R13
+R5
+vbatchnorm_normalizer
+R7
+R8
+!i10b 1
+!s100 c[3`DAI:gFQM6O23eRIo60
+I@m4bU17Mc?bbC5QM1k>eG1
+S1
+R1
+w1747800726
+8batchnorm_normalizer.sv
+Fbatchnorm_normalizer.sv
+!i122 117
+L0 1 93
+R9
+R10
+r1
+!s85 0
+31
+R11
+R14
+R12
+!i113 0
+R13
+R5
+vbatchnorm_top
+R7
+R8
+!i10b 1
+!s100 __6h4aofNH]B0a60?`N4I1
+IGcgXKR`Ll^KF=787MPkR;2
+S1
+R1
+w1747802026
+8batchnorm_top.sv
+Fbatchnorm_top.sv
+!i122 117
+L0 1 105
+R9
+R10
+r1
+!s85 0
+31
+R11
+R14
+R12
+!i113 0
+R13
+R5
+vconvolver
+R7
+R8
+!i10b 1
+!s100 gOER:h;Q5`bW3L4k4Q<hX2
+IQc3KOBRFKDTFFM[o1ebaO3
+S1
+R1
+w1747800732
+8convolver.sv
+Fconvolver.sv
+!i122 117
+L0 1 277
+R9
+R10
+r1
+!s85 0
+31
+R11
+R14
+R12
+!i113 0
+R13
+R5
+vHSwish
+R7
+R8
+!i10b 1
+!s100 P8I>5olWozA<?GZa15=[H3
+I@0l2:I6Coflo8_O5lngEm3
+S1
+R1
+w1747798889
+8HSwish.sv
+FHSwish.sv
+!i122 117
+L0 1 52
+R9
+R10
+r1
+!s85 0
+31
+R11
+R14
+R12
+!i113 0
+R13
+R5
+n@h@swish
+vimage_handler_send
+R7
+R8
+!i10b 1
+!s100 7Cl_:`3<C7OcmQiRn]BiO0
+I`LYZoV1KQ^XPzU`m3<P`[2
+S1
+R1
+w1747801279
+8image_handler_send.sv
+Fimage_handler_send.sv
+!i122 117
+L0 2 85
+R9
+R10
+r1
+!s85 0
+31
+R11
+R14
+R12
+!i113 0
+R13
+R5
+vRelu6
+R7
+R8
+!i10b 1
+!s100 0@?G:fg7MnYUj`;GTa8362
+I;n2Bn=]h`:6VMg3;]c5OQ1
+S1
+R1
+w1747798914
+8Relu6.sv
+FRelu6.sv
+!i122 117
+L0 1 27
+R9
+R10
+r1
+!s85 0
+31
+R11
+R14
+R12
+!i113 0
+R13
+R5
+n@relu6

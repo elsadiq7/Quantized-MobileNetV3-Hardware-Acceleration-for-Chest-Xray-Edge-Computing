@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Wed May 21 07:48:40 2025
+# Process ID: 21592
+# Current directory: C:/Users/AhmedAli/Desktop/Quantized-MobileNetV3-Hardware-Acceleration-for-Chest-Xray-Edge-Computing/Hardware/First Block/first block/first block.runs/synth_1
+# Command line: vivado.exe -log accelerator.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source accelerator.tcl
+# Log file: C:/Users/AhmedAli/Desktop/Quantized-MobileNetV3-Hardware-Acceleration-for-Chest-Xray-Edge-Computing/Hardware/First Block/first block/first block.runs/synth_1/accelerator.vds
+# Journal file: C:/Users/AhmedAli/Desktop/Quantized-MobileNetV3-Hardware-Acceleration-for-Chest-Xray-Edge-Computing/Hardware/First Block/first block/first block.runs/synth_1\vivado.jou
+# Running On: Ahmed-Ali, OS: Windows, CPU Frequency: 2592 MHz, CPU Physical cores: 6, Host memory: 34263 MB
+#-----------------------------------------------------------
+source accelerator.tcl -notrace
