@@ -11,6 +11,8 @@ from .models import MobileNetV3_Small
 from binary_fractions import Binary
 import pandas as pd
 import os 
+import torch.nn as nn
+
 def float_bin(number, places_int, places_float):
     '''
 
@@ -305,162 +307,182 @@ def qun_image(padded_image,file_name,float_len=8,int_len=8):
       arr.append(it_raw)
     write_to_file(main_path+"/"+file_name, arr, "w")
 
+def write_to_file(path, lines, mode="w"):
+    with open(path, mode) as f:
+        for line in lines:
+            f.write(line)
 
-def qun_conv(model,layer_name,file_name,float_len=8,int_len=8):
-    main_path="memory_files"
-    os.makedirs(main_path,exist_ok=True)
-    conv=getattr(model, layer_name)
-    weights=conv.weight
-    weights_shape=weights.shape
-    
-    arr=[]
-    for i in range (weights_shape[0]):
-      it_raw=""
-      for j in range (weights_shape[2]):
-          for k in range (weights_shape[3]):
-             rep=float_bin(weights[i][0][j][k], int_len, float_len)
-             it_raw= rep+it_raw
-      if (i!=15):
-          it_raw+="\n"
-      arr.append(it_raw)
-    write_to_file(main_path+"/"+file_name, arr, "w")
+def get_module_by_name(model, layer_name):
+    parts = layer_name.split('.')
+    for part in parts:
+        if part.isdigit():
+            model = model[int(part)]
+        else:
+            model = getattr(model, part)
+    return model
 
-def qun_bn(model,layer_name,file_name,float_len=8,int_len=8):
-    main_path="memory_files"
-    os.makedirs(main_path,exist_ok=True)
-    bn=getattr(model, layer_name)
-    gamma=bn.weight
-    beta=bn.bias
+
+
+def qun_conv(model, layer_name, file_name, float_len=8, int_len=8):
+    os.makedirs("memory_files", exist_ok=True)
+    conv = get_module_by_name(model, layer_name)
+    weights = conv.weight.data.cpu()
+    out_channels, in_channels, kH, kW = weights.shape
+    arr = []
+    for i in range(out_channels):
+        it_raw = ""
+        for j in range(kH):
+            for k in range(kW):
+                rep = float_bin(weights[i][0][j][k], int_len, float_len)
+                it_raw = rep + it_raw
+        it_raw += "\n"
+        arr.append(it_raw)
+    write_to_file("memory_files/" + file_name, arr)
+
+def qun_bn(model, layer_name, file_name, float_len=8, int_len=8):
+    os.makedirs("memory_files", exist_ok=True)
+    bn = get_module_by_name(model, layer_name)
+    gamma = bn.weight.data.cpu()
+    beta = bn.bias.data.cpu()
+    gamma_raw = "".join(float_bin(g, int_len, float_len) for g in reversed(gamma)) + "\n"
+    beta_raw = "".join(float_bin(b, int_len, float_len) for b in reversed(beta)) + "\n"
+    write_to_file("memory_files/" + file_name, [gamma_raw, beta_raw])
+
+
+def qun_layer_op(output, file_name, float_len=8, int_len=8):
+    os.makedirs("memory_files", exist_ok=True)
+
+    # === FIX: No .cpu() — already NumPy array ===
+    output = output[0]  # [C, H, W]
+    C, H, W = output.shape
+    arr = []
+    for i in range(C):
+        for j in range(H):
+            it_raw = ""
+            for k in range(W):
+                rep = float_bin(output[i][j][k], int_len, float_len)
+                it_raw = rep + it_raw
+            arr.append(it_raw + "\n")
+    write_to_file("memory_files/" + file_name, arr)
+
+def qun_layer_linear_op(output, file_name, float_len=8, int_len=8):
+    os.makedirs("memory_files", exist_ok=True)
+    output = output[0] # shape: [D] or [D1, D2]
+    arr = []
+
+    if output.ndim == 1:
+        for i in range(output.shape[0]):
+            rep = float_bin(output[i], int_len, float_len)
+            arr.append(rep + "\n")
+
+    elif output.ndim == 2:
+        D1, D2 = output.shape
+        for i in range(D1):
+            it_raw = ""
+            for j in range(D2):
+                rep = float_bin(output[i][j], int_len, float_len)
+                it_raw = rep + it_raw
+            it_raw += "\n"
+            arr.append(it_raw)
+
+    else:
+        raise ValueError(f"Unsupported shape {output.shape} for linear activation.")
+
+    write_to_file(file_name, arr)
+
+def dump_all_quantized(model, activations_dict, float_len=8, int_len=8):
+    os.makedirs("memory_files", exist_ok=True)
+
+    # === Dump weights ===
+    for name, module in model.named_modules():
+        try:
+            if isinstance(module, nn.Conv2d):
+                qun_conv(model, name, f"{name.replace('.', '_')}_conv.mem", float_len, int_len)
+            elif isinstance(module, nn.BatchNorm2d):
+                qun_bn(model, name, f"{name.replace('.', '_')}_bn.mem", float_len, int_len)
+        except Exception as e:
+            print(f"Skipped weight {name}: {e}")
+
+    # === Dump activations ===
+    for i, (name, activation) in enumerate(activations_dict.items()):
+        try:
+            if not isinstance(activation, np.ndarray):
+                raise TypeError(f"Activation '{name}' is not a NumPy array.")
+            filename = f"{i:02d}_{name.replace('.', '_')}_act.mem"
+
+            if activation.ndim > 3:
+                qun_layer_op(activation, filename, float_len, int_len)
+            elif activation.ndim in [1, 2]:
+                qun_layer_linear_op(activation, filename, float_len, int_len)
+            else:
+                raise ValueError(f"Unsupported activation shape: {activation.shape}")
+
+        except Exception as e:
+            print(f"Skipped activation {name}: {e}")
+
+
+
+# def qun_conv(model,layer_name,file_name,float_len=8,int_len=8):
+#     main_path="memory_files"
+#     os.makedirs(main_path,exist_ok=True)
+#     conv=getattr(model, layer_name)
+#     weights=conv.weight
+#     weights_shape=weights.shape
     
-    arr=[]
-    gamma_raw=""
-    beta_raw=""
-    for i in range (gamma.shape[0]):
-      rep=float_bin(gamma[i], int_len, float_len)
-      gamma_raw= rep+gamma_raw
-    for i in range (beta.shape[0]):
-      rep=float_bin(beta[i], int_len, float_len)
-      beta_raw= rep+beta_raw
+#     arr=[]
+#     for i in range (weights_shape[0]):
+#       it_raw=""
+#       for j in range (weights_shape[2]):
+#           for k in range (weights_shape[3]):
+#              rep=float_bin(weights[i][0][j][k], int_len, float_len)
+#              it_raw= rep+it_raw
+#       if (i!=15):
+#           it_raw+="\n"
+#       arr.append(it_raw)
+#     write_to_file(main_path+"/"+file_name, arr, "w")
+
+# def qun_bn(model,layer_name,file_name,float_len=8,int_len=8):
+#     main_path="memory_files"
+#     os.makedirs(main_path,exist_ok=True)
+#     bn=getattr(model, layer_name)
+#     gamma=bn.weight
+#     beta=bn.bias
+    
+#     arr=[]
+#     gamma_raw=""
+#     beta_raw=""
+#     for i in range (gamma.shape[0]):
+#       rep=float_bin(gamma[i], int_len, float_len)
+#       gamma_raw= rep+gamma_raw
+#     for i in range (beta.shape[0]):
+#       rep=float_bin(beta[i], int_len, float_len)
+#       beta_raw= rep+beta_raw
         
-    gamma_raw+="\n"
-    arr.append(gamma_raw)
-    arr.append(beta_raw)
-    write_to_file(main_path+"/"+file_name, arr, "w")
+#     gamma_raw+="\n"
+#     arr.append(gamma_raw)
+#     arr.append(beta_raw)
+#     write_to_file(main_path+"/"+file_name, arr, "w")
     
 
-def qun_layer_op(output,file_name,float_len=8,int_len=8):
-    main_path="memory_files"
-    os.makedirs(main_path,exist_ok=True)
-    output=output[0]
-    weights_shape=output.shape
+# def qun_layer_op(output,file_name,float_len=8,int_len=8):
+#     main_path="memory_files"
+#     os.makedirs(main_path,exist_ok=True)
+#     output=output[0]
+#     weights_shape=output.shape
 
     
-    arr=[]
-    for i in range (weights_shape[0]):
-      for j in range (weights_shape[1]):
-          it_raw=""
-          for k in range (weights_shape[2]):
-             rep=float_bin(output[i][j][k], int_len, float_len)
-             it_raw= rep+it_raw
-          #if i!=(weights_shape[0]-1) and j!=(weights_shape[1]-1):
-          it_raw+="\n"
-          arr.append(it_raw)
-    write_to_file(main_path+"/"+file_name, arr, "w")
+#     arr=[]
+#     for i in range (weights_shape[0]):
+#       for j in range (weights_shape[1]):
+#           it_raw=""
+#           for k in range (weights_shape[2]):
+#              rep=float_bin(output[i][j][k], int_len, float_len)
+#              it_raw= rep+it_raw
+#           #if i!=(weights_shape[0]-1) and j!=(weights_shape[1]-1):
+#           it_raw+="\n"
+#           arr.append(it_raw)
+#     write_to_file(main_path+"/"+file_name, arr, "w")
 
-
-# class ONNXQuantizer:
-#     def __init__(self, model, val_loader, test_loader, input_shape, input_name='input', output_name='output'):
-#         self.model = model.eval()
-#         self.val_loader = val_loader
-#         self.test_loader = test_loader
-#         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-#         self.model.to(self.device)
-#         self.input_shape = input_shape
-#         self.input_name = input_name
-#         self.output_name = output_name
-#         self.onnx_fp32_path = "models/model_fp32.onnx"
-#         self.onnx_int8_path = "models/model_int8.onnx"
-
-#     def export_to_onnx(self):
-#         dummy_input = torch.randn(*self.input_shape).to(self.device)
-#         torch.onnx.export(
-#             self.model, dummy_input, self.onnx_fp32_path,
-#             export_params=True,
-#             opset_version=11,
-#             do_constant_folding=True,
-#             input_names=[self.input_name], output_names=[self.output_name],
-#             dynamic_axes={self.input_name: {0: 'batch_size'}, self.output_name: {0: 'batch_size'}}
-#         )
-#         print(f"Model exported to {self.onnx_fp32_path}")
-
-#     class DataLoaderCalibrationReader(CalibrationDataReader):
-#         def __init__(self, data_loader, input_name):
-#             self.input_name = input_name
-#             self.enum_data = []
-#             for images, _ in tqdm(data_loader, desc="Collecting calibration data"):
-#                 self.enum_data.append({self.input_name: images.numpy().astype(np.float32)})
-#             self.data_iter = iter(self.enum_data)
-
-#         def get_next(self):
-#             return next(self.data_iter, None)
-
-#         def rewind(self):
-#             self.data_iter = iter(self.enum_data)
-
-#     def quantize(self):
-#         reader = self.DataLoaderCalibrationReader(self.val_loader, self.input_name)
-#         quantize_static(
-#             model_input=self.onnx_fp32_path,
-#             model_output=self.onnx_int8_path,
-#             calibration_data_reader=reader,
-#             weight_type=QuantType.QInt8,
-#             activation_type=QuantType.QUInt8
-#         )
-#         print(f"Quantized model saved to {self.onnx_int8_path}")
-
-#     def test_quantized_model(self):
-#         session = onnxruntime.InferenceSession(self.onnx_int8_path, providers=['CPUExecutionProvider'])
-#         input_name = session.get_inputs()[0].name
-#         output_name = session.get_outputs()[0].name
-
-#         correct = 0
-#         total = 0
-
-#         for images, labels in tqdm(self.test_loader, desc="Testing INT8 model"):
-#             images_np = images.numpy().astype(np.float32)
-#             outputs = session.run([output_name], {input_name: images_np})[0]
-#             preds = torch.tensor(outputs).argmax(dim=1)
-#             correct += (preds == labels).sum().item()
-#             total += labels.size(0)
-
-#         acc = correct / total
-#         print(f"Quantized Model Accuracy: {acc:.4f}")
-#         return acc
-
-    
-
-# def run_quantize(val_loader, test_loader):
-#     # Initialize the model and load the pretrained weights
-#     model = MobileNetV3_Small(in_channels=1, num_classes=15)
-#     model.load_state_dict(torch.load("models/mobilenetv3_small_best_v2_0.pth"))
-    
-#     # Define the input shape
-#     input_shape = (1, 1, 224, 224)  # Adjust as needed for your model's input
-    
-#     # Initialize the ONNXQuantizer with the model, validation loader, and input shape
-#     quantizer = ONNXQuantizer(model, val_loader, test_loader, input_shape=input_shape)
-
-#     # Export the model to ONNX
-#     print("Exporting model to ONNX...")
-#     quantizer.export_to_onnx()
-
-#     # Perform quantization
-#     print("Quantizing the model...")
-#     quantizer.quantize()
-
-#     # Test the quantized model
-#     print("Testing the quantized model...")
-#     quantizer.test_quantized_model()
 
 
 

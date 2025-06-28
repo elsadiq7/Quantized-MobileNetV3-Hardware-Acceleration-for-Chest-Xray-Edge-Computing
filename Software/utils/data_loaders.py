@@ -101,7 +101,8 @@ def create_dataloaders(
     test_path: str,
     batch_size: int = 64,
     target_size: Tuple[int, int] = (224, 224),
-    max_workers: int = 8
+    max_workers: int = 8,
+    shuffle_train=True
 ) -> Tuple[DataLoader, DataLoader, DataLoader]:
     """
     Create train/val/test dataloaders with automatic worker configuration
@@ -144,7 +145,7 @@ def create_dataloaders(
     # Create loaders
     train_loader = DataLoader(
         train_set,
-        shuffle=True,
+        shuffle=shuffle_train,
         **loader_kwargs
     )
     val_loader = DataLoader(
@@ -162,14 +163,15 @@ def create_dataloaders(
 
 
 # Example usage
-def data_loaders():
+def data_loaders(shuffle_train1=True):
     try:
         train_loader, val_loader, test_loader = create_dataloaders(
             train_path="data/train_full.txt",
             val_path="data/val_full.txt",
             test_path="data/test_full.txt",
             batch_size=64,
-            max_workers=32
+            max_workers=32,
+            shuffle_train=shuffle_train1
         )
         
         print(f"Train batches: {len(train_loader)}")
