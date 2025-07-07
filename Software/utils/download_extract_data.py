@@ -47,20 +47,28 @@ def extract_dataset(zip_path='./data.zip', extract_dir='./data/'):
 
 def download_extract_data():
     # Install dependencies
-    #install_kaggle()
-    
+    print("Installing Kaggle package...")
+    install_kaggle()
+    print("Kaggle package installation attempted.")
+
     # Configure credentials
+    print("Configuring Kaggle credentials...")
     if not configure_kaggle_credentials():
+        print("Failed to configure Kaggle credentials.")
         return
-    
+    print("Kaggle credentials configured successfully.")
+
     # Download dataset
+    print("Downloading dataset...")
     if not download_dataset():
-        print("Failed to download dataset")
+        print("Failed to download dataset.")
         return
-    
+    print("Dataset downloaded successfully.")
+
     # Extract and clean up
+    print("Extracting dataset...")
     if extract_dataset():
         print("Dataset successfully downloaded and extracted!")
     else:
-        print("Failed to extract dataset")
+        print("Failed to extract dataset.")
 

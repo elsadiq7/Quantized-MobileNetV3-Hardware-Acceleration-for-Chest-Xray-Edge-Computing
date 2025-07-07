@@ -162,7 +162,6 @@ def create_dataloaders(
     return train_loader, val_loader, test_loader
 
 
-# Example usage
 def data_loaders(shuffle_train1=True):
     try:
         train_loader, val_loader, test_loader = create_dataloaders(

@@ -388,7 +388,7 @@ def qun_layer_linear_op(output, file_name, float_len=8, int_len=8):
     else:
         raise ValueError(f"Unsupported shape {output.shape} for linear activation.")
 
-    write_to_file(file_name, arr)
+    write_to_file("memory_files/" +file_name, arr)
 
 def dump_all_quantized(model, activations_dict, float_len=8, int_len=8):
     os.makedirs("memory_files", exist_ok=True)
@@ -419,71 +419,6 @@ def dump_all_quantized(model, activations_dict, float_len=8, int_len=8):
 
         except Exception as e:
             print(f"Skipped activation {name}: {e}")
-
-
-
-# def qun_conv(model,layer_name,file_name,float_len=8,int_len=8):
-#     main_path="memory_files"
-#     os.makedirs(main_path,exist_ok=True)
-#     conv=getattr(model, layer_name)
-#     weights=conv.weight
-#     weights_shape=weights.shape
-    
-#     arr=[]
-#     for i in range (weights_shape[0]):
-#       it_raw=""
-#       for j in range (weights_shape[2]):
-#           for k in range (weights_shape[3]):
-#              rep=float_bin(weights[i][0][j][k], int_len, float_len)
-#              it_raw= rep+it_raw
-#       if (i!=15):
-#           it_raw+="\n"
-#       arr.append(it_raw)
-#     write_to_file(main_path+"/"+file_name, arr, "w")
-
-# def qun_bn(model,layer_name,file_name,float_len=8,int_len=8):
-#     main_path="memory_files"
-#     os.makedirs(main_path,exist_ok=True)
-#     bn=getattr(model, layer_name)
-#     gamma=bn.weight
-#     beta=bn.bias
-    
-#     arr=[]
-#     gamma_raw=""
-#     beta_raw=""
-#     for i in range (gamma.shape[0]):
-#       rep=float_bin(gamma[i], int_len, float_len)
-#       gamma_raw= rep+gamma_raw
-#     for i in range (beta.shape[0]):
-#       rep=float_bin(beta[i], int_len, float_len)
-#       beta_raw= rep+beta_raw
-        
-#     gamma_raw+="\n"
-#     arr.append(gamma_raw)
-#     arr.append(beta_raw)
-#     write_to_file(main_path+"/"+file_name, arr, "w")
-    
-
-# def qun_layer_op(output,file_name,float_len=8,int_len=8):
-#     main_path="memory_files"
-#     os.makedirs(main_path,exist_ok=True)
-#     output=output[0]
-#     weights_shape=output.shape
-
-    
-#     arr=[]
-#     for i in range (weights_shape[0]):
-#       for j in range (weights_shape[1]):
-#           it_raw=""
-#           for k in range (weights_shape[2]):
-#              rep=float_bin(output[i][j][k], int_len, float_len)
-#              it_raw= rep+it_raw
-#           #if i!=(weights_shape[0]-1) and j!=(weights_shape[1]-1):
-#           it_raw+="\n"
-#           arr.append(it_raw)
-#     write_to_file(main_path+"/"+file_name, arr, "w")
-
-
 
 
 
