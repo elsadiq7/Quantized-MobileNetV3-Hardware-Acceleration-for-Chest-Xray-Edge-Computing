@@ -1,7 +1,11 @@
 
 # 🔧 Project Overview
 
-This repository presents a complete system integrating **FPGA-based hardware modules** and **Python-based software utilities** to accelerate and interact with deep learning models—specifically for tasks like image classification.
+🚀 Graduation Project | FPGA-based AI Accelerator
+Proud to share our complete system that integrates FPGA hardware modules and Python-based software tools to accelerate deep learning models for image classification.
+🛠️ Developed under the mentorship of the Analog Devices Digital Team – Cairo and Dr. Mohammed Sharaf.
+
+
 
 ---
 
