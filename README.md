@@ -45,8 +45,7 @@ Python tools for data pipelines and user interaction.
 - **Software**: Python 3.x  
   Install required packages:
   ```bash
-  pip install -r requirements.txt
-````
+  pip install -r requirements.txt ````
 
 ---
 
