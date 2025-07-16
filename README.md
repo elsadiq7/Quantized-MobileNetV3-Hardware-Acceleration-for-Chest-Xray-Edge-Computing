@@ -1,6 +1,4 @@
-Here's your optimized `README.md` formatted **for Markdown tools** (e.g., GitHub, VS Code preview, etc.):
 
-````markdown
 # 🔧 Project Overview
 
 This repository presents a complete system integrating **FPGA-based hardware modules** and **Python-based software utilities** to accelerate and interact with deep learning models—specifically for tasks like image classification.
