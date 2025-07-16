@@ -5,3 +5,8 @@
 .vscode 
 Software/data
 Software/kaggle_credentials.json
+.cursor-server
+.viminfo
+.vscode-server
+.wget-hsts
+.windsurf-server
