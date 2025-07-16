@@ -82,10 +82,10 @@ Python tools for data pipelines and user interaction.
      chmod 600 ~/.kaggle/kaggle.json
      ```
 
-4. **Download dataset**:
+4. **Run the project flow **:
 
    ```bash
-   python Software/download_dataset.py
+   python Software/project_flow.ipynb
    ```
 
 5. **Open Vivado project**:
