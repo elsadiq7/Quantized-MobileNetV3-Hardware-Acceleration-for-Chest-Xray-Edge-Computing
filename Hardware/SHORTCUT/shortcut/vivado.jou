@@ -1,0 +1,63 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Fri Jul 11 22:37:31 2025
+# Process ID: 2688
+# Current directory: C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/shortcut
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent20444 C:\intelFPGA\Final_Project\BOTTEL NECK\SHORTCUT\shortcut\shortcut.xpr
+# Log file: C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/shortcut/vivado.log
+# Journal file: C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/shortcut\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/shortcut/shortcut.xpr}
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
+refresh_design
+write_schematic -format pdf -orientation portrait -force C:/intelFPGA/Grad_Final_Project/BottelNeck/schematic.pdf
+write_schematic -format pdf -orientation portrait C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/schematic.pdf
+write_schematic -format pdf -orientation portrait C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/schematic.pdf
+close_project
+open_project {C:/intelFPGA/Grad_Final_Project/Final layer/project_2/project_2.xpr}
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+close_project
+open_project {C:/intelFPGA/Grad_Final_Project/First Block/project_1/project_1.xpr}
+update_compile_order -fileset sources_1
+open_hw_manager
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+close_project
+open_project {C:/intelFPGA/SQYEEZE MODEL/project_2/project_2.xpr}
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+close_project
+open_project C:/intelFPGA/Grad_Final_Project/BottelNeck/project_1/project_1.xpr
+update_compile_order -fileset sources_1
+close_project
+open_project C:/intelFPGA/Grad_Final_Project/BottelNeck/project_2/project_2.xpr
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top SE_module [current_fileset]
+set_property top_lib xil_defaultlib [current_fileset]
+set_property top_file C:/intelFPGA/Grad_Final_Project/BottelNeck/SE_module.sv [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+reset_run synth_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top BottleNeck_11Stage_Sequential_Optimized [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+reset_run synth_1

@@ -1,0 +1,291 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+!s11f vlog 2021.1 2021.01, Jan 19 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dC:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT
+T_opt
+!s110 1751491315
+V9YMVaGlX7b`URP3H6>Kc]3
+Z2 04 11 4 work shortcut_tb fast 0
+=1-c8f7501db222-6865a2f3-19e-bdc
+Z3 !s124 OEM100
+Z4 o-quiet -auto_acc_if_foreign -work work +acc
+Z5 tCvgOpt 0
+n@_opt
+Z6 OL;O;2021.1;73
+R1
+T_opt1
+!s110 1751490874
+VEQa?]^o[]19[O;4Q5VhhY2
+R2
+=3-c8f7501db222-6865a139-303-68a4
+R3
+R4
+R5
+n@_opt1
+R6
+R1
+vbatchnorm
+Z7 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z8 !s110 1752262888
+!i10b 1
+!s100 _lf>H?on^L5PbQ=2:1Pmc2
+IhfAm6Z4g3TJCeCG]N_lYd1
+S1
+R1
+w1751280384
+8batchnorm.sv
+Fbatchnorm.sv
+!i122 130
+L0 1 197
+Z9 VDg1SIo80bB@j0V0VzS_@n1
+Z10 OL;L;2021.1;73
+r1
+!s85 0
+31
+Z11 !s108 1752262888.000000
+Z12 !s107 shortcut_tb.sv|shortcut.sv|pointwise_conv_tb.sv|pointwise_conv.sv|batchnorm_tb.sv|batchnorm.sv|
+Z13 !s90 -reportprogress|300|batchnorm.sv|batchnorm_tb.sv|pointwise_conv.sv|pointwise_conv_tb.sv|shortcut.sv|shortcut_tb.sv|
+!i113 0
+Z14 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R5
+vbatchnorm_tb
+R7
+R8
+!i10b 1
+!s100 ][Yf5bf[bTb4J8T1CHOba3
+I_`Z4=W5bX=Gd6zWnZ=BLa3
+S1
+R1
+Z15 w1751301324
+8batchnorm_tb.sv
+Fbatchnorm_tb.sv
+!i122 130
+L0 3 280
+R9
+R10
+r1
+!s85 0
+31
+R11
+R12
+R13
+!i113 0
+R14
+R5
+vpointwise_conv
+R7
+R8
+!i10b 1
+!s100 kDMIKV37[U9PK:V;<:0Fh0
+IZTfmeCMkBmdSKF=mGAD2>3
+S1
+R1
+w1751490846
+Z16 8pointwise_conv.sv
+Z17 Fpointwise_conv.sv
+!i122 130
+L0 1 210
+R9
+R10
+r1
+!s85 0
+31
+R11
+R12
+R13
+!i113 0
+R14
+R5
+vpointwise_conv_optimized_v2
+R7
+!s110 1751458034
+!i10b 1
+!s100 >2[N_GkoCilK?1M`zQ3?c0
+IJln77oo]l@W=2@<]@FiaS2
+S1
+R1
+w1751458023
+R16
+R17
+!i122 113
+L0 1 307
+R9
+R10
+r1
+!s85 0
+31
+!s108 1751458034.000000
+R12
+R13
+!i113 0
+R14
+R5
+vpointwise_conv_tb
+R7
+R8
+!i10b 1
+!s100 P]ojMdXCQG;1R`RLgG6zo3
+I^X;C9:B0:9dzRXBA@jFOX2
+S1
+R1
+w1751490344
+8pointwise_conv_tb.sv
+Fpointwise_conv_tb.sv
+!i122 130
+L0 3 252
+R9
+R10
+r1
+!s85 0
+31
+R11
+R12
+R13
+!i113 0
+R14
+R5
+vshortcut
+R7
+R8
+!i10b 1
+!s100 6Jj`EIAI^zj@lI>A13ZRR1
+IZBY6XLGk67zod1^QJNfCK2
+S1
+R1
+w1751489559
+8shortcut.sv
+Fshortcut.sv
+!i122 130
+L0 1 331
+R9
+R10
+r1
+!s85 0
+31
+R11
+R12
+R13
+!i113 0
+R14
+R5
+vshortcut_tb
+R7
+R8
+!i10b 1
+!s100 HZO3J:e:B@;@WOMZi:7^;1
+IoTBP?Tc]F?7Ta;=_3iCJV3
+S1
+R1
+R15
+8shortcut_tb.sv
+Fshortcut_tb.sv
+!i122 130
+L0 3 340
+R9
+R10
+r1
+!s85 0
+31
+R11
+R12
+R13
+!i113 0
+R14
+R5
+vtop_level_tb
+R7
+!s110 1751282934
+!i10b 1
+!s100 olzAe5P??[ChZP;K>GLmh0
+If732gT>ioBYLlCX<C2EhU0
+S1
+R1
+w1751282897
+8top_level_tb.sv
+Ftop_level_tb.sv
+!i122 26
+L0 3 240
+R9
+R10
+r1
+!s85 0
+31
+!s108 1751282934.000000
+!s107 top_level_tb.sv|shortcut_tb.sv|shortcut.sv|pointwise_conv_tb.sv|pointwise_conv.sv|batchnorm_tb.sv|batchnorm.sv|
+!s90 batchnorm.sv|batchnorm_tb.sv|pointwise_conv.sv|pointwise_conv_tb.sv|shortcut.sv|shortcut_tb.sv|top_level_tb.sv|
+!i113 0
+R14
+R5

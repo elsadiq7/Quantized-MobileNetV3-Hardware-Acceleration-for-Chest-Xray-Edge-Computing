@@ -1,0 +1,646 @@
+
+*** Running vivado
+    with args -log top_all_layers.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_all_layers.tcl
+
+
+****** Vivado v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source top_all_layers.tcl -notrace
+Command: synth_design -top top_all_layers -part xa7z020clg484-1I
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xa7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xa7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 18268 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 687.504 ; gain = 237.035
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top_all_layers' [C:/intelFPGA/Final_Project/SQYEEZE MODEL/top_all_layers.sv:2]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter IN_CHANNELS bound to: 16 - type: integer 
+	Parameter REDUCTION bound to: 4 - type: integer 
+	Parameter IN_HEIGHT bound to: 8 - type: integer 
+	Parameter IN_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'AdaptiveAvgPool2d_1x1' [C:/intelFPGA/Final_Project/SQYEEZE MODEL/AdaptiveAvgPool2d_1x1.sv:2]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter IN_HEIGHT bound to: 8 - type: integer 
+	Parameter IN_WIDTH bound to: 8 - type: integer 
+	Parameter CHANNELS bound to: 16 - type: integer 
+	Parameter TOTAL_PIXELS_PER_CHANNEL bound to: 64 - type: integer 
+	Parameter TOTAL_INPUTS bound to: 1024 - type: integer 
+	Parameter ACC_WIDTH bound to: 24 - type: integer 
+INFO: [Synth 8-251]  AdaptiveAvgPool2d: input[x] = x for channel[x], sum=x [C:/intelFPGA/Final_Project/SQYEEZE MODEL/AdaptiveAvgPool2d_1x1.sv:87]
+INFO: [Synth 8-251]  AdaptiveAvgPool2d: All 1024 inputs received, starting output phase [C:/intelFPGA/Final_Project/SQYEEZE MODEL/AdaptiveAvgPool2d_1x1.sv:98]
+INFO: [Synth 8-251]  AdaptiveAvgPool2d: Enough inputs (x), starting output phase [C:/intelFPGA/Final_Project/SQYEEZE MODEL/AdaptiveAvgPool2d_1x1.sv:105]
+INFO: [Synth 8-251]  AdaptiveAvgPool2d: Output channel x = x (sum=x, avg=x) [C:/intelFPGA/Final_Project/SQYEEZE MODEL/AdaptiveAvgPool2d_1x1.sv:130]
+INFO: [Synth 8-251]  AdaptiveAvgPool2d: Last channel x output, will complete next cycle [C:/intelFPGA/Final_Project/SQYEEZE MODEL/AdaptiveAvgPool2d_1x1.sv:137]
+INFO: [Synth 8-251]  AdaptiveAvgPool2d: All 16 channels output complete [C:/intelFPGA/Final_Project/SQYEEZE MODEL/AdaptiveAvgPool2d_1x1.sv:141]
+WARNING: [Synth 8-6014] Unused sequential element channel_idx_reg was removed.  [C:/intelFPGA/Final_Project/SQYEEZE MODEL/AdaptiveAvgPool2d_1x1.sv:80]
+WARNING: [Synth 8-6014] Unused sequential element sum_val_reg was removed.  [C:/intelFPGA/Final_Project/SQYEEZE MODEL/AdaptiveAvgPool2d_1x1.sv:114]
+WARNING: [Synth 8-6014] Unused sequential element avg_val_reg was removed.  [C:/intelFPGA/Final_Project/SQYEEZE MODEL/AdaptiveAvgPool2d_1x1.sv:115]
+WARNING: [Synth 8-6014] Unused sequential element remainder_reg was removed.  [C:/intelFPGA/Final_Project/SQYEEZE MODEL/AdaptiveAvgPool2d_1x1.sv:116]
+INFO: [Synth 8-6155] done synthesizing module 'AdaptiveAvgPool2d_1x1' (1#1) [C:/intelFPGA/Final_Project/SQYEEZE MODEL/AdaptiveAvgPool2d_1x1.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'Conv2D' [C:/intelFPGA/Final_Project/SQYEEZE MODEL/Conv2D.sv:2]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter IN_CHANNELS bound to: 16 - type: integer 
+	Parameter OUT_CHANNELS bound to: 4 - type: integer 
+	Parameter ACC_WIDTH bound to: 37 - type: integer 
+	Parameter KERNEL_ADDR_WIDTH bound to: 6 - type: integer 
+INFO: [Synth 8-251]  Starting kernel loading... [C:/intelFPGA/Final_Project/SQYEEZE MODEL/Conv2D.sv:136]
+INFO: [Synth 8-251]  Starting input collection... [C:/intelFPGA/Final_Project/SQYEEZE MODEL/Conv2D.sv:141]
+INFO: [Synth 8-251]  Loaded kernel[x][x] = x (addr=x) [C:/intelFPGA/Final_Project/SQYEEZE MODEL/Conv2D.sv:155]
+INFO: [Synth 8-251]  Kernel loading complete - 64 weights loaded [C:/intelFPGA/Final_Project/SQYEEZE MODEL/Conv2D.sv:161]
+INFO: [Synth 8-251]  Collected input[x] = x (total needed: 16) [C:/intelFPGA/Final_Project/SQYEEZE MODEL/Conv2D.sv:170]
+INFO: [Synth 8-251]  All 16 inputs collected, starting computation [C:/intelFPGA/Final_Project/SQYEEZE MODEL/Conv2D.sv:178]
+INFO: [Synth 8-251]  All 16 inputs already collected, starting computation [C:/intelFPGA/Final_Project/SQYEEZE MODEL/Conv2D.sv:186]
+INFO: [Synth 8-251] 🔧 FORCED: Using duplicate last input for missing input[15], starting computation [C:/intelFPGA/Final_Project/SQYEEZE MODEL/Conv2D.sv:196]
+WARNING: [Synth 8-639] system function call 'time' not supported [C:/intelFPGA/Final_Project/SQYEEZE MODEL/Conv2D.sv:199]
+INFO: [Synth 8-251]  Waiting for input: in_valid=1'bx, in_ch_cnt=x, IN_CHANNELS=16 [C:/intelFPGA/Final_Project/SQYEEZE MODEL/Conv2D.sv:200]
+INFO: [Synth 8-251]  MAC[x]: x * x = x, acc=x [C:/intelFPGA/Final_Project/SQYEEZE MODEL/Conv2D.sv:209]
+INFO: [Synth 8-251]  Outputting channel x: acc=x, scaled=x, final=x [C:/intelFPGA/Final_Project/SQYEEZE MODEL/Conv2D.sv:236]
+INFO: [Synth 8-251]  All outputs complete [C:/intelFPGA/Final_Project/SQYEEZE MODEL/Conv2D.sv:244]
+INFO: [Synth 8-251]   Moving to next output channel x [C:/intelFPGA/Final_Project/SQYEEZE MODEL/Conv2D.sv:250]
+WARNING: [Synth 8-5856] 3D RAM kernel_reg  for this pattern/configuration is not supported. This will most likely be implemented in registers
+WARNING: [Synth 8-6014] Unused sequential element computing_reg was removed.  [C:/intelFPGA/Final_Project/SQYEEZE MODEL/Conv2D.sv:120]
+WARNING: [Synth 8-6014] Unused sequential element output_ready_reg was removed.  [C:/intelFPGA/Final_Project/SQYEEZE MODEL/Conv2D.sv:121]
+WARNING: [Synth 8-6014] Unused sequential element scaled_acc_reg was removed.  [C:/intelFPGA/Final_Project/SQYEEZE MODEL/Conv2D.sv:224]
+WARNING: [Synth 8-6014] Unused sequential element final_output_reg was removed.  [C:/intelFPGA/Final_Project/SQYEEZE MODEL/Conv2D.sv:229]
+INFO: [Synth 8-6155] done synthesizing module 'Conv2D' (2#1) [C:/intelFPGA/Final_Project/SQYEEZE MODEL/Conv2D.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'BatchNorm_param' [C:/intelFPGA/Final_Project/SQYEEZE MODEL/BatchNorm_param.sv:1]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter CALC_WIDTH bound to: 32 - type: integer 
+	Parameter EPSILON bound to: 16'sb0000000001000000 
+	Parameter SHIFT_AMOUNT bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'BatchNorm_param' (3#1) [C:/intelFPGA/Final_Project/SQYEEZE MODEL/BatchNorm_param.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'ReLU_param' [C:/intelFPGA/Final_Project/SQYEEZE MODEL/ReLU_param.sv:2]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+WARNING: [Synth 8-6014] Unused sequential element in_reg_reg was removed.  [C:/intelFPGA/Final_Project/SQYEEZE MODEL/ReLU_param.sv:18]
+INFO: [Synth 8-6155] done synthesizing module 'ReLU_param' (4#1) [C:/intelFPGA/Final_Project/SQYEEZE MODEL/ReLU_param.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'Conv2D__parameterized0' [C:/intelFPGA/Final_Project/SQYEEZE MODEL/Conv2D.sv:2]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter IN_CHANNELS bound to: 4 - type: integer 
+	Parameter OUT_CHANNELS bound to: 16 - type: integer 
+	Parameter ACC_WIDTH bound to: 35 - type: integer 
+	Parameter KERNEL_ADDR_WIDTH bound to: 6 - type: integer 
+INFO: [Synth 8-251]  Starting kernel loading... [C:/intelFPGA/Final_Project/SQYEEZE MODEL/Conv2D.sv:136]
+INFO: [Synth 8-251]  Starting input collection... [C:/intelFPGA/Final_Project/SQYEEZE MODEL/Conv2D.sv:141]
+INFO: [Synth 8-251]  Loaded kernel[x][x] = x (addr=x) [C:/intelFPGA/Final_Project/SQYEEZE MODEL/Conv2D.sv:155]
+INFO: [Synth 8-251]  Kernel loading complete - 64 weights loaded [C:/intelFPGA/Final_Project/SQYEEZE MODEL/Conv2D.sv:161]
+INFO: [Synth 8-251]  Collected input[x] = x (total needed: 4) [C:/intelFPGA/Final_Project/SQYEEZE MODEL/Conv2D.sv:170]
+INFO: [Synth 8-251]  All 4 inputs collected, starting computation [C:/intelFPGA/Final_Project/SQYEEZE MODEL/Conv2D.sv:178]
+INFO: [Synth 8-251]  All 4 inputs already collected, starting computation [C:/intelFPGA/Final_Project/SQYEEZE MODEL/Conv2D.sv:186]
+INFO: [Synth 8-251] 🔧 FORCED: Using duplicate last input for missing input[3], starting computation [C:/intelFPGA/Final_Project/SQYEEZE MODEL/Conv2D.sv:196]
+WARNING: [Synth 8-639] system function call 'time' not supported [C:/intelFPGA/Final_Project/SQYEEZE MODEL/Conv2D.sv:199]
+INFO: [Synth 8-251]  Waiting for input: in_valid=1'bx, in_ch_cnt=x, IN_CHANNELS=4 [C:/intelFPGA/Final_Project/SQYEEZE MODEL/Conv2D.sv:200]
+INFO: [Synth 8-251]  MAC[x]: x * x = x, acc=x [C:/intelFPGA/Final_Project/SQYEEZE MODEL/Conv2D.sv:209]
+INFO: [Synth 8-251]  Outputting channel x: acc=x, scaled=x, final=x [C:/intelFPGA/Final_Project/SQYEEZE MODEL/Conv2D.sv:236]
+INFO: [Synth 8-251]  All outputs complete [C:/intelFPGA/Final_Project/SQYEEZE MODEL/Conv2D.sv:244]
+INFO: [Synth 8-251]   Moving to next output channel x [C:/intelFPGA/Final_Project/SQYEEZE MODEL/Conv2D.sv:250]
+WARNING: [Synth 8-5856] 3D RAM kernel_reg  for this pattern/configuration is not supported. This will most likely be implemented in registers
+WARNING: [Synth 8-6014] Unused sequential element computing_reg was removed.  [C:/intelFPGA/Final_Project/SQYEEZE MODEL/Conv2D.sv:120]
+WARNING: [Synth 8-6014] Unused sequential element output_ready_reg was removed.  [C:/intelFPGA/Final_Project/SQYEEZE MODEL/Conv2D.sv:121]
+WARNING: [Synth 8-6014] Unused sequential element scaled_acc_reg was removed.  [C:/intelFPGA/Final_Project/SQYEEZE MODEL/Conv2D.sv:222]
+WARNING: [Synth 8-6014] Unused sequential element final_output_reg was removed.  [C:/intelFPGA/Final_Project/SQYEEZE MODEL/Conv2D.sv:229]
+INFO: [Synth 8-6155] done synthesizing module 'Conv2D__parameterized0' (4#1) [C:/intelFPGA/Final_Project/SQYEEZE MODEL/Conv2D.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'HardSwishSigmoid' [C:/intelFPGA/Final_Project/SQYEEZE MODEL/HardSwishSigmoid.sv:2]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter CALC_WIDTH bound to: 24 - type: integer 
+	Parameter THREE bound to: 16'sb0000001100000000 
+	Parameter SIX bound to: 16'sb0000011000000000 
+	Parameter SCALE_FACTOR bound to: 16'sb0000000000001000 
+INFO: [Synth 8-251]  HardSigmoid: relu6_result=x, hsigmoid_temp=x, hsig_div=x, final=x [C:/intelFPGA/Final_Project/SQYEEZE MODEL/HardSwishSigmoid.sv:89]
+WARNING: [Synth 8-6014] Unused sequential element scaled_input_reg was removed.  [C:/intelFPGA/Final_Project/SQYEEZE MODEL/HardSwishSigmoid.sv:52]
+WARNING: [Synth 8-6014] Unused sequential element input_plus_three_reg was removed.  [C:/intelFPGA/Final_Project/SQYEEZE MODEL/HardSwishSigmoid.sv:53]
+WARNING: [Synth 8-6014] Unused sequential element scaled_temp_reg was removed.  [C:/intelFPGA/Final_Project/SQYEEZE MODEL/HardSwishSigmoid.sv:80]
+WARNING: [Synth 8-6014] Unused sequential element hsig_div_reg was removed.  [C:/intelFPGA/Final_Project/SQYEEZE MODEL/HardSwishSigmoid.sv:81]
+WARNING: [Synth 8-6014] Unused sequential element hswish_div_reg was removed.  [C:/intelFPGA/Final_Project/SQYEEZE MODEL/HardSwishSigmoid.sv:86]
+INFO: [Synth 8-6155] done synthesizing module 'HardSwishSigmoid' (5#1) [C:/intelFPGA/Final_Project/SQYEEZE MODEL/HardSwishSigmoid.sv:2]
+INFO: [Synth 8-251] DEBUG INPUT: count=x, data=x [C:/intelFPGA/Final_Project/SQYEEZE MODEL/top_all_layers.sv:159]
+INFO: [Synth 8-251] DEBUG: inputs_complete set to 1, total inputs received: x [C:/intelFPGA/Final_Project/SQYEEZE MODEL/top_all_layers.sv:164]
+INFO: [Synth 8-251] DEBUG: Reset for next frame [C:/intelFPGA/Final_Project/SQYEEZE MODEL/top_all_layers.sv:170]
+INFO: [Synth 8-251]  SE Scale computed: x (hsigmoid_out: x) [C:/intelFPGA/Final_Project/SQYEEZE MODEL/top_all_layers.sv:185]
+INFO: [Synth 8-251]  Starting SE output generation with scale: x [C:/intelFPGA/Final_Project/SQYEEZE MODEL/top_all_layers.sv:205]
+INFO: [Synth 8-251]  SE Output[x]: input=x * scale=x = x [C:/intelFPGA/Final_Project/SQYEEZE MODEL/top_all_layers.sv:223]
+WARNING: [Synth 8-6014] Unused sequential element scaled_result_reg was removed.  [C:/intelFPGA/Final_Project/SQYEEZE MODEL/top_all_layers.sv:210]
+INFO: [Synth 8-6155] done synthesizing module 'top_all_layers' (6#1) [C:/intelFPGA/Final_Project/SQYEEZE MODEL/top_all_layers.sv:2]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 835.500 ; gain = 385.031
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 835.500 ; gain = 385.031
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xa7z020clg484-1I
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 835.500 ; gain = 385.031
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xa7z020clg484-1I
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'AdaptiveAvgPool2d_1x1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                              001 |                               00
+            ACCUMULATING |                              010 |                               01
+              OUTPUTTING |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'AdaptiveAvgPool2d_1x1'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1008.660 ; gain = 558.191
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+--------------------+------------+----------+
+|      |RTL Partition       |Replication |Instances |
++------+--------------------+------------+----------+
+|1     |top_all_layers__GB0 |           1|     31210|
+|2     |top_all_layers__GB1 |           1|      9541|
+|3     |top_all_layers__GB2 |           1|     12415|
+|4     |top_all_layers__GB3 |           1|      9115|
+|5     |top_all_layers__GB4 |           1|     19075|
++------+--------------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     48 Bit       Adders := 2     
+	   2 Input     32 Bit       Adders := 8     
+	   2 Input     24 Bit       Adders := 2     
+	   2 Input     19 Bit       Adders := 1     
+	   3 Input     17 Bit       Adders := 2     
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 2     
+	   2 Input      6 Bit       Adders := 3     
+	   2 Input      5 Bit       Adders := 4     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 3     
++---Registers : 
+	               37 Bit    Registers := 1     
+	               35 Bit    Registers := 1     
+	               32 Bit    Registers := 2     
+	               24 Bit    Registers := 19    
+	               16 Bit    Registers := 1193  
+	               11 Bit    Registers := 1     
+	               10 Bit    Registers := 2     
+	                6 Bit    Registers := 2     
+	                5 Bit    Registers := 4     
+	                3 Bit    Registers := 5     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 17    
++---Multipliers : 
+	                16x32  Multipliers := 2     
++---Muxes : 
+	   2 Input     48 Bit        Muxes := 2     
+	   6 Input     37 Bit        Muxes := 1     
+	   6 Input     35 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 8     
+	   2 Input     24 Bit        Muxes := 3     
+	   3 Input     24 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 18    
+	   6 Input     16 Bit        Muxes := 4     
+	   4 Input     16 Bit        Muxes := 18    
+	   3 Input     11 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 2     
+	   6 Input      6 Bit        Muxes := 2     
+	   6 Input      5 Bit        Muxes := 3     
+	   2 Input      5 Bit        Muxes := 4     
+	   3 Input      5 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 3     
+	   2 Input      3 Bit        Muxes := 8     
+	   2 Input      2 Bit        Muxes := 6     
+	   3 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 216   
+	   6 Input      1 Bit        Muxes := 170   
+	   3 Input      1 Bit        Muxes := 23    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module top_all_layers 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
++---Registers : 
+	               16 Bit    Registers := 1026  
+	               10 Bit    Registers := 2     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 2     
+	   2 Input     10 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 15    
+Module BatchNorm_param__1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 4     
+	   3 Input     17 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 6     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Multipliers : 
+	                16x32  Multipliers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 4     
+	   2 Input     16 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 1     
+Module HardSwishSigmoid 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     48 Bit       Adders := 2     
+	   2 Input     24 Bit       Adders := 1     
++---Registers : 
+	               24 Bit    Registers := 3     
+	               16 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     48 Bit        Muxes := 2     
+	   2 Input     24 Bit        Muxes := 2     
+Module Conv2D__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 2     
++---Registers : 
+	               35 Bit    Registers := 1     
+	               16 Bit    Registers := 69    
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                3 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   6 Input     35 Bit        Muxes := 1     
+	   6 Input     16 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 3     
+	   4 Input     16 Bit        Muxes := 2     
+	   6 Input      6 Bit        Muxes := 1     
+	   6 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 5     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   6 Input      1 Bit        Muxes := 79    
+	   2 Input      1 Bit        Muxes := 80    
+	   3 Input      1 Bit        Muxes := 1     
+Module ReLU_param 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+Module BatchNorm_param 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 4     
+	   3 Input     17 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 6     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Multipliers : 
+	                16x32  Multipliers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 4     
+	   2 Input     16 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 1     
+Module Conv2D 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 2     
+	   2 Input      5 Bit       Adders := 2     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               37 Bit    Registers := 1     
+	               16 Bit    Registers := 81    
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 2     
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   6 Input     37 Bit        Muxes := 1     
+	   6 Input     16 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 3     
+	   4 Input     16 Bit        Muxes := 16    
+	   6 Input      6 Bit        Muxes := 1     
+	   6 Input      5 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 3     
+	   6 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 3     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   6 Input      1 Bit        Muxes := 91    
+	   2 Input      1 Bit        Muxes := 104   
+	   3 Input      1 Bit        Muxes := 1     
+Module AdaptiveAvgPool2d_1x1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     24 Bit       Adders := 1     
+	   2 Input     19 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	               24 Bit    Registers := 16    
+	               16 Bit    Registers := 1     
+	               11 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   3 Input     24 Bit        Muxes := 2     
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	   3 Input     11 Bit        Muxes := 1     
+	   3 Input      5 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 17    
+	   3 Input      1 Bit        Muxes := 21    
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+DSP Report: Generating DSP out_data4, operation Mode is: A*B.
+DSP Report: operator out_data4 is absorbed into DSP out_data4.
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [C:/intelFPGA/Final_Project/SQYEEZE MODEL/BatchNorm_param.sv:66]
+DSP Report: Generating DSP out_data3, operation Mode is: A*B.
+DSP Report: operator out_data3 is absorbed into DSP out_data3.
+DSP Report: operator out_data3 is absorbed into DSP out_data3.
+DSP Report: Generating DSP out_data3, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator out_data3 is absorbed into DSP out_data3.
+DSP Report: operator out_data3 is absorbed into DSP out_data3.
+DSP Report: Generating DSP hswish_temp0, operation Mode is: A*B.
+DSP Report: operator hswish_temp0 is absorbed into DSP hswish_temp0.
+DSP Report: Generating DSP acc0, operation Mode is: C+A*B.
+DSP Report: operator acc0 is absorbed into DSP acc0.
+DSP Report: operator acc1 is absorbed into DSP acc0.
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [C:/intelFPGA/Final_Project/SQYEEZE MODEL/BatchNorm_param.sv:66]
+DSP Report: Generating DSP out_data3, operation Mode is: A*B.
+DSP Report: operator out_data3 is absorbed into DSP out_data3.
+DSP Report: operator out_data3 is absorbed into DSP out_data3.
+DSP Report: Generating DSP out_data3, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator out_data3 is absorbed into DSP out_data3.
+DSP Report: operator out_data3 is absorbed into DSP out_data3.
+DSP Report: Generating DSP acc0, operation Mode is: C+A*B.
+DSP Report: operator acc0 is absorbed into DSP acc0.
+DSP Report: operator acc1 is absorbed into DSP acc0.
+INFO: [Synth 8-3886] merging instance 'i_4/hsigmoid_module/relu6_result_reg[0]' (FDCE) to 'i_4/hsigmoid_module/relu6_result_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_4/hsigmoid_module/relu6_result_reg[1]' (FDCE) to 'i_4/hsigmoid_module/relu6_result_reg[2]'
+INFO: [Synth 8-3886] merging instance 'i_4/hsigmoid_module/relu6_result_reg[2]' (FDCE) to 'i_4/hsigmoid_module/relu6_result_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_4/hsigmoid_module/relu6_result_reg[3]' (FDCE) to 'i_4/hsigmoid_module/relu6_result_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_4/hsigmoid_module/relu6_result_reg[4]' (FDCE) to 'i_4/hsigmoid_module/relu6_result_reg[5]'
+INFO: [Synth 8-3886] merging instance 'i_4/hsigmoid_module/relu6_result_reg[5]' (FDCE) to 'i_4/hsigmoid_module/relu6_result_reg[6]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (hsigmoid_module/\relu6_result_reg[6] )
+INFO: [Synth 8-3886] merging instance 'i_4/hsigmoid_module/hsigmoid_temp_reg[0]' (FDCE) to 'i_4/hsigmoid_module/hsigmoid_temp_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_4/hsigmoid_module/hsigmoid_temp_reg[1]' (FDCE) to 'i_4/hsigmoid_module/hsigmoid_temp_reg[2]'
+INFO: [Synth 8-3886] merging instance 'i_4/hsigmoid_module/hsigmoid_temp_reg[2]' (FDCE) to 'i_4/hsigmoid_module/hsigmoid_temp_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_4/hsigmoid_module/hsigmoid_temp_reg[3]' (FDCE) to 'i_4/hsigmoid_module/hsigmoid_temp_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_4/hsigmoid_module/hsigmoid_temp_reg[4]' (FDCE) to 'i_4/hsigmoid_module/hsigmoid_temp_reg[5]'
+INFO: [Synth 8-3886] merging instance 'i_4/hsigmoid_module/hsigmoid_temp_reg[5]' (FDCE) to 'i_4/hsigmoid_module/hsigmoid_temp_reg[6]'
+INFO: [Synth 8-3886] merging instance 'i_4/hsigmoid_module/hsigmoid_reg_reg[14]' (FDCE) to 'i_4/hsigmoid_module/hsigmoid_reg_reg[15]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (hsigmoid_module/\hsigmoid_reg_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (hsigmoid_module/\relu6_result_reg[7] )
+INFO: [Synth 8-3886] merging instance 'i_3/se_scale_reg[14]' (FDCE) to 'i_3/se_scale_reg[15]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\se_scale_reg[15] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:19 ; elapsed = 00:01:24 . Memory (MB): peak = 1195.898 ; gain = 745.430
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping	Report (see note below)
++-----------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name      | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-----------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|top_all_layers   | A*B            | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|BatchNorm_param  | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|BatchNorm_param  | (PCIN>>17)+A*B | 16     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|HardSwishSigmoid | A*B            | 24     | 16     | -      | -      | 40     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Conv2D           | C+A*B          | 16     | 16     | 35     | -      | 35     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|BatchNorm_param  | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|BatchNorm_param  | (PCIN>>17)+A*B | 16     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Conv2D           | C+A*B          | 16     | 16     | 37     | -      | 37     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
++-----------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/intelFPGA/Final_Project/SQYEEZE MODEL/BatchNorm_param.sv:35]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/intelFPGA/Final_Project/SQYEEZE MODEL/BatchNorm_param.sv:33]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/intelFPGA/Final_Project/SQYEEZE MODEL/BatchNorm_param.sv:33]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/intelFPGA/Final_Project/SQYEEZE MODEL/BatchNorm_param.sv:35]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/intelFPGA/Final_Project/SQYEEZE MODEL/Conv2D.sv:117]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/intelFPGA/Final_Project/SQYEEZE MODEL/BatchNorm_param.sv:35]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/intelFPGA/Final_Project/SQYEEZE MODEL/BatchNorm_param.sv:33]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/intelFPGA/Final_Project/SQYEEZE MODEL/BatchNorm_param.sv:33]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/intelFPGA/Final_Project/SQYEEZE MODEL/BatchNorm_param.sv:35]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/intelFPGA/Final_Project/SQYEEZE MODEL/Conv2D.sv:117]
+
+Report RTL Partitions: 
++------+--------------------+------------+----------+
+|      |RTL Partition       |Replication |Instances |
++------+--------------------+------------+----------+
+|1     |top_all_layers__GB0 |           1|     31209|
+|2     |top_all_layers__GB1 |           1|      2223|
+|3     |top_all_layers__GB2 |           1|       681|
+|4     |top_all_layers__GB3 |           1|      3059|
+|5     |top_all_layers__GB4 |           1|     12313|
++------+--------------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:19 ; elapsed = 00:01:24 . Memory (MB): peak = 1197.727 ; gain = 747.258
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+--------------------+------------+----------+
+|      |RTL Partition       |Replication |Instances |
++------+--------------------+------------+----------+
+|1     |top_all_layers__GB0 |           1|     31209|
+|2     |top_all_layers__GB1 |           1|      2223|
+|3     |top_all_layers__GB2 |           1|       681|
+|4     |top_all_layers__GB3 |           1|      3059|
+|5     |top_all_layers__GB4 |           1|     12313|
++------+--------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\conv2/out_ch_cnt_reg[4] )
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/intelFPGA/Final_Project/SQYEEZE MODEL/top_all_layers.sv:178]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/intelFPGA/Final_Project/SQYEEZE MODEL/BatchNorm_param.sv:35]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/intelFPGA/Final_Project/SQYEEZE MODEL/BatchNorm_param.sv:33]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/intelFPGA/Final_Project/SQYEEZE MODEL/BatchNorm_param.sv:33]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/intelFPGA/Final_Project/SQYEEZE MODEL/BatchNorm_param.sv:35]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/intelFPGA/Final_Project/SQYEEZE MODEL/Conv2D.sv:117]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/intelFPGA/Final_Project/SQYEEZE MODEL/BatchNorm_param.sv:35]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/intelFPGA/Final_Project/SQYEEZE MODEL/BatchNorm_param.sv:33]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/intelFPGA/Final_Project/SQYEEZE MODEL/BatchNorm_param.sv:33]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/intelFPGA/Final_Project/SQYEEZE MODEL/BatchNorm_param.sv:35]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/intelFPGA/Final_Project/SQYEEZE MODEL/Conv2D.sv:117]
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:28 ; elapsed = 00:01:34 . Memory (MB): peak = 1212.520 ; gain = 762.051
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:36 ; elapsed = 00:01:41 . Memory (MB): peak = 1212.520 ; gain = 762.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:36 ; elapsed = 00:01:41 . Memory (MB): peak = 1212.520 ; gain = 762.051
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:37 ; elapsed = 00:01:42 . Memory (MB): peak = 1212.520 ; gain = 762.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:37 ; elapsed = 00:01:42 . Memory (MB): peak = 1212.520 ; gain = 762.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:37 ; elapsed = 00:01:42 . Memory (MB): peak = 1212.520 ; gain = 762.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:37 ; elapsed = 00:01:42 . Memory (MB): peak = 1212.520 ; gain = 762.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG    |     1|
+|2     |CARRY4  |   712|
+|3     |DSP48E1 |     7|
+|4     |LUT1    |   154|
+|5     |LUT2    |   778|
+|6     |LUT3    |   203|
+|7     |LUT4    |  1398|
+|8     |LUT5    |  2267|
+|9     |LUT6    |  5675|
+|10    |MUXF7   |  2320|
+|11    |MUXF8   |  1152|
+|12    |FDCE    | 19827|
+|13    |FDPE    |     4|
+|14    |IBUF    |   149|
+|15    |OBUF    |   129|
++------+--------+------+
+
+Report Instance Areas: 
++------+------------------+-----------------------+------+
+|      |Instance          |Module                 |Cells |
++------+------------------+-----------------------+------+
+|1     |top               |                       | 34776|
+|2     |  bn1             |BatchNorm_param        |  1833|
+|3     |  bn2             |BatchNorm_param_0      |  1845|
+|4     |  conv1           |Conv2D                 |  2340|
+|5     |  conv2           |Conv2D__parameterized0 |  1911|
+|6     |  hsigmoid_module |HardSwishSigmoid       |   188|
+|7     |  pool            |AdaptiveAvgPool2d_1x1  |   789|
+|8     |  relu            |ReLU_param             |    18|
++------+------------------+-----------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:37 ; elapsed = 00:01:42 . Memory (MB): peak = 1212.520 ; gain = 762.051
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 23 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:37 ; elapsed = 00:01:43 . Memory (MB): peak = 1212.520 ; gain = 762.051
+Synthesis Optimization Complete : Time (s): cpu = 00:01:37 ; elapsed = 00:01:43 . Memory (MB): peak = 1212.520 ; gain = 762.051
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.360 . Memory (MB): peak = 1212.520 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 4191 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1227.758 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+106 Infos, 23 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:19 ; elapsed = 00:02:26 . Memory (MB): peak = 1227.758 ; gain = 802.141
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1227.758 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/intelFPGA/Final_Project/SQYEEZE MODEL/project_1/project_1.runs/synth_1/top_all_layers.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_all_layers_utilization_synth.rpt -pb top_all_layers_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Jun 24 23:19:41 2025...

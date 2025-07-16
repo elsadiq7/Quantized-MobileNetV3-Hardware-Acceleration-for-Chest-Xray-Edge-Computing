@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2700185 on Thu Oct 24 18:46:05 MDT 2019
+# IP Build 2699827 on Thu Oct 24 21:16:38 MDT 2019
+# Start of session at: Mon Jul  7 20:47:41 2025
+# Process ID: 8648
+# Current directory: C:/Users/AhmedAli/Documents/First Block_tested/First Block/First Block/first layer/first layer.runs/synth_1
+# Command line: vivado.exe -log accelerator.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source accelerator.tcl
+# Log file: C:/Users/AhmedAli/Documents/First Block_tested/First Block/First Block/first layer/first layer.runs/synth_1/accelerator.vds
+# Journal file: C:/Users/AhmedAli/Documents/First Block_tested/First Block/First Block/first layer/first layer.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source accelerator.tcl -notrace

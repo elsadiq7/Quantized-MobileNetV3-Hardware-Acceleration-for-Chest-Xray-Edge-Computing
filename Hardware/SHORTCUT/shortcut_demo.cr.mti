@@ -1,0 +1,29 @@
+{C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/shortcut.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/shortcut.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module shortcut
+
+Top level modules:
+	shortcut
+
+} {} {}} {C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/shortcut_tb.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/shortcut_tb.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module shortcut_tb
+
+Top level modules:
+	shortcut_tb
+
+} {} {}} {C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/batchnorm.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/batchnorm.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module batchnorm
+
+Top level modules:
+	batchnorm
+
+} {} {}} {C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/batchnorm_tb.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/batchnorm_tb.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module batchnorm_tb
+
+Top level modules:
+	batchnorm_tb
+
+} {} {}}

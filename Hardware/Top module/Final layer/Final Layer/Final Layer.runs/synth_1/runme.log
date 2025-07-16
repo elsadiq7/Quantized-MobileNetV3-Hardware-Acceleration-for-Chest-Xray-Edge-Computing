@@ -1,0 +1,988 @@
+
+*** Running vivado
+    with args -log final_layer_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source final_layer_top.tcl
+
+
+****** Vivado v2019.2 (64-bit)
+  **** SW Build 2700185 on Thu Oct 24 18:46:05 MDT 2019
+  **** IP Build 2699827 on Thu Oct 24 21:16:38 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source final_layer_top.tcl -notrace
+Command: synth_design -top final_layer_top -part xc7z020clg484-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 23200 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 711.695 ; gain = 237.402
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'final_layer_top' [C:/Users/AhmedAli/Documents/Final layer/final_layer_top.sv:1]
+	Parameter WIDTH bound to: 16 - type: integer 
+	Parameter FRAC bound to: 8 - type: integer 
+	Parameter IN_CHANNELS bound to: 16 - type: integer 
+	Parameter MID_CHANNELS bound to: 32 - type: integer 
+	Parameter LINEAR_FEATURES_IN bound to: 32 - type: integer 
+	Parameter LINEAR_FEATURES_MID bound to: 64 - type: integer 
+	Parameter NUM_CLASSES bound to: 15 - type: integer 
+	Parameter FEATURE_SIZE bound to: 7 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'pointwise_conv' [C:/Users/AhmedAli/Documents/Final layer/pointwise_conv.sv:1]
+	Parameter N bound to: 16 - type: integer 
+	Parameter Q bound to: 8 - type: integer 
+	Parameter IN_CHANNELS bound to: 16 - type: integer 
+	Parameter OUT_CHANNELS bound to: 32 - type: integer 
+	Parameter FEATURE_SIZE bound to: 7 - type: integer 
+	Parameter MAX_VAL bound to: 16'sb0111111111111111 
+	Parameter MIN_VAL bound to: 16'sb1000000000000000 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [C:/Users/AhmedAli/Documents/Final layer/pointwise_conv.sv:31]
+WARNING: [Synth 8-639] system function call 'time' not supported [C:/Users/AhmedAli/Documents/Final layer/pointwise_conv.sv:132]
+INFO: [Synth 8-251] [1'b0] pointwise_conv: data_out=x, channel_out=x, valid_out=1'bx [C:/Users/AhmedAli/Documents/Final layer/pointwise_conv.sv:132]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/AhmedAli/Documents/Final layer/pointwise_conv.sv:104]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/AhmedAli/Documents/Final layer/pointwise_conv.sv:148]
+WARNING: [Synth 8-6014] Unused sequential element pixel_count_reg was removed.  [C:/Users/AhmedAli/Documents/Final layer/pointwise_conv.sv:75]
+WARNING: [Synth 8-4767] Trying to implement RAM 'weight_memory_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM has too many ports (16). Maximum supported = 16. 
+	2: Unable to determine number of words or word size in RAM. 
+	3: No valid read/write found for RAM. 
+RAM "weight_memory_reg" dissolved into registers
+INFO: [Synth 8-6155] done synthesizing module 'pointwise_conv' (1#1) [C:/Users/AhmedAli/Documents/Final layer/pointwise_conv.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'batchnorm' [C:/Users/AhmedAli/Documents/Final layer/batchnorm.sv:1]
+	Parameter WIDTH bound to: 16 - type: integer 
+	Parameter FRAC bound to: 8 - type: integer 
+	Parameter CHANNELS bound to: 32 - type: integer 
+	Parameter MAX_VAL bound to: 16'sb0111111111111111 
+	Parameter MIN_VAL bound to: 16'sb1000000000000000 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [C:/Users/AhmedAli/Documents/Final layer/batchnorm.sv:30]
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [C:/Users/AhmedAli/Documents/Final layer/batchnorm.sv:31]
+WARNING: [Synth 8-6014] Unused sequential element x_reg_reg[2] was removed.  [C:/Users/AhmedAli/Documents/Final layer/batchnorm.sv:92]
+WARNING: [Synth 8-6014] Unused sequential element x_reg_reg[3] was removed.  [C:/Users/AhmedAli/Documents/Final layer/batchnorm.sv:92]
+WARNING: [Synth 8-6014] Unused sequential element gamma_reg_reg[2] was removed.  [C:/Users/AhmedAli/Documents/Final layer/batchnorm.sv:97]
+WARNING: [Synth 8-6014] Unused sequential element scaled_shifted_reg was removed.  [C:/Users/AhmedAli/Documents/Final layer/batchnorm.sv:105]
+INFO: [Synth 8-6155] done synthesizing module 'batchnorm' (2#1) [C:/Users/AhmedAli/Documents/Final layer/batchnorm.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'hswish' [C:/Users/AhmedAli/Documents/Final layer/hswish.sv:5]
+	Parameter WIDTH bound to: 16 - type: integer 
+	Parameter FRAC bound to: 8 - type: integer 
+	Parameter THREE bound to: 16'sb0000001100000000 
+	Parameter SIX bound to: 16'sb0000011000000000 
+	Parameter ZERO bound to: 16'sb0000000000000000 
+	Parameter RECIPROCAL_OF_6 bound to: 10923 - type: integer 
+WARNING: [Synth 8-6014] Unused sequential element data_reg_reg[2] was removed.  [C:/Users/AhmedAli/Documents/Final layer/hswish.sv:28]
+INFO: [Synth 8-6155] done synthesizing module 'hswish' (3#1) [C:/Users/AhmedAli/Documents/Final layer/hswish.sv:5]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/AhmedAli/Documents/Final layer/final_layer_top.sv:132]
+INFO: [Synth 8-6157] synthesizing module 'linear' [C:/Users/AhmedAli/Documents/Final layer/linear.sv:2]
+	Parameter WIDTH bound to: 16 - type: integer 
+	Parameter FRAC bound to: 8 - type: integer 
+	Parameter IN_FEATURES bound to: 32 - type: integer 
+	Parameter OUT_FEATURES bound to: 64 - type: integer 
+	Parameter MAX_VAL bound to: 16'sb0111111111111111 
+	Parameter MIN_VAL bound to: 16'sb1000000000000000 
+INFO: [Synth 8-6155] done synthesizing module 'linear' (4#1) [C:/Users/AhmedAli/Documents/Final layer/linear.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'batchnorm1d' [C:/Users/AhmedAli/Documents/Final layer/batchnorm1d.sv:2]
+	Parameter WIDTH bound to: 16 - type: integer 
+	Parameter FRAC bound to: 8 - type: integer 
+	Parameter FEATURES bound to: 64 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/AhmedAli/Documents/Final layer/batchnorm1d.sv:41]
+INFO: [Synth 8-6155] done synthesizing module 'batchnorm1d' (5#1) [C:/Users/AhmedAli/Documents/Final layer/batchnorm1d.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'linear__parameterized0' [C:/Users/AhmedAli/Documents/Final layer/linear.sv:2]
+	Parameter WIDTH bound to: 16 - type: integer 
+	Parameter FRAC bound to: 8 - type: integer 
+	Parameter IN_FEATURES bound to: 64 - type: integer 
+	Parameter OUT_FEATURES bound to: 15 - type: integer 
+	Parameter MAX_VAL bound to: 16'sb0111111111111111 
+	Parameter MIN_VAL bound to: 16'sb1000000000000000 
+INFO: [Synth 8-6155] done synthesizing module 'linear__parameterized0' (5#1) [C:/Users/AhmedAli/Documents/Final layer/linear.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'final_layer_top' (6#1) [C:/Users/AhmedAli/Documents/Final layer/final_layer_top.sv:1]
+WARNING: [Synth 8-3331] design pointwise_conv has unconnected port channel_in[3]
+WARNING: [Synth 8-3331] design pointwise_conv has unconnected port channel_in[2]
+WARNING: [Synth 8-3331] design pointwise_conv has unconnected port channel_in[1]
+WARNING: [Synth 8-3331] design pointwise_conv has unconnected port channel_in[0]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 982.988 ; gain = 508.695
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 992.148 ; gain = 517.855
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-2
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-2
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 992.148 ; gain = 517.855
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'pointwise_conv'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'batchnorm1d'
+INFO: [Synth 8-802] inferred FSM for state register 'collect_state_reg' in module 'final_layer_top'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                              001 |                               00
+              PROCESSING |                              010 |                               01
+                  OUTPUT |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'pointwise_conv'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                              001 |                               00
+              PROCESSING |                              010 |                               01
+                    DONE |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'batchnorm1d'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+            COLLECT_IDLE |                              001 |                               00
+              COLLECTING |                              010 |                               01
+            COLLECT_DONE |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'collect_state_reg' using encoding 'one-hot' in module 'final_layer_top'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:31 ; elapsed = 00:00:31 . Memory (MB): peak = 1265.078 ; gain = 790.785
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+----------------------+------------+----------+
+|      |RTL Partition         |Replication |Instances |
++------+----------------------+------------+----------+
+|1     |pointwise_conv__GB0   |           1|     24528|
+|2     |pointwise_conv__GB1   |           1|     19779|
+|3     |pointwise_conv__GB2   |           1|     24528|
+|4     |pointwise_conv__GB3   |           1|     16352|
+|5     |pointwise_conv__GB4   |           1|     22514|
+|6     |pointwise_conv__GB5   |           1|     32790|
+|7     |pointwise_conv__GB6   |           1|     24528|
+|8     |pointwise_conv__GB7   |           1|     16352|
+|9     |pointwise_conv__GB8   |           1|        46|
+|10    |pointwise_conv__GB9   |           1|     32704|
+|11    |pointwise_conv__GB10  |           1|     16352|
+|12    |pointwise_conv__GB11  |           1|     32704|
+|13    |pointwise_conv__GB12  |           1|     16352|
+|14    |pointwise_conv__GB13  |           1|     16441|
+|15    |muxpart__596_linear   |           1|     32752|
+|16    |linear__GB1           |           1|      4774|
+|17    |final_layer_top__GCB0 |           1|     28063|
+|18    |final_layer_top__GCB1 |           1|      7858|
++------+----------------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     17 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 3     
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 7     
+	   2 Input      6 Bit       Adders := 2     
+	   2 Input      5 Bit       Adders := 3     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               45 Bit    Registers := 4     
+	               36 Bit    Registers := 32    
+	               17 Bit    Registers := 1     
+	               16 Bit    Registers := 1022  
+	               10 Bit    Registers := 1     
+	                7 Bit    Registers := 7     
+	                6 Bit    Registers := 2     
+	                5 Bit    Registers := 8     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 26    
++---Multipliers : 
+	                15x32  Multipliers := 2     
++---Muxes : 
+	   2 Input     45 Bit        Muxes := 6     
+	   3 Input     36 Bit        Muxes := 32    
+	   2 Input     16 Bit        Muxes := 14    
+	   3 Input     16 Bit        Muxes := 1     
+	   4 Input     16 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 5     
+	   3 Input      7 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 2     
+	   3 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 2     
+	   3 Input      4 Bit        Muxes := 1     
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   3 Input      2 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 6     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 778   
+	   3 Input      1 Bit        Muxes := 103   
+	   5 Input      1 Bit        Muxes := 80    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module final_layer_top 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 3     
++---Registers : 
+	               16 Bit    Registers := 96    
+	                7 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      7 Bit        Muxes := 4     
+	   3 Input      7 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 108   
+	   3 Input      1 Bit        Muxes := 36    
+Module pointwise_conv 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               36 Bit    Registers := 32    
+	               16 Bit    Registers := 545   
+	               10 Bit    Registers := 1     
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   3 Input     36 Bit        Muxes := 32    
+	   2 Input     16 Bit        Muxes := 2     
+	   3 Input      5 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 1     
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   3 Input      2 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 515   
+	   3 Input      1 Bit        Muxes := 3     
+Module linear 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 2     
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	               45 Bit    Registers := 2     
+	               16 Bit    Registers := 96    
+	                7 Bit    Registers := 2     
+	                6 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     45 Bit        Muxes := 3     
+	   2 Input     16 Bit        Muxes := 2     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 84    
+	   5 Input      1 Bit        Muxes := 64    
+Module batchnorm1d 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 128   
+	                7 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      2 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 64    
+Module hswish__1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 4     
+	                1 Bit    Registers := 5     
++---Multipliers : 
+	                15x32  Multipliers := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 2     
+Module linear__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 2     
++---Registers : 
+	               45 Bit    Registers := 2     
+	               16 Bit    Registers := 79    
+	                7 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     45 Bit        Muxes := 3     
+	   2 Input     16 Bit        Muxes := 2     
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 35    
+	   5 Input      1 Bit        Muxes := 15    
+Module hswish 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 4     
+	                1 Bit    Registers := 5     
++---Multipliers : 
+	                15x32  Multipliers := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 2     
+Module batchnorm 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     17 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	               17 Bit    Registers := 1     
+	               16 Bit    Registers := 70    
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 5     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 4     
+	   3 Input     16 Bit        Muxes := 1     
+	   4 Input     16 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 34    
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 2 processes.
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4471] merging register 'accum_reg[44:0]' into 'accum_reg[44:0]' [C:/Users/AhmedAli/Documents/Final layer/linear.sv:43]
+INFO: [Synth 8-4471] merging register 'out_f_count_reg[6:0]' into 'out_f_count_reg[6:0]' [C:/Users/AhmedAli/Documents/Final layer/linear.sv:42]
+INFO: [Synth 8-4471] merging register 'in_f_count_reg[5:0]' into 'in_f_count_reg[5:0]' [C:/Users/AhmedAli/Documents/Final layer/linear.sv:41]
+DSP Report: Generating DSP accum0, operation Mode is: C'+A*B.
+DSP Report: register accum_reg is absorbed into DSP accum0.
+DSP Report: operator accum0 is absorbed into DSP accum0.
+DSP Report: operator accum1 is absorbed into DSP accum0.
+DSP Report: Generating DSP mult_result_reg, operation Mode is: (A''*B2)'.
+DSP Report: register gamma_reg_reg[1] is absorbed into DSP mult_result_reg.
+DSP Report: register x_reg_reg[0] is absorbed into DSP mult_result_reg.
+DSP Report: register x_reg_reg[1] is absorbed into DSP mult_result_reg.
+DSP Report: register mult_result_reg is absorbed into DSP mult_result_reg.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result_reg.
+INFO: [Synth 8-4471] merging register 'hswish1_inst/data_reg_reg[0][15:0]' into 'hswish1_inst/data_reg_reg[0][15:0]' [C:/Users/AhmedAli/Documents/Final layer/hswish.sv:28]
+DSP Report: Generating DSP hswish1_inst/product, operation Mode is: A''*B.
+DSP Report: register hswish1_inst/data_reg_reg[0] is absorbed into DSP hswish1_inst/product.
+DSP Report: register hswish1_inst/data_reg_reg[1] is absorbed into DSP hswish1_inst/product.
+DSP Report: operator hswish1_inst/product is absorbed into DSP hswish1_inst/product.
+WARNING: [Synth 8-3331] design final_layer_top has unconnected port channel_in[3]
+WARNING: [Synth 8-3331] design final_layer_top has unconnected port channel_in[2]
+WARNING: [Synth 8-3331] design final_layer_top has unconnected port channel_in[1]
+WARNING: [Synth 8-3331] design final_layer_top has unconnected port channel_in[0]
+INFO: [Synth 8-3886] merging instance 'i_1/hswish1_inst/data_reg_reg[3][7]' (FDRE) to 'i_1/hswish1_inst/data_reg_reg[3][8]'
+INFO: [Synth 8-3886] merging instance 'i_1/hswish1_inst/data_reg_reg[3][8]' (FDRE) to 'i_1/hswish1_inst/data_reg_reg[3][9]'
+INFO: [Synth 8-3886] merging instance 'i_1/hswish1_inst/data_reg_reg[3][9]' (FDRE) to 'i_1/hswish1_inst/data_reg_reg[3][10]'
+INFO: [Synth 8-3886] merging instance 'i_1/hswish1_inst/data_reg_reg[3][10]' (FDRE) to 'i_1/hswish1_inst/data_reg_reg[3][11]'
+INFO: [Synth 8-3886] merging instance 'i_1/hswish1_inst/data_reg_reg[3][11]' (FDRE) to 'i_1/hswish1_inst/data_reg_reg[3][12]'
+INFO: [Synth 8-3886] merging instance 'i_1/hswish1_inst/data_reg_reg[3][12]' (FDRE) to 'i_1/hswish1_inst/data_reg_reg[3][13]'
+INFO: [Synth 8-3886] merging instance 'i_1/hswish1_inst/data_reg_reg[3][13]' (FDRE) to 'i_1/hswish1_inst/data_reg_reg[3][14]'
+INFO: [Synth 8-3886] merging instance 'i_1/hswish1_inst/data_reg_reg[3][14]' (FDRE) to 'i_1/hswish1_inst/data_reg_reg[3][15]'
+INFO: [Synth 8-3886] merging instance 'i_1/hswish1_inst/data_out_reg[7]' (FDRE) to 'i_1/hswish1_inst/data_out_reg[15]'
+INFO: [Synth 8-3886] merging instance 'i_1/hswish1_inst/data_out_reg[8]' (FDRE) to 'i_1/hswish1_inst/data_out_reg[15]'
+INFO: [Synth 8-3886] merging instance 'i_1/hswish1_inst/data_out_reg[9]' (FDRE) to 'i_1/hswish1_inst/data_out_reg[15]'
+INFO: [Synth 8-3886] merging instance 'i_1/hswish1_inst/data_out_reg[10]' (FDRE) to 'i_1/hswish1_inst/data_out_reg[15]'
+INFO: [Synth 8-3886] merging instance 'i_1/hswish1_inst/data_out_reg[11]' (FDRE) to 'i_1/hswish1_inst/data_out_reg[15]'
+INFO: [Synth 8-3886] merging instance 'i_1/hswish1_inst/data_out_reg[12]' (FDRE) to 'i_1/hswish1_inst/data_out_reg[15]'
+INFO: [Synth 8-3886] merging instance 'i_1/hswish1_inst/data_out_reg[13]' (FDRE) to 'i_1/hswish1_inst/data_out_reg[15]'
+INFO: [Synth 8-3886] merging instance 'i_1/hswish1_inst/data_out_reg[14]' (FDRE) to 'i_1/hswish1_inst/data_out_reg[15]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[31][7]' (FDRE) to 'i_1/linear1_input_reg_reg[31][15]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[31][8]' (FDRE) to 'i_1/linear1_input_reg_reg[31][15]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[31][9]' (FDRE) to 'i_1/linear1_input_reg_reg[31][15]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[31][10]' (FDRE) to 'i_1/linear1_input_reg_reg[31][15]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[31][11]' (FDRE) to 'i_1/linear1_input_reg_reg[31][15]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[31][12]' (FDRE) to 'i_1/linear1_input_reg_reg[31][15]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[31][13]' (FDRE) to 'i_1/linear1_input_reg_reg[31][15]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[31][14]' (FDRE) to 'i_1/linear1_input_reg_reg[31][15]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[30][7]' (FDRE) to 'i_1/linear1_input_reg_reg[30][8]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[30][8]' (FDRE) to 'i_1/linear1_input_reg_reg[30][9]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[30][9]' (FDRE) to 'i_1/linear1_input_reg_reg[30][10]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[30][10]' (FDRE) to 'i_1/linear1_input_reg_reg[30][11]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[30][11]' (FDRE) to 'i_1/linear1_input_reg_reg[30][12]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[30][12]' (FDRE) to 'i_1/linear1_input_reg_reg[30][13]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[30][13]' (FDRE) to 'i_1/linear1_input_reg_reg[30][14]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[30][14]' (FDRE) to 'i_1/linear1_input_reg_reg[30][15]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[29][7]' (FDRE) to 'i_1/linear1_input_reg_reg[29][15]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[29][8]' (FDRE) to 'i_1/linear1_input_reg_reg[29][15]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[29][9]' (FDRE) to 'i_1/linear1_input_reg_reg[29][15]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[29][10]' (FDRE) to 'i_1/linear1_input_reg_reg[29][15]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[29][11]' (FDRE) to 'i_1/linear1_input_reg_reg[29][15]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[29][12]' (FDRE) to 'i_1/linear1_input_reg_reg[29][15]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[29][13]' (FDRE) to 'i_1/linear1_input_reg_reg[29][15]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[29][14]' (FDRE) to 'i_1/linear1_input_reg_reg[29][15]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[28][7]' (FDRE) to 'i_1/linear1_input_reg_reg[28][8]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[28][8]' (FDRE) to 'i_1/linear1_input_reg_reg[28][9]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[28][9]' (FDRE) to 'i_1/linear1_input_reg_reg[28][10]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[28][10]' (FDRE) to 'i_1/linear1_input_reg_reg[28][11]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[28][11]' (FDRE) to 'i_1/linear1_input_reg_reg[28][12]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[28][12]' (FDRE) to 'i_1/linear1_input_reg_reg[28][13]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[28][13]' (FDRE) to 'i_1/linear1_input_reg_reg[28][14]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[28][14]' (FDRE) to 'i_1/linear1_input_reg_reg[28][15]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[27][7]' (FDRE) to 'i_1/linear1_input_reg_reg[27][15]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[27][8]' (FDRE) to 'i_1/linear1_input_reg_reg[27][15]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[27][9]' (FDRE) to 'i_1/linear1_input_reg_reg[27][15]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[27][10]' (FDRE) to 'i_1/linear1_input_reg_reg[27][15]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[27][11]' (FDRE) to 'i_1/linear1_input_reg_reg[27][15]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[27][12]' (FDRE) to 'i_1/linear1_input_reg_reg[27][15]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[27][13]' (FDRE) to 'i_1/linear1_input_reg_reg[27][15]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[27][14]' (FDRE) to 'i_1/linear1_input_reg_reg[27][15]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[26][7]' (FDRE) to 'i_1/linear1_input_reg_reg[26][8]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[26][8]' (FDRE) to 'i_1/linear1_input_reg_reg[26][9]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[26][9]' (FDRE) to 'i_1/linear1_input_reg_reg[26][10]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[26][10]' (FDRE) to 'i_1/linear1_input_reg_reg[26][11]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[26][11]' (FDRE) to 'i_1/linear1_input_reg_reg[26][12]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[26][12]' (FDRE) to 'i_1/linear1_input_reg_reg[26][13]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[26][13]' (FDRE) to 'i_1/linear1_input_reg_reg[26][14]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[26][14]' (FDRE) to 'i_1/linear1_input_reg_reg[26][15]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[25][7]' (FDRE) to 'i_1/linear1_input_reg_reg[25][15]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[25][8]' (FDRE) to 'i_1/linear1_input_reg_reg[25][15]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[25][9]' (FDRE) to 'i_1/linear1_input_reg_reg[25][15]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[25][10]' (FDRE) to 'i_1/linear1_input_reg_reg[25][15]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[25][11]' (FDRE) to 'i_1/linear1_input_reg_reg[25][15]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[25][12]' (FDRE) to 'i_1/linear1_input_reg_reg[25][15]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[25][13]' (FDRE) to 'i_1/linear1_input_reg_reg[25][15]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[25][14]' (FDRE) to 'i_1/linear1_input_reg_reg[25][15]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[24][7]' (FDRE) to 'i_1/linear1_input_reg_reg[24][8]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[24][8]' (FDRE) to 'i_1/linear1_input_reg_reg[24][9]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[24][9]' (FDRE) to 'i_1/linear1_input_reg_reg[24][10]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[24][10]' (FDRE) to 'i_1/linear1_input_reg_reg[24][11]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[24][11]' (FDRE) to 'i_1/linear1_input_reg_reg[24][12]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[24][12]' (FDRE) to 'i_1/linear1_input_reg_reg[24][13]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[24][13]' (FDRE) to 'i_1/linear1_input_reg_reg[24][14]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[24][14]' (FDRE) to 'i_1/linear1_input_reg_reg[24][15]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[23][7]' (FDRE) to 'i_1/linear1_input_reg_reg[23][15]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[23][8]' (FDRE) to 'i_1/linear1_input_reg_reg[23][15]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[23][9]' (FDRE) to 'i_1/linear1_input_reg_reg[23][15]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[23][10]' (FDRE) to 'i_1/linear1_input_reg_reg[23][15]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[23][11]' (FDRE) to 'i_1/linear1_input_reg_reg[23][15]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[23][12]' (FDRE) to 'i_1/linear1_input_reg_reg[23][15]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[23][13]' (FDRE) to 'i_1/linear1_input_reg_reg[23][15]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[23][14]' (FDRE) to 'i_1/linear1_input_reg_reg[23][15]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[22][7]' (FDRE) to 'i_1/linear1_input_reg_reg[22][8]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[22][8]' (FDRE) to 'i_1/linear1_input_reg_reg[22][9]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[22][9]' (FDRE) to 'i_1/linear1_input_reg_reg[22][10]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[22][10]' (FDRE) to 'i_1/linear1_input_reg_reg[22][11]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[22][11]' (FDRE) to 'i_1/linear1_input_reg_reg[22][12]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[22][12]' (FDRE) to 'i_1/linear1_input_reg_reg[22][13]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[22][13]' (FDRE) to 'i_1/linear1_input_reg_reg[22][14]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[22][14]' (FDRE) to 'i_1/linear1_input_reg_reg[22][15]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[21][7]' (FDRE) to 'i_1/linear1_input_reg_reg[21][15]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[21][8]' (FDRE) to 'i_1/linear1_input_reg_reg[21][15]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[21][9]' (FDRE) to 'i_1/linear1_input_reg_reg[21][15]'
+INFO: [Synth 8-3886] merging instance 'i_1/linear1_input_reg_reg[21][10]' (FDRE) to 'i_1/linear1_input_reg_reg[21][15]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-4471] merging register 'data_in_reg_reg[15:0]' into 'data_in_reg_reg[15:0]' [C:/Users/AhmedAli/Documents/Final layer/pointwise_conv.sv:76]
+INFO: [Synth 8-4471] merging register 'data_in_reg_reg[15:0]' into 'data_in_reg_reg[15:0]' [C:/Users/AhmedAli/Documents/Final layer/pointwise_conv.sv:76]
+INFO: [Synth 8-4471] merging register 'data_in_reg_reg[15:0]' into 'data_in_reg_reg[15:0]' [C:/Users/AhmedAli/Documents/Final layer/pointwise_conv.sv:76]
+INFO: [Synth 8-4471] merging register 'data_in_reg_reg[15:0]' into 'data_in_reg_reg[15:0]' [C:/Users/AhmedAli/Documents/Final layer/pointwise_conv.sv:76]
+INFO: [Synth 8-4471] merging register 'data_in_reg_reg[15:0]' into 'data_in_reg_reg[15:0]' [C:/Users/AhmedAli/Documents/Final layer/pointwise_conv.sv:76]
+INFO: [Synth 8-4471] merging register 'data_in_reg_reg[15:0]' into 'data_in_reg_reg[15:0]' [C:/Users/AhmedAli/Documents/Final layer/pointwise_conv.sv:76]
+INFO: [Synth 8-4471] merging register 'data_in_reg_reg[15:0]' into 'data_in_reg_reg[15:0]' [C:/Users/AhmedAli/Documents/Final layer/pointwise_conv.sv:76]
+INFO: [Synth 8-4471] merging register 'data_in_reg_reg[15:0]' into 'data_in_reg_reg[15:0]' [C:/Users/AhmedAli/Documents/Final layer/pointwise_conv.sv:76]
+INFO: [Synth 8-4471] merging register 'data_in_reg_reg[15:0]' into 'data_in_reg_reg[15:0]' [C:/Users/AhmedAli/Documents/Final layer/pointwise_conv.sv:76]
+INFO: [Synth 8-4471] merging register 'data_in_reg_reg[15:0]' into 'data_in_reg_reg[15:0]' [C:/Users/AhmedAli/Documents/Final layer/pointwise_conv.sv:76]
+INFO: [Synth 8-4471] merging register 'data_in_reg_reg[15:0]' into 'data_in_reg_reg[15:0]' [C:/Users/AhmedAli/Documents/Final layer/pointwise_conv.sv:76]
+INFO: [Synth 8-4471] merging register 'data_in_reg_reg[15:0]' into 'data_in_reg_reg[15:0]' [C:/Users/AhmedAli/Documents/Final layer/pointwise_conv.sv:76]
+INFO: [Synth 8-4471] merging register 'data_in_reg_reg[15:0]' into 'data_in_reg_reg[15:0]' [C:/Users/AhmedAli/Documents/Final layer/pointwise_conv.sv:76]
+INFO: [Synth 8-4471] merging register 'data_in_reg_reg[15:0]' into 'data_in_reg_reg[15:0]' [C:/Users/AhmedAli/Documents/Final layer/pointwise_conv.sv:76]
+INFO: [Synth 8-4471] merging register 'data_in_reg_reg[15:0]' into 'data_in_reg_reg[15:0]' [C:/Users/AhmedAli/Documents/Final layer/pointwise_conv.sv:76]
+INFO: [Synth 8-4471] merging register 'data_in_reg_reg[15:0]' into 'data_in_reg_reg[15:0]' [C:/Users/AhmedAli/Documents/Final layer/pointwise_conv.sv:76]
+INFO: [Synth 8-4471] merging register 'data_in_reg_reg[15:0]' into 'data_in_reg_reg[15:0]' [C:/Users/AhmedAli/Documents/Final layer/pointwise_conv.sv:76]
+INFO: [Synth 8-4471] merging register 'data_in_reg_reg[15:0]' into 'data_in_reg_reg[15:0]' [C:/Users/AhmedAli/Documents/Final layer/pointwise_conv.sv:76]
+INFO: [Synth 8-4471] merging register 'data_in_reg_reg[15:0]' into 'data_in_reg_reg[15:0]' [C:/Users/AhmedAli/Documents/Final layer/pointwise_conv.sv:76]
+INFO: [Synth 8-4471] merging register 'data_in_reg_reg[15:0]' into 'data_in_reg_reg[15:0]' [C:/Users/AhmedAli/Documents/Final layer/pointwise_conv.sv:76]
+INFO: [Synth 8-4471] merging register 'data_in_reg_reg[15:0]' into 'data_in_reg_reg[15:0]' [C:/Users/AhmedAli/Documents/Final layer/pointwise_conv.sv:76]
+INFO: [Synth 8-4471] merging register 'data_in_reg_reg[15:0]' into 'data_in_reg_reg[15:0]' [C:/Users/AhmedAli/Documents/Final layer/pointwise_conv.sv:76]
+INFO: [Synth 8-4471] merging register 'data_in_reg_reg[15:0]' into 'data_in_reg_reg[15:0]' [C:/Users/AhmedAli/Documents/Final layer/pointwise_conv.sv:76]
+INFO: [Synth 8-4471] merging register 'data_in_reg_reg[15:0]' into 'data_in_reg_reg[15:0]' [C:/Users/AhmedAli/Documents/Final layer/pointwise_conv.sv:76]
+INFO: [Synth 8-4471] merging register 'data_in_reg_reg[15:0]' into 'data_in_reg_reg[15:0]' [C:/Users/AhmedAli/Documents/Final layer/pointwise_conv.sv:76]
+INFO: [Synth 8-4471] merging register 'data_in_reg_reg[15:0]' into 'data_in_reg_reg[15:0]' [C:/Users/AhmedAli/Documents/Final layer/pointwise_conv.sv:76]
+INFO: [Synth 8-4471] merging register 'data_in_reg_reg[15:0]' into 'data_in_reg_reg[15:0]' [C:/Users/AhmedAli/Documents/Final layer/pointwise_conv.sv:76]
+INFO: [Synth 8-4471] merging register 'data_in_reg_reg[15:0]' into 'data_in_reg_reg[15:0]' [C:/Users/AhmedAli/Documents/Final layer/pointwise_conv.sv:76]
+INFO: [Synth 8-4471] merging register 'data_in_reg_reg[15:0]' into 'data_in_reg_reg[15:0]' [C:/Users/AhmedAli/Documents/Final layer/pointwise_conv.sv:76]
+INFO: [Synth 8-4471] merging register 'data_in_reg_reg[15:0]' into 'data_in_reg_reg[15:0]' [C:/Users/AhmedAli/Documents/Final layer/pointwise_conv.sv:76]
+INFO: [Synth 8-4471] merging register 'data_in_reg_reg[15:0]' into 'data_in_reg_reg[15:0]' [C:/Users/AhmedAli/Documents/Final layer/pointwise_conv.sv:76]
+DSP Report: Generating DSP p_1_out, operation Mode is: C'+A2*B.
+DSP Report: register accum_reg[0] is absorbed into DSP p_1_out.
+DSP Report: register data_in_reg_reg is absorbed into DSP p_1_out.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: C'+A2*B.
+DSP Report: register accum_reg[1] is absorbed into DSP p_1_out.
+DSP Report: register data_in_reg_reg is absorbed into DSP p_1_out.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: C'+A2*B.
+DSP Report: register accum_reg[2] is absorbed into DSP p_1_out.
+DSP Report: register data_in_reg_reg is absorbed into DSP p_1_out.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: C'+A2*B.
+DSP Report: register accum_reg[3] is absorbed into DSP p_1_out.
+DSP Report: register data_in_reg_reg is absorbed into DSP p_1_out.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: C'+A2*B.
+DSP Report: register accum_reg[4] is absorbed into DSP p_1_out.
+DSP Report: register data_in_reg_reg is absorbed into DSP p_1_out.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: C'+A2*B.
+DSP Report: register accum_reg[5] is absorbed into DSP p_1_out.
+DSP Report: register data_in_reg_reg is absorbed into DSP p_1_out.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: C'+A2*B.
+DSP Report: register accum_reg[6] is absorbed into DSP p_1_out.
+DSP Report: register data_in_reg_reg is absorbed into DSP p_1_out.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: C'+A2*B.
+DSP Report: register accum_reg[7] is absorbed into DSP p_1_out.
+DSP Report: register data_in_reg_reg is absorbed into DSP p_1_out.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: C'+A2*B.
+DSP Report: register accum_reg[8] is absorbed into DSP p_1_out.
+DSP Report: register data_in_reg_reg is absorbed into DSP p_1_out.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: C'+A2*B.
+DSP Report: register accum_reg[9] is absorbed into DSP p_1_out.
+DSP Report: register data_in_reg_reg is absorbed into DSP p_1_out.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: C'+A2*B.
+DSP Report: register accum_reg[10] is absorbed into DSP p_1_out.
+DSP Report: register data_in_reg_reg is absorbed into DSP p_1_out.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: C'+A2*B.
+DSP Report: register accum_reg[11] is absorbed into DSP p_1_out.
+DSP Report: register data_in_reg_reg is absorbed into DSP p_1_out.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: C'+A2*B.
+DSP Report: register accum_reg[12] is absorbed into DSP p_1_out.
+DSP Report: register data_in_reg_reg is absorbed into DSP p_1_out.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: C'+A2*B.
+DSP Report: register accum_reg[13] is absorbed into DSP p_1_out.
+DSP Report: register data_in_reg_reg is absorbed into DSP p_1_out.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: C'+A2*B.
+DSP Report: register accum_reg[14] is absorbed into DSP p_1_out.
+DSP Report: register data_in_reg_reg is absorbed into DSP p_1_out.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: C'+A2*B.
+DSP Report: register accum_reg[15] is absorbed into DSP p_1_out.
+DSP Report: register data_in_reg_reg is absorbed into DSP p_1_out.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: C'+A2*B.
+DSP Report: register accum_reg[16] is absorbed into DSP p_1_out.
+DSP Report: register data_in_reg_reg is absorbed into DSP p_1_out.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: C'+A2*B.
+DSP Report: register accum_reg[17] is absorbed into DSP p_1_out.
+DSP Report: register data_in_reg_reg is absorbed into DSP p_1_out.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: C'+A2*B.
+DSP Report: register accum_reg[18] is absorbed into DSP p_1_out.
+DSP Report: register data_in_reg_reg is absorbed into DSP p_1_out.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: C'+A2*B.
+DSP Report: register accum_reg[19] is absorbed into DSP p_1_out.
+DSP Report: register data_in_reg_reg is absorbed into DSP p_1_out.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: C'+A2*B.
+DSP Report: register accum_reg[20] is absorbed into DSP p_1_out.
+DSP Report: register data_in_reg_reg is absorbed into DSP p_1_out.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: C'+A2*B.
+DSP Report: register accum_reg[21] is absorbed into DSP p_1_out.
+DSP Report: register data_in_reg_reg is absorbed into DSP p_1_out.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: C'+A2*B.
+DSP Report: register accum_reg[22] is absorbed into DSP p_1_out.
+DSP Report: register data_in_reg_reg is absorbed into DSP p_1_out.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: C'+A2*B.
+DSP Report: register accum_reg[23] is absorbed into DSP p_1_out.
+DSP Report: register data_in_reg_reg is absorbed into DSP p_1_out.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: C'+A2*B.
+DSP Report: register accum_reg[24] is absorbed into DSP p_1_out.
+DSP Report: register data_in_reg_reg is absorbed into DSP p_1_out.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: C'+A2*B.
+DSP Report: register accum_reg[25] is absorbed into DSP p_1_out.
+DSP Report: register data_in_reg_reg is absorbed into DSP p_1_out.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: C'+A2*B.
+DSP Report: register accum_reg[26] is absorbed into DSP p_1_out.
+DSP Report: register data_in_reg_reg is absorbed into DSP p_1_out.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: C'+A2*B.
+DSP Report: register accum_reg[27] is absorbed into DSP p_1_out.
+DSP Report: register data_in_reg_reg is absorbed into DSP p_1_out.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: C'+A2*B.
+DSP Report: register accum_reg[28] is absorbed into DSP p_1_out.
+DSP Report: register data_in_reg_reg is absorbed into DSP p_1_out.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: C'+A2*B.
+DSP Report: register accum_reg[29] is absorbed into DSP p_1_out.
+DSP Report: register data_in_reg_reg is absorbed into DSP p_1_out.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: C'+A2*B.
+DSP Report: register data_in_reg_reg is absorbed into DSP p_1_out.
+DSP Report: register accum_reg[30] is absorbed into DSP p_1_out.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: C'+A2*B.
+DSP Report: register data_in_reg_reg is absorbed into DSP p_1_out.
+DSP Report: register accum_reg[31] is absorbed into DSP p_1_out.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP mult_res, operation Mode is: A*B.
+DSP Report: operator mult_res is absorbed into DSP mult_res.
+INFO: [Synth 8-4471] merging register 'accum_reg[44:0]' into 'accum_reg[44:0]' [C:/Users/AhmedAli/Documents/Final layer/linear.sv:43]
+INFO: [Synth 8-4471] merging register 'out_f_count_reg[4:0]' into 'out_f_count_reg[4:0]' [C:/Users/AhmedAli/Documents/Final layer/linear.sv:42]
+INFO: [Synth 8-4471] merging register 'in_f_count_reg[6:0]' into 'in_f_count_reg[6:0]' [C:/Users/AhmedAli/Documents/Final layer/linear.sv:41]
+DSP Report: Generating DSP accum0, operation Mode is: C'+A*B.
+DSP Report: register accum_reg is absorbed into DSP accum0.
+DSP Report: operator accum0 is absorbed into DSP accum0.
+DSP Report: operator accum1 is absorbed into DSP accum0.
+INFO: [Synth 8-4471] merging register 'hswish2_inst/data_reg_reg[0][15:0]' into 'hswish2_inst/data_reg_reg[0][15:0]' [C:/Users/AhmedAli/Documents/Final layer/hswish.sv:28]
+DSP Report: Generating DSP hswish2_inst/product, operation Mode is: A''*B.
+DSP Report: register hswish2_inst/data_reg_reg[0] is absorbed into DSP hswish2_inst/product.
+DSP Report: register hswish2_inst/data_reg_reg[1] is absorbed into DSP hswish2_inst/product.
+DSP Report: operator hswish2_inst/product is absorbed into DSP hswish2_inst/product.
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:20 ; elapsed = 00:01:43 . Memory (MB): peak = 1289.473 ; gain = 815.180
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping	Report (see note below)
++----------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name           | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++----------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|final_layer_top       | C'+A*B      | 16     | 16     | 45     | -      | 45     | 0    | 0    | 1    | -    | -     | 0    | 0    | 
+|batchnorm             | (A''*B2)'   | 16     | 16     | -      | -      | 32     | 2    | 1    | -    | -    | -     | 1    | 0    | 
+|final_layer_top       | A''*B       | 16     | 16     | -      | -      | 32     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|pointwise_conv__GB4   | C'+A2*B     | 16     | 16     | 36     | -      | 36     | 1    | 0    | 1    | -    | -     | 0    | 0    | 
+|pointwise_conv__GB4   | C'+A2*B     | 16     | 16     | 36     | -      | 36     | 1    | 0    | 1    | -    | -     | 0    | 0    | 
+|pointwise_conv__GB4   | C'+A2*B     | 16     | 16     | 36     | -      | 36     | 1    | 0    | 1    | -    | -     | 0    | 0    | 
+|pointwise_conv__GB4   | C'+A2*B     | 16     | 16     | 36     | -      | 36     | 1    | 0    | 1    | -    | -     | 0    | 0    | 
+|pointwise_conv__GB4   | C'+A2*B     | 16     | 16     | 36     | -      | 36     | 1    | 0    | 1    | -    | -     | 0    | 0    | 
+|pointwise_conv__GB4   | C'+A2*B     | 16     | 16     | 36     | -      | 36     | 1    | 0    | 1    | -    | -     | 0    | 0    | 
+|pointwise_conv__GB4   | C'+A2*B     | 16     | 16     | 36     | -      | 36     | 1    | 0    | 1    | -    | -     | 0    | 0    | 
+|pointwise_conv__GB4   | C'+A2*B     | 16     | 16     | 36     | -      | 36     | 1    | 0    | 1    | -    | -     | 0    | 0    | 
+|pointwise_conv__GB4   | C'+A2*B     | 16     | 16     | 36     | -      | 36     | 1    | 0    | 1    | -    | -     | 0    | 0    | 
+|pointwise_conv__GB4   | C'+A2*B     | 16     | 16     | 36     | -      | 36     | 1    | 0    | 1    | -    | -     | 0    | 0    | 
+|pointwise_conv__GB4   | C'+A2*B     | 16     | 16     | 36     | -      | 36     | 1    | 0    | 1    | -    | -     | 0    | 0    | 
+|pointwise_conv__GB4   | C'+A2*B     | 16     | 16     | 36     | -      | 36     | 1    | 0    | 1    | -    | -     | 0    | 0    | 
+|pointwise_conv__GB4   | C'+A2*B     | 16     | 16     | 36     | -      | 36     | 1    | 0    | 1    | -    | -     | 0    | 0    | 
+|pointwise_conv__GB4   | C'+A2*B     | 16     | 16     | 36     | -      | 36     | 1    | 0    | 1    | -    | -     | 0    | 0    | 
+|pointwise_conv__GB4   | C'+A2*B     | 16     | 16     | 36     | -      | 36     | 1    | 0    | 1    | -    | -     | 0    | 0    | 
+|pointwise_conv__GB4   | C'+A2*B     | 16     | 16     | 36     | -      | 36     | 1    | 0    | 1    | -    | -     | 0    | 0    | 
+|pointwise_conv__GB4   | C'+A2*B     | 16     | 16     | 36     | -      | 36     | 1    | 0    | 1    | -    | -     | 0    | 0    | 
+|pointwise_conv__GB4   | C'+A2*B     | 16     | 16     | 36     | -      | 36     | 1    | 0    | 1    | -    | -     | 0    | 0    | 
+|pointwise_conv__GB4   | C'+A2*B     | 16     | 16     | 36     | -      | 36     | 1    | 0    | 1    | -    | -     | 0    | 0    | 
+|pointwise_conv__GB4   | C'+A2*B     | 16     | 16     | 36     | -      | 36     | 1    | 0    | 1    | -    | -     | 0    | 0    | 
+|pointwise_conv__GB4   | C'+A2*B     | 16     | 16     | 36     | -      | 36     | 1    | 0    | 1    | -    | -     | 0    | 0    | 
+|pointwise_conv__GB4   | C'+A2*B     | 16     | 16     | 36     | -      | 36     | 1    | 0    | 1    | -    | -     | 0    | 0    | 
+|pointwise_conv__GB4   | C'+A2*B     | 16     | 16     | 36     | -      | 36     | 1    | 0    | 1    | -    | -     | 0    | 0    | 
+|pointwise_conv__GB4   | C'+A2*B     | 16     | 16     | 36     | -      | 36     | 1    | 0    | 1    | -    | -     | 0    | 0    | 
+|pointwise_conv__GB4   | C'+A2*B     | 16     | 16     | 36     | -      | 36     | 1    | 0    | 1    | -    | -     | 0    | 0    | 
+|pointwise_conv__GB4   | C'+A2*B     | 16     | 16     | 36     | -      | 36     | 1    | 0    | 1    | -    | -     | 0    | 0    | 
+|pointwise_conv__GB4   | C'+A2*B     | 16     | 16     | 36     | -      | 36     | 1    | 0    | 1    | -    | -     | 0    | 0    | 
+|pointwise_conv__GB4   | C'+A2*B     | 16     | 16     | 36     | -      | 36     | 1    | 0    | 1    | -    | -     | 0    | 0    | 
+|pointwise_conv__GB4   | C'+A2*B     | 16     | 16     | 36     | -      | 36     | 1    | 0    | 1    | -    | -     | 0    | 0    | 
+|pointwise_conv__GB4   | C'+A2*B     | 16     | 16     | 36     | -      | 36     | 1    | 0    | 1    | -    | -     | 0    | 0    | 
+|pointwise_conv        | C'+A2*B     | 16     | 16     | 36     | -      | 36     | 1    | 0    | 1    | -    | -     | 0    | 0    | 
+|pointwise_conv        | C'+A2*B     | 16     | 16     | 36     | -      | 36     | 1    | 0    | 1    | -    | -     | 0    | 0    | 
+|batchnorm1d           | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|linear                | C'+A*B      | 16     | 16     | 45     | -      | 45     | 0    | 0    | 1    | -    | -     | 0    | 0    | 
+|final_layer_top__GCB0 | A''*B       | 16     | 16     | -      | -      | 32     | 2    | 0    | -    | -    | -     | 0    | 0    | 
++----------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+----------------------+------------+----------+
+|      |RTL Partition         |Replication |Instances |
++------+----------------------+------------+----------+
+|1     |pointwise_conv__GB0   |           1|       720|
+|2     |pointwise_conv__GB1   |           1|      3786|
+|3     |pointwise_conv__GB2   |           1|       720|
+|4     |pointwise_conv__GB3   |           1|       480|
+|5     |pointwise_conv__GB4   |           1|     14054|
+|6     |pointwise_conv__GB5   |           1|      5629|
+|7     |pointwise_conv__GB6   |           1|       720|
+|8     |pointwise_conv__GB7   |           1|       480|
+|9     |pointwise_conv__GB8   |           1|        37|
+|10    |pointwise_conv__GB9   |           1|       960|
+|11    |pointwise_conv__GB10  |           1|       480|
+|12    |pointwise_conv__GB11  |           1|       960|
+|13    |pointwise_conv__GB12  |           1|       480|
+|14    |pointwise_conv__GB13  |           1|       569|
+|15    |muxpart__596_linear   |           1|     32752|
+|16    |linear__GB1           |           1|      3371|
+|17    |final_layer_top__GCB0 |           1|     24884|
+|18    |final_layer_top__GCB1 |           1|      5090|
++------+----------------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:23 ; elapsed = 00:01:47 . Memory (MB): peak = 1289.473 ; gain = 815.180
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+----------------------+------------+----------+
+|      |RTL Partition         |Replication |Instances |
++------+----------------------+------------+----------+
+|1     |pointwise_conv__GB0   |           1|       720|
+|2     |pointwise_conv__GB1   |           1|      3786|
+|3     |pointwise_conv__GB2   |           1|       720|
+|4     |pointwise_conv__GB3   |           1|       480|
+|5     |pointwise_conv__GB4   |           1|     14054|
+|6     |pointwise_conv__GB5   |           1|      5629|
+|7     |pointwise_conv__GB6   |           1|       720|
+|8     |pointwise_conv__GB7   |           1|       480|
+|9     |pointwise_conv__GB8   |           1|        37|
+|10    |pointwise_conv__GB9   |           1|       960|
+|11    |pointwise_conv__GB10  |           1|       480|
+|12    |pointwise_conv__GB11  |           1|       960|
+|13    |pointwise_conv__GB12  |           1|       480|
+|14    |pointwise_conv__GB13  |           1|       566|
+|15    |muxpart__596_linear   |           1|     32752|
+|16    |linear__GB1           |           1|      3371|
+|17    |final_layer_top__GCB0 |           1|     24885|
+|18    |final_layer_top__GCB1 |           1|      5090|
++------+----------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:32 ; elapsed = 00:01:57 . Memory (MB): peak = 1289.473 ; gain = 815.180
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+----------------------+------------+----------+
+|      |RTL Partition         |Replication |Instances |
++------+----------------------+------------+----------+
+|1     |pointwise_conv__GB0   |           1|       336|
+|2     |pointwise_conv__GB1   |           1|      3490|
+|3     |pointwise_conv__GB2   |           1|       336|
+|4     |pointwise_conv__GB3   |           1|       224|
+|5     |pointwise_conv__GB4   |           1|      7469|
+|6     |pointwise_conv__GB5   |           1|      5202|
+|7     |pointwise_conv__GB6   |           1|       336|
+|8     |pointwise_conv__GB7   |           1|       224|
+|9     |pointwise_conv__GB8   |           1|        26|
+|10    |pointwise_conv__GB9   |           1|       448|
+|11    |pointwise_conv__GB10  |           1|       224|
+|12    |pointwise_conv__GB11  |           1|       448|
+|13    |pointwise_conv__GB12  |           1|       224|
+|14    |pointwise_conv__GB13  |           1|       286|
+|15    |muxpart__596_linear   |           1|     15280|
+|16    |linear__GB1           |           1|      2186|
+|17    |final_layer_top__GCB0 |           1|     13275|
+|18    |final_layer_top__GCB1 |           1|      2951|
++------+----------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:45 ; elapsed = 00:02:10 . Memory (MB): peak = 1289.473 ; gain = 815.180
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:45 ; elapsed = 00:02:11 . Memory (MB): peak = 1289.473 ; gain = 815.180
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:50 ; elapsed = 00:02:16 . Memory (MB): peak = 1289.473 ; gain = 815.180
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:51 ; elapsed = 00:02:17 . Memory (MB): peak = 1289.473 ; gain = 815.180
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:52 ; elapsed = 00:02:17 . Memory (MB): peak = 1289.473 ; gain = 815.180
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:52 ; elapsed = 00:02:18 . Memory (MB): peak = 1289.473 ; gain = 815.180
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++----------------+----------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name     | RTL Name                   | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++----------------+----------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|final_layer_top | hswish2_inst/valid_out_reg | 5      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|final_layer_top | hswish1_inst/valid_out_reg | 5      | 1     | YES          | NO                 | YES               | 1      | 0       | 
++----------------+----------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG    |     1|
+|2     |CARRY4  |   126|
+|3     |DSP48E1 |    38|
+|4     |LUT1    |    92|
+|5     |LUT2    |  1878|
+|6     |LUT3    |   272|
+|7     |LUT4    |   317|
+|8     |LUT5    |   551|
+|9     |LUT6    | 20282|
+|10    |MUXF7   |  9622|
+|11    |MUXF8   |  4532|
+|12    |SRL16E  |     2|
+|13    |FDRE    | 15898|
+|14    |FDSE    |    34|
+|15    |IBUF    | 60676|
+|16    |OBUF    |   241|
++------+--------+------+
+
+Report Instance Areas: 
++------+---------------+-----------------------+-------+
+|      |Instance       |Module                 |Cells  |
++------+---------------+-----------------------+-------+
+|1     |top            |                       | 114562|
+|2     |  bn1_inst     |batchnorm              |   2126|
+|3     |  bn2_inst     |batchnorm1d            |   4034|
+|4     |  hswish1_inst |hswish                 |    361|
+|5     |  hswish2_inst |hswish_0               |    406|
+|6     |  linear1_inst |linear                 |  17612|
+|7     |  linear2_inst |linear__parameterized0 |   8638|
+|8     |  pw_conv_inst |pointwise_conv         |  19566|
++------+---------------+-----------------------+-------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:52 ; elapsed = 00:02:18 . Memory (MB): peak = 1289.473 ; gain = 815.180
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 16 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:53 ; elapsed = 00:02:19 . Memory (MB): peak = 1289.473 ; gain = 815.180
+Synthesis Optimization Complete : Time (s): cpu = 00:01:53 ; elapsed = 00:02:19 . Memory (MB): peak = 1289.473 ; gain = 815.180
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1297.746 ; gain = 1.051
+INFO: [Netlist 29-17] Analyzing 14318 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 1557.012 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+179 Infos, 16 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:17 ; elapsed = 00:02:44 . Memory (MB): peak = 1557.012 ; gain = 1107.570
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 1557.012 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/AhmedAli/Documents/Final layer/Final Layer/Final Layer.runs/synth_1/final_layer_top.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:15 ; elapsed = 00:00:13 . Memory (MB): peak = 1557.012 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file final_layer_top_utilization_synth.rpt -pb final_layer_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Jul  2 19:58:15 2025...

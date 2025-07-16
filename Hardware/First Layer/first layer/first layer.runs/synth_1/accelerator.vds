@@ -1,0 +1,71 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2700185 on Thu Oct 24 18:46:05 MDT 2019
+# IP Build 2699827 on Thu Oct 24 21:16:38 MDT 2019
+# Start of session at: Mon Jul  7 20:47:41 2025
+# Process ID: 8648
+# Current directory: C:/Users/AhmedAli/Documents/First Block_tested/First Block/First Block/first layer/first layer.runs/synth_1
+# Command line: vivado.exe -log accelerator.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source accelerator.tcl
+# Log file: C:/Users/AhmedAli/Documents/First Block_tested/First Block/First Block/first layer/first layer.runs/synth_1/accelerator.vds
+# Journal file: C:/Users/AhmedAli/Documents/First Block_tested/First Block/First Block/first layer/first layer.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source accelerator.tcl -notrace
+Command: synth_design -top accelerator -part xc7z020clg400-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 13844 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 713.043 ; gain = 237.523
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'accelerator' [C:/Users/AhmedAli/Documents/First Block_tested/First Block/First Block/accelerator.sv:1]
+	Parameter N bound to: 16 - type: integer 
+	Parameter Q bound to: 8 - type: integer 
+	Parameter n bound to: 224 - type: integer 
+	Parameter k bound to: 3 - type: integer 
+	Parameter s bound to: 2 - type: integer 
+	Parameter p bound to: 1 - type: integer 
+	Parameter IN_CHANNELS bound to: 1 - type: integer 
+	Parameter OUT_CHANNELS bound to: 16 - type: integer 
+	Parameter IDLE bound to: 2'b00 
+	Parameter LOAD_MEM bound to: 2'b01 
+	Parameter CONV bound to: 2'b10 
+	Parameter FINISH bound to: 2'b11 
+	Parameter FEATURE_SIZE bound to: 112 - type: integer 
+	Parameter expected_outputs bound to: 20'b00110001000000000000 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [C:/Users/AhmedAli/Documents/First Block_tested/First Block/First Block/accelerator.sv:47]
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [C:/Users/AhmedAli/Documents/First Block_tested/First Block/First Block/accelerator.sv:48]
+INFO: [Synth 8-226] default block is never used [C:/Users/AhmedAli/Documents/First Block_tested/First Block/First Block/accelerator.sv:193]
+INFO: [Synth 8-6157] synthesizing module 'convolver' [C:/Users/AhmedAli/Documents/First Block_tested/First Block/First Block/convolver.sv:1]
+	Parameter N bound to: 16 - type: integer 
+	Parameter Q bound to: 8 - type: integer 
+	Parameter n bound to: 224 - type: integer 
+	Parameter k bound to: 3 - type: integer 
+	Parameter s bound to: 2 - type: integer 
+	Parameter p bound to: 1 - type: integer 
+	Parameter IN_CHANNELS bound to: 1 - type: integer 
+	Parameter OUT_CHANNELS bound to: 16 - type: integer 
+	Parameter NUM_MAC bound to: 4 - type: integer 
+	Parameter n_padded bound to: 226 - type: integer 
+	Parameter o bound to: 112 - type: integer 
+	Parameter IDLE bound to: 3'b000 
+	Parameter LOAD bound to: 3'b001 
+	Parameter PAD bound to: 3'b010 
+	Parameter COMPUTE bound to: 3'b011 
+	Parameter NEXT_CHANNEL bound to: 3'b100 
+	Parameter DONE bound to: 3'b101 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [C:/Users/AhmedAli/Documents/First Block_tested/First Block/First Block/convolver.sv:30]
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [C:/Users/AhmedAli/Documents/First Block_tested/First Block/First Block/convolver.sv:44]
+ERROR: [Synth 8-524] part-select [4:0] out of range of prefix 'channel_counter' [C:/Users/AhmedAli/Documents/First Block_tested/First Block/First Block/convolver.sv:266]
+ERROR: [Synth 8-6156] failed synthesizing module 'convolver' [C:/Users/AhmedAli/Documents/First Block_tested/First Block/First Block/convolver.sv:1]
+ERROR: [Synth 8-6156] failed synthesizing module 'accelerator' [C:/Users/AhmedAli/Documents/First Block_tested/First Block/First Block/accelerator.sv:1]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 786.297 ; gain = 310.777
+---------------------------------------------------------------------------------
+synthesize failed
+INFO: [Common 17-83] Releasing license: Synthesis
+9 Infos, 0 Warnings, 0 Critical Warnings and 4 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Vivado Synthesis failed
+INFO: [Common 17-206] Exiting Vivado at Mon Jul  7 20:47:54 2025...

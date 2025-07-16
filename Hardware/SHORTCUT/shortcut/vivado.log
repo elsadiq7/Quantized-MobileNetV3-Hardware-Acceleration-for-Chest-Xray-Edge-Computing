@@ -1,0 +1,278 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Fri Jul 11 22:37:31 2025
+# Process ID: 2688
+# Current directory: C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/shortcut
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent20444 C:\intelFPGA\Final_Project\BOTTEL NECK\SHORTCUT\shortcut\shortcut.xpr
+# Log file: C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/shortcut/vivado.log
+# Journal file: C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/shortcut\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/shortcut/shortcut.xpr}
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado_2019.2/Vivado/2019.2/data/ip'.
+open_project: Time (s): cpu = 00:00:28 ; elapsed = 00:00:12 . Memory (MB): peak = 867.746 ; gain = 218.133
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7z020iclg400-1L
+Top: shortcut
+INFO: [Device 21-403] Loading part xc7z020iclg400-1L
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1446.461 ; gain = 217.543
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'shortcut' [C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/shortcut.sv:1]
+	Parameter N bound to: 16 - type: integer 
+	Parameter Q bound to: 8 - type: integer 
+	Parameter IN_CHANNELS bound to: 40 - type: integer 
+	Parameter OUT_CHANNELS bound to: 48 - type: integer 
+	Parameter FEATURE_SIZE bound to: 14 - type: integer 
+	Parameter SPATIAL_PARALLEL bound to: 2 - type: integer 
+	Parameter CHANNEL_PARALLEL bound to: 4 - type: integer 
+	Parameter TOTAL_PIXEL_GROUPS bound to: 98 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'pointwise_conv' [C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/pointwise_conv.sv:1]
+	Parameter N bound to: 16 - type: integer 
+	Parameter Q bound to: 8 - type: integer 
+	Parameter IN_CHANNELS bound to: 40 - type: integer 
+	Parameter OUT_CHANNELS bound to: 48 - type: integer 
+	Parameter FEATURE_SIZE bound to: 14 - type: integer 
+	Parameter PARALLELISM bound to: 4 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/pointwise_conv.sv:29]
+INFO: [Synth 8-6155] done synthesizing module 'pointwise_conv' (1#1) [C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/pointwise_conv.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'batchnorm' [C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/batchnorm.sv:1]
+	Parameter WIDTH bound to: 16 - type: integer 
+	Parameter FRAC bound to: 8 - type: integer 
+	Parameter CHANNELS bound to: 48 - type: integer 
+	Parameter EPSILON bound to: 16'sb0000000000010000 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/batchnorm.sv:26]
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/batchnorm.sv:27]
+WARNING: [Synth 8-6014] Unused sequential element x_reg_reg[2] was removed.  [C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/batchnorm.sv:89]
+WARNING: [Synth 8-6014] Unused sequential element x_reg_reg[3] was removed.  [C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/batchnorm.sv:89]
+WARNING: [Synth 8-6014] Unused sequential element gamma_reg_reg[2] was removed.  [C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/batchnorm.sv:94]
+WARNING: [Synth 8-6014] Unused sequential element scaled_extended_reg was removed.  [C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/batchnorm.sv:102]
+INFO: [Synth 8-6155] done synthesizing module 'batchnorm' (2#1) [C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/batchnorm.sv:1]
+INFO: [Synth 8-251] Transitioning to COMPLETING: input_finished=1'b1, output_count=x, target=73 [C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/shortcut.sv:106]
+INFO: [Synth 8-251] PROCESSING: input_finished=1'bx, output_count=x/98, input_count=x [C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/shortcut.sv:112]
+WARNING: [Synth 8-639] system function call 'time' not supported [C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/shortcut.sv:124]
+INFO: [Synth 8-251] Transitioning to DONE_STATE at time 1'b0, completion_counter=x [C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/shortcut.sv:123]
+WARNING: [Synth 8-639] system function call 'time' not supported [C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/shortcut.sv:183]
+INFO: [Synth 8-251] Input finished at time 1'b0, input_count=x, TOTAL_PIXEL_GROUPS=98 [C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/shortcut.sv:182]
+WARNING: [Synth 8-639] system function call 'time' not supported [C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/shortcut.sv:192]
+INFO: [Synth 8-251] Input finished by timeout at time 1'b0, no_input_counter=x [C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/shortcut.sv:191]
+WARNING: [Synth 8-639] system function call 'time' not supported [C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/shortcut.sv:214]
+INFO: [Synth 8-251] Entering COMPLETING state at time 1'b0 [C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/shortcut.sv:214]
+INFO: [Synth 8-251] Input finished: 1'bx, Output count: x/98 [C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/shortcut.sv:215]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/shortcut.sv:157]
+INFO: [Synth 8-6155] done synthesizing module 'shortcut' (3#1) [C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/shortcut.sv:1]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1655.332 ; gain = 426.414
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:28 . Memory (MB): peak = 1655.332 ; gain = 426.414
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:29 ; elapsed = 00:00:28 . Memory (MB): peak = 1655.332 ; gain = 426.414
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1671.586 ; gain = 3.637
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-140] Inserted 8 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-141] Inserted 8 OBUFs to IO ports without IO buffers.
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 2022.164 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:01:12 ; elapsed = 00:00:54 . Memory (MB): peak = 2080.508 ; gain = 851.590
+23 Infos, 8 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:39 ; elapsed = 00:01:23 . Memory (MB): peak = 2080.508 ; gain = 1149.348
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2085.707 ; gain = 5.199
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'shortcut' [C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/shortcut.sv:1]
+	Parameter N bound to: 16 - type: integer 
+	Parameter Q bound to: 8 - type: integer 
+	Parameter IN_CHANNELS bound to: 40 - type: integer 
+	Parameter OUT_CHANNELS bound to: 48 - type: integer 
+	Parameter FEATURE_SIZE bound to: 14 - type: integer 
+	Parameter SPATIAL_PARALLEL bound to: 2 - type: integer 
+	Parameter CHANNEL_PARALLEL bound to: 4 - type: integer 
+	Parameter TOTAL_PIXEL_GROUPS bound to: 98 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'pointwise_conv' [C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/pointwise_conexit
+INFO: [Common 17-206] Exiting Vivado at Fri Jul 11 23:00:13 2025...
+ 8 - type: integer 
+	Parameter IN_CHANNELS bound to: 40 - type: integer 
+	Parameter OUT_CHANNELS bound to: 48 - type: integer 
+	Parameter FEATURE_SIZE bound to: 14 - type: integer 
+	Parameter PARALLELISM bound to: 4 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/pointwise_conv.sv:29]
+INFO: [Synth 8-6155] done synthesizing module 'pointwise_conv' (1#1) [C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/pointwise_conv.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'batchnorm' [C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/batchnorm.sv:1]
+	Parameter WIDTH bound to: 16 - type: integer 
+	Parameter FRAC bound to: 8 - type: integer 
+	Parameter CHANNELS bound to: 48 - type: integer 
+	Parameter EPSILON bound to: 16'sb0000000000010000 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/batchnorm.sv:26]
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/batchnorm.sv:27]
+WARNING: [Synth 8-6014] Unused sequential element x_reg_reg[2] was removed.  [C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/batchnorm.sv:89]
+WARNING: [Synth 8-6014] Unused sequential element x_reg_reg[3] was removed.  [C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/batchnorm.sv:89]
+WARNING: [Synth 8-6014] Unused sequential element gamma_reg_reg[2] was removed.  [C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/batchnorm.sv:94]
+WARNING: [Synth 8-6014] Unused sequential element scaled_extended_reg was removed.  [C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/batchnorm.sv:102]
+INFO: [Synth 8-6155] done synthesizing module 'batchnorm' (2#1) [C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/batchnorm.sv:1]
+INFO: [Synth 8-251] Transitioning to COMPLETING: input_finished=1'b1, output_count=x, target=73 [C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/shortcut.sv:106]
+INFO: [Synth 8-251] PROCESSING: input_finished=1'bx, output_count=x/98, input_count=x [C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/shortcut.sv:112]
+WARNING: [Synth 8-639] system function call 'time' not supported [C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/shortcut.sv:124]
+INFO: [Synth 8-251] Transitioning to DONE_STATE at time 1'b0, completion_counter=x [C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/shortcut.sv:123]
+WARNING: [Synth 8-639] system function call 'time' not supported [C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/shortcut.sv:183]
+INFO: [Synth 8-251] Input finished at time 1'b0, input_count=x, TOTAL_PIXEL_GROUPS=98 [C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/shortcut.sv:182]
+WARNING: [Synth 8-639] system function call 'time' not supported [C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/shortcut.sv:192]
+INFO: [Synth 8-251] Input finished by timeout at time 1'b0, no_input_counter=x [C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/shortcut.sv:191]
+WARNING: [Synth 8-639] system function call 'time' not supported [C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/shortcut.sv:214]
+INFO: [Synth 8-251] Entering COMPLETING state at time 1'b0 [C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/shortcut.sv:214]
+INFO: [Synth 8-251] Input finished: 1'bx, Output count: x/98 [C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/shortcut.sv:215]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/shortcut.sv:157]
+INFO: [Synth 8-6155] done synthesizing module 'shortcut' (3#1) [C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/shortcut.sv:1]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 2238.797 ; gain = 158.289
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 2261.621 ; gain = 181.113
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 2261.621 ; gain = 181.113
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2261.621 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-140] Inserted 8 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-141] Inserted 8 OBUFs to IO ports without IO buffers.
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:01:33 ; elapsed = 00:01:30 . Memory (MB): peak = 2261.621 ; gain = 181.113
+write_schematic -format pdf -orientation portrait -force C:/intelFPGA/Grad_Final_Project/BottelNeck/schematic.pdf
+C:/intelFPGA/Grad_Final_Project/BottelNeck/schematic.pdf
+write_schematic -format pdf -orientation portrait C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/schematic.pdf
+ERROR: [Common 17-165] Too many positional options when parsing 'NECK/SHORTCUT/schematic.pdf', please type 'write_schematic -help' for usage info.
+write_schematic -format pdf -orientation portrait C:/intelFPGA/Final_Project/BOTTEL NECK/SHORTCUT/schematic.pdf
+ERROR: [Common 17-165] Too many positional options when parsing 'NECK/SHORTCUT/schematic.pdf', please type 'write_schematic -help' for usage info.
+close_project
+close_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 2356.406 ; gain = 8.566
+open_project {C:/intelFPGA/Grad_Final_Project/Final layer/project_2/project_2.xpr}
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado_2019.2/Vivado/2019.2/data/ip'.
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 6
+[Fri Jul 11 23:29:33 2025] Launched synth_1...
+Run output will be captured here: C:/intelFPGA/Grad_Final_Project/Final layer/project_2/project_2.runs/synth_1/runme.log
+close_project
+open_project {C:/intelFPGA/Grad_Final_Project/First Block/project_1/project_1.xpr}
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado_2019.2/Vivado/2019.2/data/ip'.
+update_compile_order -fileset sources_1
+open_hw_manager
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+[Fri Jul 11 23:32:53 2025] Launched synth_1...
+Run output will be captured here: C:/intelFPGA/Grad_Final_Project/First Block/project_1/project_1.runs/synth_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z020clg400-1
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2356.406 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 19 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/4G/Downloads/Zedboard-Master.xdc]
+Finished Parsing XDC File [C:/Users/4G/Downloads/Zedboard-Master.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2356.406 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:15 ; elapsed = 00:00:13 . Memory (MB): peak = 2356.406 ; gain = 0.000
+close_project
+open_project {C:/intelFPGA/SQYEEZE MODEL/project_2/project_2.xpr}
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado_2019.2/Vivado/2019.2/data/ip'.
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 6
+[Fri Jul 11 23:37:16 2025] Launched synth_1...
+Run output will be captured here: C:/intelFPGA/SQYEEZE MODEL/project_2/project_2.runs/synth_1/runme.log
+close_project
+open_project C:/intelFPGA/Grad_Final_Project/BottelNeck/project_1/project_1.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado_2019.2/Vivado/2019.2/data/ip'.
+update_compile_order -fileset sources_1
+close_project
+open_project C:/intelFPGA/Grad_Final_Project/BottelNeck/project_2/project_2.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado_2019.2/Vivado/2019.2/data/ip'.
+update_compile_order -fileset sources_1
+set_property top SE_module [current_fileset]
+set_property top_lib xil_defaultlib [current_fileset]
+set_property top_file C:/intelFPGA/Grad_Final_Project/BottelNeck/SE_module.sv [current_fileset]
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 6
+WARNING: [filemgmt 20-736] The current top specification, "SE_module" (Library: xil_defaultlib, File: C:/intelFPGA/Grad_Final_Project/BottelNeck/SE_module.sv), does not uniquely identify a single design element. Using "SE_module" (Library: xil_defaultlib, File: C:/intelFPGA/Grad_Final_Project/BottelNeck/SE_module.sv).
+[Sat Jul 12 00:08:26 2025] Launched synth_1...
+Run output will be captured here: C:/intelFPGA/Grad_Final_Project/BottelNeck/project_2/project_2.runs/synth_1/runme.log
+reset_run synth_1
+set_property top BottleNeck_11Stage_Sequential_Optimized [current_fileset]
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 6
+[Sat Jul 12 00:30:23 2025] Launched synth_1...
+Run output will be captured here: C:/intelFPGA/Grad_Final_Project/BottelNeck/project_2/project_2.runs/synth_1/runme.log
+reset_run synth_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat Jul 12 00:36:15 2025...

@@ -1,0 +1,334 @@
+
+*** Running vivado
+    with args -log final_layer_top.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source final_layer_top.tcl -notrace
+
+
+****** Vivado v2019.2 (64-bit)
+  **** SW Build 2700185 on Thu Oct 24 18:46:05 MDT 2019
+  **** IP Build 2699827 on Thu Oct 24 21:16:38 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source final_layer_top.tcl -notrace
+Command: link_design -top final_layer_top -part xc7z020clg484-2
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7z020clg484-2
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 910.664 ; gain = 0.094
+INFO: [Netlist 29-17] Analyzing 14318 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 1181.445 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+6 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1181.445 ; gain = 725.625
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1192.898 ; gain = 11.453
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: f106af43
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:13 . Memory (MB): peak = 1769.754 ; gain = 576.855
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: f106af43
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1980.445 ; gain = 0.625
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 14e4dedd7
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1980.445 ; gain = 0.625
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 148c38afe
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1980.445 ; gain = 0.625
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+
+Phase 4 BUFG optimization
+INFO: [Opt 31-1112] Starts optimizing BUFG(s) with a common MMCM/DPLL/XPLL driver.
+INFO: [Opt 31-1112] Starts optimizing BUFG(s) with a common driver.
+INFO: [Opt 31-1092] Phase BUFG optimization transformed 0 BUFG(s) to MBUFG(s).
+Phase 4 BUFG optimization | Checksum: 148c38afe
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1980.445 ; gain = 0.625
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 5 Shift Register Optimization | Checksum: 148c38afe
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:13 . Memory (MB): peak = 1980.445 ; gain = 0.625
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 148c38afe
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1980.445 ; gain = 0.625
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |               0  |                                              0  |
+|  Constant propagation         |               0  |               0  |                                              0  |
+|  Sweep                        |               0  |               0  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.201 . Memory (MB): peak = 1980.445 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: fda602c6
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1980.445 ; gain = 0.625
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: fda602c6
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.091 . Memory (MB): peak = 1980.445 ; gain = 0.000
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: fda602c6
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1980.445 ; gain = 0.000
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 1980.445 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: fda602c6
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 1980.445 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+26 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:37 ; elapsed = 00:00:34 . Memory (MB): peak = 1980.445 ; gain = 799.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 1980.445 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/AhmedAli/Documents/Final layer/Final Layer/Final Layer.runs/impl_1/final_layer_top_opt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:17 ; elapsed = 00:00:14 . Memory (MB): peak = 1980.445 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_drc -file final_layer_top_drc_opted.rpt -pb final_layer_top_drc_opted.pb -rpx final_layer_top_drc_opted.rpx
+Command: report_drc -file final_layer_top_drc_opted.rpt -pb final_layer_top_drc_opted.pb -rpx final_layer_top_drc_opted.rpx
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/AhmedAli/Documents/Final layer/Final Layer/Final Layer.runs/impl_1/final_layer_top_drc_opted.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:32 ; elapsed = 00:00:23 . Memory (MB): peak = 1980.445 ; gain = 0.000
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [DRC CHECK-2] Report rule not checked: BGIVC-1 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: BIIVRC-1 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: BISLIM-1 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: BIVB-1 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: BIVC-1 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: BIVR-1 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: BIVRU-1 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: BIVT-1 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: DCIP-1 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: DCIP-2 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: DIFFISTD-1 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: DIFFISTDDrv-1 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: DIFFISTDSlew-1 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: IOBUSSLRC-1 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: IOCNT-1 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: IOCNT-2 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: IOCTMGT-1 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: IODIR-1 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: IOPCBUFG-1 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: IOPCMGT-1 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: IOPCMGT-2 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: IOPCPR-1 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: IOPCPR-2 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: IOPCSLR-1 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: IOPCSLR-2 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: IOPL-1 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: IOPL-2 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: IOPL-3 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: IOPL-4 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: IOPL-5 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: IOPL-6 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: IOPL-7 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: LVDS-1 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: PORTPROP-1 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: PORTPROP-3 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: PORTPROP-4 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: PORTPROP-5 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: VCCAUX1-1 rule not checked: Too many IO ports
+INFO: [DRC CHECK-2] Report rule not checked: VCCAUX1-2 rule not checked: Too many IO ports
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 39 Advisories
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 1980.445 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 6115c9fa
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.098 . Memory (MB): peak = 1980.445 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 1980.445 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+ERROR: [Place 30-415] IO Placement failed due to overutilization. This design contains 60917 I/O ports
+ while the target  device: 7z020 package: clg484, contains only 330 available user I/O. The target device has 330 usable I/O pins of which 0 are already occupied by user-locked I/Os.
+ To rectify this issue:
+ 1. Ensure you are targeting the correct device and package.  Select a larger device or different package if necessary.
+ 2. Check the top-level ports of the design to ensure the correct number of ports are specified.
+ 3. Consider design changes to reduce the number of I/Os necessary.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+ERROR: [Place 30-68] Instance accum0_i_1000 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10000 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10001 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10002 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10003 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10004 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10005 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10006 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10007 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10008 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10009 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_1001 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10010 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10011 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10012 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10013 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10014 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10015 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10016 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10017 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10018 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10019 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_1002 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10020 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10021 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10022 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10023 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10024 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10025 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10026 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10027 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10028 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10029 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10030 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10031 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10032 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10033 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10034 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10035 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10036 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10037 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10038 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10039 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_1004 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10040 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10041 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10042 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10043 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10044 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10045 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10046 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10047 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10048 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10049 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_1005 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10050 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10051 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10052 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10053 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10054 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10055 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10056 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10057 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10058 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10059 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_1006 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10060 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10061 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10062 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10063 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10064 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10065 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10066 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10067 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10068 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10069 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_1007 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10070 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10071 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10072 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10073 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10074 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10075 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10076 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10077 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10078 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10079 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_1008 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10080 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10081 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10082 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10083 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10084 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10085 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10086 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10087 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10088 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10089 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_1009 (IBUF) is not placed
+ERROR: [Place 30-68] Instance accum0_i_10090 (IBUF) is not placed
+INFO: [Common 17-14] Message 'Place 30-68' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 9482b3c1
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:24 . Memory (MB): peak = 2013.988 ; gain = 33.543
+Phase 1 Placer Initialization | Checksum: 9482b3c1
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:24 . Memory (MB): peak = 2013.988 ; gain = 33.543
+ERROR: [Place 30-99] Placer failed with error: 'IO Clock Placer failed'
+Please review all ERROR, CRITICAL WARNING, and WARNING messages during placement to understand the cause for failure.
+Ending Placer Task | Checksum: 9482b3c1
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:24 . Memory (MB): peak = 2013.988 ; gain = 33.543
+INFO: [Common 17-83] Releasing license: Implementation
+83 Infos, 1 Warnings, 0 Critical Warnings and 103 Errors encountered.
+place_design failed
+ERROR: [Common 17-69] Command failed: Placer could not place all instances
+INFO: [Common 17-206] Exiting Vivado at Wed Jul  2 20:01:16 2025...

@@ -1,0 +1,573 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+!s11f MIXED_VERSIONS
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dC:/Users/lenovo/Downloads/SQYEEZE MODEL
+T_opt
+!s110 1750795942
+VS:PL82efCD]?Y_]5He_[l0
+Z2 04 17 4 work tb_top_all_layers fast 0
+=1-c8f7501db222-685b06a6-235-2138
+Z3 !s124 OEM100
+o-quiet -auto_acc_if_foreign -work work +acc
+Z4 tCvgOpt 0
+n@_opt
+Z5 OL;O;2021.1;73
+R1
+T_opt1
+!s110 1750787584
+V8f30lg<EXOf0[4cVBIm^<1
+R2
+=1-5405db1de0f4-685ae5ff-313-5d74
+R3
+Z6 o-quiet -auto_acc_if_foreign -work work
+R4
+n@_opt1
+R5
+R1
+T_opt2
+!s110 1750786708
+VWAzFlCDaI4KO[VdnB40UE0
+04 18 4 work tb_BatchNorm_param fast 0
+=1-5405db1de0f4-685ae294-2a3-5f10
+R3
+R6
+R4
+n@_opt2
+R5
+R1
+vAdaptiveAvgPool2d_1x1
+Z7 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z8 !s110 1750860668
+!i10b 1
+!s100 lDF;aHIz8F@H?[[VTkm?g1
+I2NaVDS^Yz61`KgzA[iJ4U0
+S1
+Z9 dC:/intelFPGA/Final_Project/SQYEEZE MODEL
+w1750795930
+8AdaptiveAvgPool2d_1x1.sv
+FAdaptiveAvgPool2d_1x1.sv
+!i122 346
+L0 2 153
+Z10 VDg1SIo80bB@j0V0VzS_@n1
+Z11 OL;L;2021.1;73
+r1
+!s85 0
+31
+Z12 !s108 1750860668.000000
+!s107 top_all_layers.sv|tb_top_all_layers.sv|tb_ReLU_param.sv|tb_HardSwishSigmoid.sv|tb_Conv2D_param.sv|tb_BatchNorm_param.sv|tb_AdaptiveAvgPool2d_1x1.sv|ReLU_param.sv|HardSwishSigmoid.sv|Conv2D.sv|BatchNorm_param.sv|AdaptiveAvgPool2d_1x1.sv|
+Z13 !s90 -reportprogress|300|AdaptiveAvgPool2d_1x1.sv|BatchNorm_param.sv|Conv2D.sv|HardSwishSigmoid.sv|ReLU_param.sv|tb_AdaptiveAvgPool2d_1x1.sv|tb_BatchNorm_param.sv|tb_Conv2D_param.sv|tb_HardSwishSigmoid.sv|tb_ReLU_param.sv|tb_top_all_layers.sv|top_all_layers.sv|
+!i113 0
+Z14 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R4
+n@adaptive@avg@pool2d_1x1
+vBatchNorm_param
+R7
+R8
+!i10b 1
+!s100 JlK_=:aFf9R1mhhAJZ?lj1
+IO<^Ji:8gWHgPfFB6H`Pb?0
+S1
+R9
+w1750795500
+8BatchNorm_param.sv
+FBatchNorm_param.sv
+!i122 346
+L0 1 93
+R10
+R11
+r1
+!s85 0
+31
+R12
+Z15 !s107 top_all_layers.sv|tb_top_all_layers.sv|tb_ReLU_param.sv|tb_HardSwishSigmoid.sv|tb_Conv2D_param.sv|tb_BatchNorm_param.sv|tb_AdaptiveAvgPool2d_1x1.sv|ReLU_param.sv|HardSwishSigmoid.sv|Conv2D.sv|BatchNorm_param.sv|AdaptiveAvgPool2d_1x1.sv|
+R13
+!i113 0
+R14
+R4
+n@batch@norm_param
+vConv2D
+R7
+R8
+!i10b 1
+!s100 1:bWEi2YWVmP2CfI_7mYX1
+IkLM31lFa[AQTELC1N?4SK0
+S1
+R9
+w1750793784
+8Conv2D.sv
+FConv2D.sv
+!i122 346
+Z16 L0 2 259
+R10
+R11
+r1
+!s85 0
+31
+R12
+R15
+R13
+!i113 0
+R14
+R4
+n@conv2@d
+vConv2D_param
+R7
+!s110 1750792495
+!i10b 1
+!s100 5;dY^SZYDll^[G_M8Nn^a2
+I?i=@JU7klfC^:S0D1MQ^`3
+S1
+R9
+w1750792237
+8Conv2D_param.sv
+FConv2D_param.sv
+!i122 269
+R16
+R10
+R11
+r1
+!s85 0
+31
+!s108 1750792495.000000
+!s107 Conv2D_param.sv|
+!s90 -reportprogress|300|Conv2D_param.sv|
+!i113 0
+R14
+R4
+n@conv2@d_param
+vConv2D_specific
+Z17 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+!s110 1750723128
+!i10b 1
+!s100 fCh5P<>zi3OUbUaX8>f<L0
+IzdZSOoK0VlFMeP`1RzVHN1
+R10
+!s105 Conv2D_specific_sv_unit
+S1
+R1
+w1750722110
+8Conv2D_specific.sv
+FConv2D_specific.sv
+L0 2
+Z18 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1750723128.000000
+!s107 Conv2D_specific.sv|
+!s90 -reportprogress|300|Conv2D_specific.sv|
+!i113 1
+R4
+n@conv2@d_specific
+vHardSwishSigmoid
+R7
+R8
+!i10b 1
+!s100 bP:Anz7Ch8G3GAnPRDJMR3
+I7;iC@gJ;6jFU2TD<N7:ES1
+S1
+R9
+w1750792247
+8HardSwishSigmoid.sv
+FHardSwishSigmoid.sv
+!i122 346
+L0 2 103
+R10
+R11
+r1
+!s85 0
+31
+R12
+R15
+R13
+!i113 0
+R14
+R4
+n@hard@swish@sigmoid
+vReLU_param
+R7
+R8
+!i10b 1
+!s100 ZFb0O:e]RG_eWhDdXDh8>0
+Ik@Soh?XZX37kgM<?DKm5A0
+S1
+R9
+Z19 w1750792140
+8ReLU_param.sv
+FReLU_param.sv
+!i122 346
+L0 2 34
+R10
+R11
+r1
+!s85 0
+31
+R12
+R15
+R13
+!i113 0
+R14
+R4
+n@re@l@u_param
+vtb_AdaptiveAvgPool2d_1x1
+R7
+R8
+!i10b 1
+!s100 PGiGb]oRQ_La3AGL@oOWJ0
+IZ?BR`g0lSH:7:`LoA?zI:0
+S1
+R9
+R19
+8tb_AdaptiveAvgPool2d_1x1.sv
+Ftb_AdaptiveAvgPool2d_1x1.sv
+!i122 346
+L0 2 150
+R10
+R11
+r1
+!s85 0
+31
+R12
+R15
+R13
+!i113 0
+R14
+R4
+ntb_@adaptive@avg@pool2d_1x1
+vtb_BatchNorm_param
+R7
+R8
+!i10b 1
+!s100 REPI_9EE3?C0C:?dgGWC02
+I_z1lb<C<N>YV62dVW>oa13
+S1
+R9
+R19
+8tb_BatchNorm_param.sv
+Ftb_BatchNorm_param.sv
+!i122 346
+L0 2 60
+R10
+R11
+r1
+!s85 0
+31
+R12
+R15
+R13
+!i113 0
+R14
+R4
+ntb_@batch@norm_param
+vtb_Conv2D_param
+R7
+R8
+!i10b 1
+!s100 ;z4QmM4kR46`P@T;B1IB61
+IVg_9<k`g1i@KlL8CaIOib1
+S1
+R9
+w1750796466
+8tb_Conv2D_param.sv
+Ftb_Conv2D_param.sv
+!i122 346
+L0 2 126
+R10
+R11
+r1
+!s85 0
+31
+R12
+R15
+R13
+!i113 0
+R14
+R4
+ntb_@conv2@d_param
+vtb_Conv2D_specific
+R17
+!s110 1750723869
+!i10b 1
+!s100 j3`fJJ[3h7iZlV15c<glI2
+ISiP8lY9<ldl3R<D<dIMJ83
+R10
+!s105 tb_Conv2D_specific_sv_unit
+S1
+R1
+w1750723565
+8tb_Conv2D_specific.sv
+Ftb_Conv2D_specific.sv
+L0 2
+R18
+r1
+!s85 0
+31
+!s108 1750723869.000000
+!s107 tb_Conv2D_specific.sv|
+!s90 -reportprogress|300|tb_Conv2D_specific.sv|
+!i113 1
+R4
+ntb_@conv2@d_specific
+vtb_debug_pool
+R7
+!s110 1750781203
+!i10b 1
+!s100 ?EeU_[dk^UBHI3BB9iW<c1
+IO9IZ2jPicjTE3;LW3NRKT1
+S1
+Z20 dC:/Users/AhmedAli/Desktop/SQYEEZE MODEL (2)/SQYEEZE MODEL
+w1750780901
+8tb_debug_pool.sv
+Ftb_debug_pool.sv
+!i122 50
+L0 2 79
+R10
+R11
+r1
+!s85 0
+31
+!s108 1750781203.000000
+!s107 tb_debug_pool.sv|
+!s90 tb_debug_pool.sv|
+!i113 0
+R14
+R4
+vtb_debug_simple
+R7
+!s110 1750781659
+!i10b 1
+!s100 OiUZ=Rb`hKTlMUc<?82`93
+I4_CaBnbUzMj>:X5jZifTB1
+S1
+R20
+w1750781632
+8tb_debug_simple.sv
+Ftb_debug_simple.sv
+!i122 71
+L0 2 81
+R10
+R11
+r1
+!s85 0
+31
+!s108 1750781659.000000
+!s107 tb_debug_simple.sv|
+!s90 tb_debug_simple.sv|
+!i113 0
+R14
+R4
+vtb_full_pipeline_debug
+R7
+!s110 1750782099
+!i10b 1
+!s100 BNkTeDdD?F]Jce;<Td:eI2
+IL>9N<^ch]Rh^i>JmHXLnS2
+S1
+R20
+w1750782073
+8tb_full_pipeline_debug.sv
+Ftb_full_pipeline_debug.sv
+!i122 105
+L0 2 122
+R10
+R11
+r1
+!s85 0
+31
+!s108 1750782099.000000
+!s107 tb_full_pipeline_debug.sv|
+!s90 tb_full_pipeline_debug.sv|
+!i113 0
+R14
+R4
+vtb_HardSwishSigmoid
+R7
+R8
+!i10b 1
+!s100 oU_oLAA[J>d>Nn^T[C`Fe2
+If5zAT>HiC<cPDOTT6fD^G3
+S1
+R9
+R19
+8tb_HardSwishSigmoid.sv
+Ftb_HardSwishSigmoid.sv
+!i122 346
+L0 2 36
+R10
+R11
+r1
+!s85 0
+31
+R12
+R15
+R13
+!i113 0
+R14
+R4
+ntb_@hard@swish@sigmoid
+vtb_pipeline_debug
+R7
+!s110 1750781979
+!i10b 1
+!s100 Eog6VZIf;A@5UNDVB8bkM0
+IlbofZ3UDSRhO9]Il@D8?81
+S1
+R20
+w1750781868
+8tb_pipeline_debug.sv
+Ftb_pipeline_debug.sv
+!i122 89
+L0 2 112
+R10
+R11
+r1
+!s85 0
+31
+!s108 1750781979.000000
+!s107 tb_pipeline_debug.sv|
+!s90 tb_pipeline_debug.sv|
+!i113 0
+R14
+R4
+vtb_ReLU_param
+R7
+R8
+!i10b 1
+!s100 3Sb?0DJ=g]0GFnh9DUJ>k0
+IARG^o7A_^<`5d:nJ2VM<31
+S1
+R9
+R19
+8tb_ReLU_param.sv
+Ftb_ReLU_param.sv
+!i122 346
+L0 2 40
+R10
+R11
+r1
+!s85 0
+31
+R12
+R15
+R13
+!i113 0
+R14
+R4
+ntb_@re@l@u_param
+vtb_top_all_layers
+R7
+R8
+!i10b 1
+!s100 841hnhG?;_bhb`bULKTYW3
+IV^5]Wg_Ybb5R^B1MPB^8]3
+S1
+R9
+R19
+8tb_top_all_layers.sv
+Ftb_top_all_layers.sv
+!i122 346
+L0 2 272
+R10
+R11
+r1
+!s85 0
+31
+R12
+R15
+R13
+!i113 0
+R14
+R4
+vtop_all_layers
+R7
+R8
+!i10b 1
+!s100 EX>cA[2M3zZMCUS^3gH<R0
+IT029_iKKYoISL5GOjo`^_3
+S1
+R9
+w1750793096
+8top_all_layers.sv
+Ftop_all_layers.sv
+!i122 346
+L0 2 250
+R10
+R11
+r1
+!s85 0
+31
+R12
+R15
+R13
+!i113 0
+R14
+R4

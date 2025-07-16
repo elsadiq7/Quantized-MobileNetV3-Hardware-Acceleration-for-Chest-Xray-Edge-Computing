@@ -1,0 +1,43 @@
+C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv {1 {vlog -work work -vopt -sv -stats=none C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module pointwise_conv
+
+Top level modules:
+	pointwise_conv
+
+} {} {}} C:/intelFPGA/Final_Project/secondblock/BottleNeck.sv {1 {vlog -work work -vopt -sv -stats=none C:/intelFPGA/Final_Project/secondblock/BottleNeck.sv
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module BottleNeck
+
+Top level modules:
+	BottleNeck
+
+} {} {}} C:/intelFPGA/Final_Project/secondblock/Relu.sv {1 {vlog -work work -vopt -sv -stats=none C:/intelFPGA/Final_Project/secondblock/Relu.sv
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module Relu
+
+Top level modules:
+	Relu
+
+} {} {}} C:/intelFPGA/Final_Project/secondblock/BottleNeck_fullimage_tb.sv {1 {vlog -work work -vopt -sv -stats=none C:/intelFPGA/Final_Project/secondblock/BottleNeck_fullimage_tb.sv
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module BottleNeck_fullimage_tb
+
+Top level modules:
+	BottleNeck_fullimage_tb
+
+} {} {}} C:/intelFPGA/Final_Project/secondblock/batchnorm.sv {1 {vlog -work work -vopt -sv -stats=none C:/intelFPGA/Final_Project/secondblock/batchnorm.sv
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module batchnorm
+
+Top level modules:
+	batchnorm
+
+} {} {}} C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv {1 {vlog -work work -vopt -sv -stats=none C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module depthwise_conv
+
+Top level modules:
+	depthwise_conv
+
+} {} {}}

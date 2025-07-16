@@ -1,0 +1,246 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Accelerator Accuracy Verification Report</title>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 40px; }
+            .header { background-color: #f0f0f0; padding: 20px; border-radius: 5px; }
+            .section { margin: 20px 0; padding: 15px; border: 1px solid #ddd; border-radius: 5px; }
+            .metric { display: inline-block; margin: 10px; padding: 10px; background-color: #e8f4f8; border-radius: 3px; }
+            .good { background-color: #d4edda; }
+            .warning { background-color: #fff3cd; }
+            .error { background-color: #f8d7da; }
+            table { border-collapse: collapse; width: 100%; }
+            th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+            th { background-color: #f2f2f2; }
+            .plot { text-align: center; margin: 20px 0; }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Accelerator Accuracy Verification Report</h1>
+            <p>Comprehensive analysis of the accelerator's performance against expected outputs</p>
+        </div>
+    
+        <div class="section">
+            <h2>Summary Metrics</h2>
+            <div class="metric good">
+                <strong>Exact Match Accuracy:</strong><br>
+                100.00% (200,704 / 200,704)
+            </div>
+            <div class="metric good">
+                <strong>Close Match Accuracy:</strong><br>
+                100.00% (≤1 LSB error)
+            </div>
+            <div class="metric good">
+                <strong>Error Rate:</strong><br>
+                0.00% (0 errors)
+            </div>
+            <div class="metric">
+                <strong>Mean Error:</strong><br>
+                0.0000 LSB
+            </div>
+            <div class="metric">
+                <strong>Max Error:</strong><br>
+                0.0000 LSB
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Channel-wise Analysis</h2>
+            <table>
+                <tr>
+                    <th>Channel</th>
+                    <th>Count</th>
+                    <th>Mean Value</th>
+                    <th>Std Dev</th>
+                    <th>Min</th>
+                    <th>Max</th>
+                    <th>Non-zero %</th>
+                </tr>
+        
+                <tr>
+                    <td>0</td>
+                    <td>12,544</td>
+                    <td>24578.00</td>
+                    <td>31715.34</td>
+                    <td>6</td>
+                    <td>65528</td>
+                    <td>100.0%</td>
+                </tr>
+            
+                <tr>
+                    <td>1</td>
+                    <td>12,544</td>
+                    <td>24578.00</td>
+                    <td>31715.34</td>
+                    <td>6</td>
+                    <td>65528</td>
+                    <td>100.0%</td>
+                </tr>
+            
+                <tr>
+                    <td>2</td>
+                    <td>12,544</td>
+                    <td>24578.00</td>
+                    <td>31715.34</td>
+                    <td>6</td>
+                    <td>65528</td>
+                    <td>100.0%</td>
+                </tr>
+            
+                <tr>
+                    <td>3</td>
+                    <td>12,544</td>
+                    <td>24578.00</td>
+                    <td>31715.34</td>
+                    <td>6</td>
+                    <td>65528</td>
+                    <td>100.0%</td>
+                </tr>
+            
+                <tr>
+                    <td>4</td>
+                    <td>12,544</td>
+                    <td>24578.00</td>
+                    <td>31715.34</td>
+                    <td>6</td>
+                    <td>65528</td>
+                    <td>100.0%</td>
+                </tr>
+            
+                <tr>
+                    <td>5</td>
+                    <td>12,544</td>
+                    <td>24578.00</td>
+                    <td>31715.34</td>
+                    <td>6</td>
+                    <td>65528</td>
+                    <td>100.0%</td>
+                </tr>
+            
+                <tr>
+                    <td>6</td>
+                    <td>12,544</td>
+                    <td>24578.00</td>
+                    <td>31715.34</td>
+                    <td>6</td>
+                    <td>65528</td>
+                    <td>100.0%</td>
+                </tr>
+            
+                <tr>
+                    <td>7</td>
+                    <td>12,544</td>
+                    <td>24578.00</td>
+                    <td>31715.34</td>
+                    <td>6</td>
+                    <td>65528</td>
+                    <td>100.0%</td>
+                </tr>
+            
+                <tr>
+                    <td>8</td>
+                    <td>12,544</td>
+                    <td>24578.00</td>
+                    <td>31715.34</td>
+                    <td>6</td>
+                    <td>65528</td>
+                    <td>100.0%</td>
+                </tr>
+            
+                <tr>
+                    <td>9</td>
+                    <td>12,544</td>
+                    <td>24578.00</td>
+                    <td>31715.34</td>
+                    <td>6</td>
+                    <td>65528</td>
+                    <td>100.0%</td>
+                </tr>
+            
+                <tr>
+                    <td>10</td>
+                    <td>12,544</td>
+                    <td>24578.00</td>
+                    <td>31715.34</td>
+                    <td>6</td>
+                    <td>65528</td>
+                    <td>100.0%</td>
+                </tr>
+            
+                <tr>
+                    <td>11</td>
+                    <td>12,544</td>
+                    <td>24578.00</td>
+                    <td>31715.34</td>
+                    <td>6</td>
+                    <td>65528</td>
+                    <td>100.0%</td>
+                </tr>
+            
+                <tr>
+                    <td>12</td>
+                    <td>12,544</td>
+                    <td>24578.00</td>
+                    <td>31715.34</td>
+                    <td>6</td>
+                    <td>65528</td>
+                    <td>100.0%</td>
+                </tr>
+            
+                <tr>
+                    <td>13</td>
+                    <td>12,544</td>
+                    <td>24578.00</td>
+                    <td>31715.34</td>
+                    <td>6</td>
+                    <td>65528</td>
+                    <td>100.0%</td>
+                </tr>
+            
+                <tr>
+                    <td>14</td>
+                    <td>12,544</td>
+                    <td>24578.00</td>
+                    <td>31715.34</td>
+                    <td>6</td>
+                    <td>65528</td>
+                    <td>100.0%</td>
+                </tr>
+            
+                <tr>
+                    <td>15</td>
+                    <td>12,544</td>
+                    <td>24578.00</td>
+                    <td>31715.34</td>
+                    <td>6</td>
+                    <td>65528</td>
+                    <td>100.0%</td>
+                </tr>
+            </table></div>
+        <div class="section">
+            <h2>Visualizations</h2>
+        
+            <div class="plot">
+                <h3>Error Analysis</h3>
+                <img src="accuracy_plots\error_analysis.png" alt="error_analysis" style="max-width: 100%; height: auto;">
+            </div>
+            
+            <div class="plot">
+                <h3>Value Distributions</h3>
+                <img src="accuracy_plots\value_distributions.png" alt="value_distributions" style="max-width: 100%; height: auto;">
+            </div>
+            </div>
+        <div class="section">
+            <h2>Overall Assessment</h2>
+            <div class="metric good">
+                <strong>Assessment:</strong> EXCELLENT
+            </div>
+            <p>The accelerator shows excellent accuracy with very low error rates.</p>
+        </div>
+        
+    </body>
+    </html>
+    

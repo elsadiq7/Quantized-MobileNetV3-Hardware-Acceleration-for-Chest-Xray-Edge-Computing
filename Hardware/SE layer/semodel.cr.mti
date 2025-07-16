@@ -1,0 +1,78 @@
+{C:/intelFPGA/Final_Project/SQYEEZE MODEL/tb_top_all_layers.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/intelFPGA/Final_Project/SQYEEZE MODEL/tb_top_all_layers.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module tb_top_all_layers
+
+Top level modules:
+	tb_top_all_layers
+
+} {} {}} {C:/intelFPGA/Final_Project/SQYEEZE MODEL/tb_BatchNorm_param.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/intelFPGA/Final_Project/SQYEEZE MODEL/tb_BatchNorm_param.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module tb_BatchNorm_param
+
+Top level modules:
+	tb_BatchNorm_param
+
+} {} {}} {C:/intelFPGA/Final_Project/SQYEEZE MODEL/ReLU_param.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/intelFPGA/Final_Project/SQYEEZE MODEL/ReLU_param.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module ReLU_param
+
+Top level modules:
+	ReLU_param
+
+} {} {}} {C:/intelFPGA/Final_Project/SQYEEZE MODEL/Conv2D.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/intelFPGA/Final_Project/SQYEEZE MODEL/Conv2D.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module Conv2D
+
+Top level modules:
+	Conv2D
+
+} {} {}} {C:/intelFPGA/Final_Project/SQYEEZE MODEL/HardSwishSigmoid.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/intelFPGA/Final_Project/SQYEEZE MODEL/HardSwishSigmoid.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module HardSwishSigmoid
+
+Top level modules:
+	HardSwishSigmoid
+
+} {} {}} {C:/intelFPGA/Final_Project/SQYEEZE MODEL/AdaptiveAvgPool2d_1x1.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/intelFPGA/Final_Project/SQYEEZE MODEL/AdaptiveAvgPool2d_1x1.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module AdaptiveAvgPool2d_1x1
+
+Top level modules:
+	AdaptiveAvgPool2d_1x1
+
+} {} {}} {C:/intelFPGA/Final_Project/SQYEEZE MODEL/tb_ReLU_param.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/intelFPGA/Final_Project/SQYEEZE MODEL/tb_ReLU_param.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module tb_ReLU_param
+
+Top level modules:
+	tb_ReLU_param
+
+} {} {}} {C:/intelFPGA/Final_Project/SQYEEZE MODEL/tb_AdaptiveAvgPool2d_1x1.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/intelFPGA/Final_Project/SQYEEZE MODEL/tb_AdaptiveAvgPool2d_1x1.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module tb_AdaptiveAvgPool2d_1x1
+
+Top level modules:
+	tb_AdaptiveAvgPool2d_1x1
+
+} {} {}} {C:/intelFPGA/Final_Project/SQYEEZE MODEL/BatchNorm_param.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/intelFPGA/Final_Project/SQYEEZE MODEL/BatchNorm_param.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module BatchNorm_param
+
+Top level modules:
+	BatchNorm_param
+
+} {} {}} {C:/intelFPGA/Final_Project/SQYEEZE MODEL/tb_HardSwishSigmoid.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/intelFPGA/Final_Project/SQYEEZE MODEL/tb_HardSwishSigmoid.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module tb_HardSwishSigmoid
+
+Top level modules:
+	tb_HardSwishSigmoid
+
+} {} {}} {C:/intelFPGA/Final_Project/SQYEEZE MODEL/top_all_layers.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/intelFPGA/Final_Project/SQYEEZE MODEL/top_all_layers.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module top_all_layers
+
+Top level modules:
+	top_all_layers
+
+} {} {}}
