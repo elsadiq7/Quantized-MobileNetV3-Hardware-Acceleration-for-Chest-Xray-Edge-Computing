@@ -1,0 +1,306 @@
+# do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+# Start time: 18:36:24 on Jun 22,2025
+# vlog BottleNeck.sv BottleNeck_fullimage_tb.sv Relu.sv batchnorm.sv depthwise_conv.sv pointwise_conv.sv 
+# -- Compiling module BottleNeck
+# -- Compiling module BottleNeck_fullimage_tb
+# -- Compiling module Relu
+# -- Compiling module batchnorm
+# -- Compiling module depthwise_conv
+# -- Compiling module pointwise_conv
+# 
+# Top level modules:
+# 	BottleNeck_fullimage_tb
+# End time: 18:36:25 on Jun 22,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.BottleNeck_fullimage_tb 
+# Start time: 18:36:25 on Jun 22,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "BottleNeck(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "depthwise_conv(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "pointwise_conv(fast__1)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "pointwise_conv(fast)".
+# //  Questa Sim-64
+# //  Version 2021.1 win64 Jan 19 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.BottleNeck_fullimage_tb(fast)
+# Loading work.BottleNeck(fast)
+# Loading work.pointwise_conv(fast)
+# Loading work.batchnorm(fast)
+# Loading work.Relu(fast)
+# Loading work.depthwise_conv(fast)
+# Loading work.pointwise_conv(fast__1)
+# Loading work.batchnorm(fast__1)
+# === BottleNeck OPTIMIZED Full Image Test (112x112x16) ===
+#  8-pixel spatial parallelism + 16-channel processing
+# Total pixel groups: 6272 (processing 8 pixels per cycle)
+# Expected performance: ~6272 cycles (8x speedup)
+# Total inputs expected: 200704
+# Total outputs expected: 12544
+# Initializing weights...
+# Weight initialization complete
+# Time 30: Starting OPTIMIZED full image processing test
+# Time 827: Processed 200/6272 pixel groups (3.2%) - Row 3, Col group 62 - SPATIAL MODE
+# Time 1627: Processed 400/6272 pixel groups (6.4%) - Row 7, Col group 14 - SPATIAL MODE
+# Time 2427: Processed 600/6272 pixel groups (9.6%) - Row 10, Col group 78 - SPATIAL MODE
+# Time 3158: Output[2] - 2 spatial outputs (Row 13, Col 108)
+#   Pixel[0]: Ch[0] = 0037 (decimal: 55) [VALID]
+#   Pixel[1]: Ch[0] = 0037 (decimal: 55) [VALID]
+# Time 3162: Output[4] - 2 spatial outputs (Row 13, Col 110)
+#   Pixel[0]: Ch[1] = 0002 (decimal: 2) [VALID]
+#   Pixel[1]: Ch[1] = 0002 (decimal: 2) [VALID]
+# Time 3166: Output[6] - 2 spatial outputs (Row 14, Col 0)
+#   Pixel[0]: Ch[2] = 003a (decimal: 58) [VALID]
+#   Pixel[1]: Ch[2] = 003a (decimal: 58) [VALID]
+# Time 3170: Output[8] - 2 spatial outputs (Row 14, Col 2)
+#   Pixel[0]: Ch[3] = 0031 (decimal: 49) [VALID]
+#   Pixel[1]: Ch[3] = 0031 (decimal: 49) [VALID]
+# Time 3174: Output[10] - 2 spatial outputs (Row 14, Col 4)
+#   Pixel[0]: Ch[4] = 0035 (decimal: 53) [VALID]
+#   Pixel[1]: Ch[4] = 0035 (decimal: 53) [VALID]
+# Time 3178: Output[12] - 2 spatial outputs (Row 14, Col 6)
+#   Pixel[0]: Ch[5] = 0041 (decimal: 65) [VALID]
+#   Pixel[1]: Ch[5] = 0041 (decimal: 65) [VALID]
+# Time 3182: Output[14] - 2 spatial outputs (Row 14, Col 8)
+#   Pixel[0]: Ch[6] = 0050 (decimal: 80) [VALID]
+#   Pixel[1]: Ch[6] = 0050 (decimal: 80) [VALID]
+# Time 3186: Output[16] - 2 spatial outputs (Row 14, Col 10)
+#   Pixel[0]: Ch[7] = 005d (decimal: 93) [VALID]
+#   Pixel[1]: Ch[7] = 005d (decimal: 93) [VALID]
+# Time 3190: Output[18] - 2 spatial outputs (Row 14, Col 12)
+#   Pixel[0]: Ch[8] = 001c (decimal: 28) [VALID]
+#   Pixel[1]: Ch[8] = 001c (decimal: 28) [VALID]
+# Time 3194: Output[20] - 2 spatial outputs (Row 14, Col 14)
+#   Pixel[0]: Ch[9] = 000a (decimal: 10) [VALID]
+#   Pixel[1]: Ch[9] = 000a (decimal: 10) [VALID]
+# Time 3198: Output[22] - 2 spatial outputs (Row 14, Col 16)
+#   Pixel[0]: Ch[10] = 0031 (decimal: 49) [VALID]
+#   Pixel[1]: Ch[10] = 0031 (decimal: 49) [VALID]
+# Time 3202: Output[24] - 2 spatial outputs (Row 14, Col 18)
+#   Pixel[0]: Ch[11] = 0029 (decimal: 41) [VALID]
+#   Pixel[1]: Ch[11] = 0029 (decimal: 41) [VALID]
+# Time 3206: Output[26] - 2 spatial outputs (Row 14, Col 20)
+#   Pixel[0]: Ch[12] = 0055 (decimal: 85) [VALID]
+#   Pixel[1]: Ch[12] = 0055 (decimal: 85) [VALID]
+# Time 3210: Output[28] - 2 spatial outputs (Row 14, Col 22)
+#   Pixel[0]: Ch[13] = 0076 (decimal: 118) [VALID]
+#   Pixel[1]: Ch[13] = 0076 (decimal: 118) [VALID]
+# Time 3214: Output[30] - 2 spatial outputs (Row 14, Col 24)
+#   Pixel[0]: Ch[14] = 006f (decimal: 111) [VALID]
+#   Pixel[1]: Ch[14] = 006f (decimal: 111) [VALID]
+# Time 3218: Output[32] - 2 spatial outputs (Row 14, Col 26)
+#   Pixel[0]: Ch[15] = 0007 (decimal: 7) [VALID]
+#   Pixel[1]: Ch[15] = 0007 (decimal: 7) [VALID]
+# Time 3222: Output[34] - 2 spatial outputs (Row 14, Col 28)
+#   Pixel[0]: Ch[0] = 007c (decimal: 124) [VALID]
+#   Pixel[1]: Ch[0] = 007c (decimal: 124) [VALID]
+# Time 3226: Output[36] - 2 spatial outputs (Row 14, Col 30)
+#   Pixel[0]: Ch[1] = 0005 (decimal: 5) [VALID]
+#   Pixel[1]: Ch[1] = 0005 (decimal: 5) [VALID]
+# Time 3227: Processed 800/6272 pixel groups (12.8%) - Row 14, Col group 30 - SPATIAL MODE
+# Time 3230: Output[38] - 2 spatial outputs (Row 14, Col 32)
+#   Pixel[0]: Ch[2] = 0055 (decimal: 85) [VALID]
+#   Pixel[1]: Ch[2] = 0055 (decimal: 85) [VALID]
+# Time 3234: Output[40] - 2 spatial outputs (Row 14, Col 34)
+#   Pixel[0]: Ch[3] = 0069 (decimal: 105) [VALID]
+#   Pixel[1]: Ch[3] = 0069 (decimal: 105) [VALID]
+# Time 3238: Output[42] - 2 spatial outputs (Row 14, Col 36)
+#   Pixel[0]: Ch[4] = 0046 (decimal: 70) [VALID]
+#   Pixel[1]: Ch[4] = 0046 (decimal: 70) [VALID]
+# Time 3242: Output[44] - 2 spatial outputs (Row 14, Col 38)
+#   Pixel[0]: Ch[5] = 0042 (decimal: 66) [VALID]
+#   Pixel[1]: Ch[5] = 0042 (decimal: 66) [VALID]
+# Time 3246: Output[46] - 2 spatial outputs (Row 14, Col 40)
+#   Pixel[0]: Ch[6] = 0031 (decimal: 49) [VALID]
+#   Pixel[1]: Ch[6] = 0031 (decimal: 49) [VALID]
+# Time 3250: Output[48] - 2 spatial outputs (Row 14, Col 42)
+#   Pixel[0]: Ch[7] = 0049 (decimal: 73) [VALID]
+#   Pixel[1]: Ch[7] = 0049 (decimal: 73) [VALID]
+# Time 3254: Output[50] - 2 spatial outputs (Row 14, Col 44)
+#   Pixel[0]: Ch[8] = 0010 (decimal: 16) [VALID]
+#   Pixel[1]: Ch[8] = 0010 (decimal: 16) [VALID]
+# Time 3258: Output[52] - 2 spatial outputs (Row 14, Col 46)
+#   Pixel[0]: Ch[9] = 001f (decimal: 31) [VALID]
+#   Pixel[1]: Ch[9] = 001f (decimal: 31) [VALID]
+# Time 3262: Output[54] - 2 spatial outputs (Row 14, Col 48)
+#   Pixel[0]: Ch[10] = 0045 (decimal: 69) [VALID]
+#   Pixel[1]: Ch[10] = 0045 (decimal: 69) [VALID]
+# Time 3266: Output[56] - 2 spatial outputs (Row 14, Col 50)
+#   Pixel[0]: Ch[11] = 0061 (decimal: 97) [VALID]
+#   Pixel[1]: Ch[11] = 0061 (decimal: 97) [VALID]
+# Time 3270: Output[58] - 2 spatial outputs (Row 14, Col 52)
+#   Pixel[0]: Ch[12] = 0054 (decimal: 84) [VALID]
+#   Pixel[1]: Ch[12] = 0054 (decimal: 84) [VALID]
+# Time 3274: Output[60] - 2 spatial outputs (Row 14, Col 54)
+#   Pixel[0]: Ch[13] = 0057 (decimal: 87) [VALID]
+#   Pixel[1]: Ch[13] = 0057 (decimal: 87) [VALID]
+# Time 3278: Output[62] - 2 spatial outputs (Row 14, Col 56)
+#   Pixel[0]: Ch[14] = 0058 (decimal: 88) [VALID]
+#   Pixel[1]: Ch[14] = 0058 (decimal: 88) [VALID]
+# Time 3282: Output[64] - 2 spatial outputs (Row 14, Col 58)
+#   Pixel[0]: Ch[15] = 000f (decimal: 15) [VALID]
+#   Pixel[1]: Ch[15] = 000f (decimal: 15) [VALID]
+# Time 3286: Output[66] - 2 spatial outputs (Row 14, Col 60)
+#   Pixel[0]: Ch[0] = 005c (decimal: 92) [VALID]
+#   Pixel[1]: Ch[0] = 005c (decimal: 92) [VALID]
+# Time 3290: Output[68] - 2 spatial outputs (Row 14, Col 62)
+#   Pixel[0]: Ch[1] = 0002 (decimal: 2) [VALID]
+#   Pixel[1]: Ch[1] = 0002 (decimal: 2) [VALID]
+# Time 3294: Output[70] - 2 spatial outputs (Row 14, Col 64)
+#   Pixel[0]: Ch[2] = 0053 (decimal: 83) [VALID]
+#   Pixel[1]: Ch[2] = 0053 (decimal: 83) [VALID]
+# Time 3298: Output[72] - 2 spatial outputs (Row 14, Col 66)
+#   Pixel[0]: Ch[3] = 0068 (decimal: 104) [VALID]
+#   Pixel[1]: Ch[3] = 0068 (decimal: 104) [VALID]
+# Time 3302: Output[74] - 2 spatial outputs (Row 14, Col 68)
+#   Pixel[0]: Ch[4] = 0035 (decimal: 53) [VALID]
+#   Pixel[1]: Ch[4] = 0035 (decimal: 53) [VALID]
+# Time 3306: Output[76] - 2 spatial outputs (Row 14, Col 70)
+#   Pixel[0]: Ch[5] = 003f (decimal: 63) [VALID]
+#   Pixel[1]: Ch[5] = 003f (decimal: 63) [VALID]
+# Time 3310: Output[78] - 2 spatial outputs (Row 14, Col 72)
+#   Pixel[0]: Ch[6] = 0047 (decimal: 71) [VALID]
+#   Pixel[1]: Ch[6] = 0047 (decimal: 71) [VALID]
+# Time 3314: Output[80] - 2 spatial outputs (Row 14, Col 74)
+#   Pixel[0]: Ch[7] = 0050 (decimal: 80) [VALID]
+#   Pixel[1]: Ch[7] = 0050 (decimal: 80) [VALID]
+# Time 3318: Output[82] - 2 spatial outputs (Row 14, Col 76)
+#   Pixel[0]: Ch[8] = 003c (decimal: 60) [VALID]
+#   Pixel[1]: Ch[8] = 003c (decimal: 60) [VALID]
+# Time 3322: Output[84] - 2 spatial outputs (Row 14, Col 78)
+#   Pixel[0]: Ch[9] = 0004 (decimal: 4) [VALID]
+#   Pixel[1]: Ch[9] = 0004 (decimal: 4) [VALID]
+# Time 3326: Output[86] - 2 spatial outputs (Row 14, Col 80)
+#   Pixel[0]: Ch[10] = 0018 (decimal: 24) [VALID]
+#   Pixel[1]: Ch[10] = 0018 (decimal: 24) [VALID]
+# Time 3330: Output[88] - 2 spatial outputs (Row 14, Col 82)
+#   Pixel[0]: Ch[11] = 0060 (decimal: 96) [VALID]
+#   Pixel[1]: Ch[11] = 0060 (decimal: 96) [VALID]
+# Time 3334: Output[90] - 2 spatial outputs (Row 14, Col 84)
+#   Pixel[0]: Ch[12] = 0054 (decimal: 84) [VALID]
+#   Pixel[1]: Ch[12] = 0054 (decimal: 84) [VALID]
+# Time 3338: Output[92] - 2 spatial outputs (Row 14, Col 86)
+#   Pixel[0]: Ch[13] = 0056 (decimal: 86) [VALID]
+#   Pixel[1]: Ch[13] = 0056 (decimal: 86) [VALID]
+# Time 3342: Output[94] - 2 spatial outputs (Row 14, Col 88)
+#   Pixel[0]: Ch[14] = 0035 (decimal: 53) [VALID]
+#   Pixel[1]: Ch[14] = 0035 (decimal: 53) [VALID]
+# Time 3346: Output[96] - 2 spatial outputs (Row 14, Col 90)
+#   Pixel[0]: Ch[15] = 0014 (decimal: 20) [VALID]
+#   Pixel[1]: Ch[15] = 0014 (decimal: 20) [VALID]
+# Time 3350: Output[98] - 2 spatial outputs (Row 14, Col 92)
+#   Pixel[0]: Ch[0] = 005e (decimal: 94) [VALID]
+#   Pixel[1]: Ch[0] = 005e (decimal: 94) [VALID]
+# Time 3354: Output[100] - 2 spatial outputs (Row 14, Col 94)
+#   Pixel[0]: Ch[1] = 001a (decimal: 26) [VALID]
+#   Pixel[1]: Ch[1] = 001a (decimal: 26) [VALID]
+# Time 4027: Processed 1000/6272 pixel groups (15.9%) - Row 17, Col group 94 - SPATIAL MODE
+# Time 4827: Processed 1200/6272 pixel groups (19.1%) - Row 21, Col group 46 - SPATIAL MODE
+# Time 5158: Output[1002] - 2 spatial outputs (Row 22, Col 100)
+#   Pixel[0]: Ch[4] = 005c (decimal: 92) [VALID]
+#   Pixel[1]: Ch[4] = 005c (decimal: 92) [VALID]
+# Time 5627: Processed 1400/6272 pixel groups (22.3%) - Row 24, Col group 110 - SPATIAL MODE
+# Time 6427: Processed 1600/6272 pixel groups (25.5%) - Row 28, Col group 62 - SPATIAL MODE
+# Time 7158: Output[2002] - 2 spatial outputs (Row 31, Col 92)
+#   Pixel[0]: Ch[8] = 003c (decimal: 60) [VALID]
+#   Pixel[1]: Ch[8] = 003c (decimal: 60) [VALID]
+# Time 7227: Processed 1800/6272 pixel groups (28.7%) - Row 32, Col group 14 - SPATIAL MODE
+# Time 8027: Processed 2000/6272 pixel groups (31.9%) - Row 35, Col group 78 - SPATIAL MODE
+# Time 8827: Processed 2200/6272 pixel groups (35.1%) - Row 39, Col group 30 - SPATIAL MODE
+# Time 9158: Output[3002] - 2 spatial outputs (Row 40, Col 84)
+#   Pixel[0]: Ch[12] = 0054 (decimal: 84) [VALID]
+#   Pixel[1]: Ch[12] = 0054 (decimal: 84) [VALID]
+# Time 9627: Processed 2400/6272 pixel groups (38.3%) - Row 42, Col group 94 - SPATIAL MODE
+# Time 10427: Processed 2600/6272 pixel groups (41.5%) - Row 46, Col group 46 - SPATIAL MODE
+# Time 11158: Output[4002] - 2 spatial outputs (Row 49, Col 76)
+#   Pixel[0]: Ch[0] = 007c (decimal: 124) [VALID]
+#   Pixel[1]: Ch[0] = 007c (decimal: 124) [VALID]
+# Time 11227: Processed 2800/6272 pixel groups (44.6%) - Row 49, Col group 110 - SPATIAL MODE
+# Time 12027: Processed 3000/6272 pixel groups (47.8%) - Row 53, Col group 62 - SPATIAL MODE
+# Time 12827: Processed 3200/6272 pixel groups (51.0%) - Row 57, Col group 14 - SPATIAL MODE
+# Time 13158: Output[5002] - 2 spatial outputs (Row 58, Col 68)
+#   Pixel[0]: Ch[4] = 0054 (decimal: 84) [VALID]
+#   Pixel[1]: Ch[4] = 0054 (decimal: 84) [VALID]
+# Time 13627: Processed 3400/6272 pixel groups (54.2%) - Row 60, Col group 78 - SPATIAL MODE
+# Time 14427: Processed 3600/6272 pixel groups (57.4%) - Row 64, Col group 30 - SPATIAL MODE
+# Time 15158: Output[6002] - 2 spatial outputs (Row 67, Col 60)
+#   Pixel[0]: Ch[8] = 002b (decimal: 43) [VALID]
+#   Pixel[1]: Ch[8] = 002b (decimal: 43) [VALID]
+# Time 15227: Processed 3800/6272 pixel groups (60.6%) - Row 67, Col group 94 - SPATIAL MODE
+# Time 16027: Processed 4000/6272 pixel groups (63.8%) - Row 71, Col group 46 - SPATIAL MODE
+# Time 16827: Processed 4200/6272 pixel groups (67.0%) - Row 74, Col group 110 - SPATIAL MODE
+# Time 17158: Output[7002] - 2 spatial outputs (Row 76, Col 52)
+#   Pixel[0]: Ch[12] = 0054 (decimal: 84) [VALID]
+#   Pixel[1]: Ch[12] = 0054 (decimal: 84) [VALID]
+# Time 17627: Processed 4400/6272 pixel groups (70.2%) - Row 78, Col group 62 - SPATIAL MODE
+# Time 18427: Processed 4600/6272 pixel groups (73.3%) - Row 82, Col group 14 - SPATIAL MODE
+# Time 19158: Output[8002] - 2 spatial outputs (Row 85, Col 44)
+#   Pixel[0]: Ch[0] = 005c (decimal: 92) [VALID]
+#   Pixel[1]: Ch[0] = 005c (decimal: 92) [VALID]
+# Time 19227: Processed 4800/6272 pixel groups (76.5%) - Row 85, Col group 78 - SPATIAL MODE
+# Time 20027: Processed 5000/6272 pixel groups (79.7%) - Row 89, Col group 30 - SPATIAL MODE
+# Time 20827: Processed 5200/6272 pixel groups (82.9%) - Row 92, Col group 94 - SPATIAL MODE
+# Time 21158: Output[9002] - 2 spatial outputs (Row 94, Col 36)
+#   Pixel[0]: Ch[4] = 0046 (decimal: 70) [VALID]
+#   Pixel[1]: Ch[4] = 0046 (decimal: 70) [VALID]
+# Time 21627: Processed 5400/6272 pixel groups (86.1%) - Row 96, Col group 46 - SPATIAL MODE
+# Time 22427: Processed 5600/6272 pixel groups (89.3%) - Row 99, Col group 110 - SPATIAL MODE
+# Time 23158: Output[10002] - 2 spatial outputs (Row 103, Col 28)
+#   Pixel[0]: Ch[8] = 001c (decimal: 28) [VALID]
+#   Pixel[1]: Ch[8] = 001c (decimal: 28) [VALID]
+# Time 23227: Processed 5800/6272 pixel groups (92.5%) - Row 103, Col group 62 - SPATIAL MODE
+# Time 24027: Processed 6000/6272 pixel groups (95.7%) - Row 107, Col group 14 - SPATIAL MODE
+# Time 24827: Processed 6200/6272 pixel groups (98.9%) - Row 110, Col group 78 - SPATIAL MODE
+# Time 25119: Finished sending all 6272 pixel groups (12544 total inputs)
+# Time 25119: Waiting for BottleNeck to signal completion...
+# Time 25158: Output[11002] - 2 spatial outputs (Row 111, Col 110)
+#   Pixel[0]: Ch[12] = 005e (decimal: 94) [VALID]
+#   Pixel[1]: Ch[12] = 005e (decimal: 94) [VALID]
+# Time 27158: Output[12002] - 2 spatial outputs (Row 111, Col 110)
+#   Pixel[0]: Ch[0] = 005e (decimal: 94) [VALID]
+#   Pixel[1]: Ch[0] = 005e (decimal: 94) [VALID]
+# Time 28242: BottleNeck signaled completion (done=1)
+# === NATURAL PROCESSING TIME COMPLETED ===
+# Time 28242: BottleNeck processing time elapsed!
+# Processing time: 28212
+# Total outputs received: 12544
+# 
+# === FINAL VERIFICATION & DATA ANALYSIS ===
+# Expected inputs: 200704, Sent: 12544
+# Expected outputs: 12544, Received: 12544
+# 
+# === OPTIMIZED PERFORMANCE METRICS ===
+#  Processing Time: 28212 time units
+#  Pixel Groups Processed: 6272 (8 pixels per group)
+#  Cycle Count: 7053
+#  Target Cycles: ~6272 (achieved 0.9x speedup vs target)
+#  Input Throughput: 0.44 inputs/time_unit
+#  Output Throughput: 0.44 outputs/time_unit
+#  8x Spatial Parallelism + 16x Channel Processing: Target ~1568 cycles for 112x112
+# 
+# === GENUINE FUNCTIONALITY VERIFICATION ===
+# Design ran for 28212 time units
+# Actual outputs generated: 12544
+# Expected outputs: 12544
+#  DESIGN PRODUCED OUTPUTS: Generated 12544 outputs naturally
+#  This indicates the neural network pipeline is processing data
+#  NOTE: This test runs purely on done signal - no timeout mechanisms
+#  The design terminates naturally when the BottleNeck signals completion
+# ** Note: $finish    : BottleNeck_fullimage_tb.sv(286)
+#    Time: 28242 ns  Iteration: 2  Instance: /BottleNeck_fullimage_tb
+# End time: 18:36:33 on Jun 22,2025, Elapsed time: 0:00:08
+# Errors: 0, Warnings: 0

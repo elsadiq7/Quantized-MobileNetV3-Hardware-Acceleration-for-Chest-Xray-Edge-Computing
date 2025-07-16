@@ -1,0 +1,203 @@
+m255
+K4
+z2
+!s11f vlog 2021.1 2021.01, Jan 19 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/AhmedAli/Documents/GP- Chest X Ray/Final layer
+vbatchnorm
+Z1 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z2 !s110 1752307970
+!i10b 1
+!s100 `1Pln4P7`MIJl29>^_Amj1
+IYmG8ifz8RXGmK1>SNLKgS1
+S1
+R0
+w1752294519
+8batchnorm.sv
+Fbatchnorm.sv
+!i122 0
+L0 1 193
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+Z4 OL;L;2021.1;73
+r1
+!s85 0
+31
+Z5 !s108 1752307970.000000
+!s107 tb_final_layer.sv|pointwise_conv.sv|linear_external_weights.sv|linear.sv|hswish.sv|final_layer_top.sv|batchnorm1d.sv|batchnorm.sv|
+Z6 !s90 batchnorm.sv|batchnorm1d.sv|final_layer_top.sv|hswish.sv|linear.sv|linear_external_weights.sv|pointwise_conv.sv|tb_final_layer.sv|
+!i113 0
+Z7 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z8 tCvgOpt 0
+vbatchnorm1d
+R1
+R2
+!i10b 1
+!s100 [J6OEnS34Ibia]hdVo2G]3
+I:fSM:]mGn?@480loU3z^[2
+S1
+R0
+w1752105184
+8batchnorm1d.sv
+Fbatchnorm1d.sv
+!i122 0
+L0 2 76
+R3
+R4
+r1
+!s85 0
+31
+R5
+Z9 !s107 tb_final_layer.sv|pointwise_conv.sv|linear_external_weights.sv|linear.sv|hswish.sv|final_layer_top.sv|batchnorm1d.sv|batchnorm.sv|
+R6
+!i113 0
+R7
+R8
+vfinal_layer_top
+R1
+R2
+!i10b 1
+!s100 eHO?:HA7;T[VQ4EeOEOGS0
+I@:2_WbVRg85TnN8F_<PSf2
+S1
+R0
+w1752307185
+8final_layer_top.sv
+Ffinal_layer_top.sv
+!i122 0
+L0 1 490
+R3
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 0
+R7
+R8
+vhswish
+R1
+R2
+!i10b 1
+!s100 dN0[F]lg:2Y9LECG_hgz90
+IYb9g2VSYK0iL]510N7SX?1
+S1
+R0
+w1751472751
+8hswish.sv
+Fhswish.sv
+!i122 0
+L0 5 69
+R3
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 0
+R7
+R8
+vlinear
+R1
+R2
+!i10b 1
+!s100 8J=Tfa5C@_C]48m^6fcWH2
+I=Kccgn5OL_3[>eW_R[7Bz2
+S1
+R0
+w1752291515
+8linear.sv
+Flinear.sv
+!i122 0
+L0 2 144
+R3
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 0
+R7
+R8
+vlinear_external_weights
+R1
+R2
+!i10b 1
+!s100 G3M<TNi3iGOd>[0CXM=zj3
+Id8c@R]FWa1nKRL8?b<Zf10
+S1
+R0
+w1752306500
+8linear_external_weights.sv
+Flinear_external_weights.sv
+!i122 0
+L0 1 137
+R3
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 0
+R7
+R8
+vpointwise_conv
+R1
+R2
+!i10b 1
+!s100 IB1O8ZH=>5BXldQd@z5^l1
+Il=cjS7JK7]O7K0SQ8df?D3
+S1
+R0
+w1752294491
+8pointwise_conv.sv
+Fpointwise_conv.sv
+!i122 0
+L0 1 223
+R3
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 0
+R7
+R8
+vtb_final_layer
+R1
+R2
+!i10b 1
+!s100 nAc1=QojQ?[?39g`C^09@3
+IST:iz4mL:cPzi<_=mAeSa0
+S1
+R0
+w1752105366
+8tb_final_layer.sv
+Ftb_final_layer.sv
+!i122 0
+L0 3 150
+R3
+R4
+r1
+!s85 0
+31
+R5
+R9
+R6
+!i113 0
+R7
+R8

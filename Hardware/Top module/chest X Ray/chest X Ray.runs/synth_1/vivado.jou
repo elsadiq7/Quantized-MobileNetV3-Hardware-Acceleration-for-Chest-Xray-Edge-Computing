@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2700185 on Thu Oct 24 18:46:05 MDT 2019
+# IP Build 2699827 on Thu Oct 24 21:16:38 MDT 2019
+# Start of session at: Sat Jul 12 11:15:28 2025
+# Process ID: 19300
+# Current directory: C:/Users/AhmedAli/Documents/GP- Chest X Ray/chest X Ray/chest X Ray.runs/synth_1
+# Command line: vivado.exe -log chest_xray_classifier_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source chest_xray_classifier_top.tcl
+# Log file: C:/Users/AhmedAli/Documents/GP- Chest X Ray/chest X Ray/chest X Ray.runs/synth_1/chest_xray_classifier_top.vds
+# Journal file: C:/Users/AhmedAli/Documents/GP- Chest X Ray/chest X Ray/chest X Ray.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source chest_xray_classifier_top.tcl -notrace

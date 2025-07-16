@@ -1,0 +1,4 @@
+DETAILED ERROR ANALYSIS
+=======================
+
+First 1000 error positions and values:

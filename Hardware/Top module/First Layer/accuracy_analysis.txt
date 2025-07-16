@@ -1,0 +1,36 @@
+ACCURACY VERIFICATION ANALYSIS
+================================
+
+SUMMARY STATISTICS:
+Total outputs processed: 200704
+Expected outputs: 200704
+Exact matches: 200704 (100.00%)
+Close matches (≤1 LSB): 0 (0.00%)
+Acceptable matches (≤2 LSB): 0 (0.00%)
+Large errors (>4 LSB): 0 (0.00%)
+Total errors: 0 (0.00%)
+
+ERROR STATISTICS:
+Mean absolute error: 0.0000 LSB
+Error variance: 0.0000
+Error standard deviation: 0.0000 LSB
+Maximum error: 0.0000 LSB
+Minimum error: -0.0000 LSB
+
+CHANNEL-WISE ANALYSIS:
+Channel 0: 0 errors (0.00%), mean error: 0.0000, max error: 0.0000
+Channel 1: 0 errors (0.00%), mean error: 0.0000, max error: 0.0000
+Channel 2: 0 errors (0.00%), mean error: 0.0000, max error: 0.0000
+Channel 3: 0 errors (0.00%), mean error: 0.0000, max error: 0.0000
+Channel 4: 0 errors (0.00%), mean error: 0.0000, max error: 0.0000
+Channel 5: 0 errors (0.00%), mean error: 0.0000, max error: 0.0000
+Channel 6: 0 errors (0.00%), mean error: 0.0000, max error: 0.0000
+Channel 7: 0 errors (0.00%), mean error: 0.0000, max error: 0.0000
+Channel 8: 0 errors (0.00%), mean error: 0.0000, max error: 0.0000
+Channel 9: 0 errors (0.00%), mean error: 0.0000, max error: 0.0000
+Channel 10: 0 errors (0.00%), mean error: 0.0000, max error: 0.0000
+Channel 11: 0 errors (0.00%), mean error: 0.0000, max error: 0.0000
+Channel 12: 0 errors (0.00%), mean error: 0.0000, max error: 0.0000
+Channel 13: 0 errors (0.00%), mean error: 0.0000, max error: 0.0000
+Channel 14: 0 errors (0.00%), mean error: 0.0000, max error: 0.0000
+Channel 15: 0 errors (0.00%), mean error: 0.0000, max error: 0.0000

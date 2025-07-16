@@ -1,0 +1,217 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+R0
+R0
+R0
+!s11f vlog 2021.1 2021.01, Jan 19 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dC:/intelFPGA/Final_Project/point
+T_opt
+!s110 1751404955
+VYZP7AE9U8We4BDMZkTN^12
+04 29 4 work pointwise_conv_optimized_test fast 0
+=1-c8f7501db222-6864519a-230-536c
+Z2 !s124 OEM100
+Z3 o-quiet -auto_acc_if_foreign -work work
+Z4 tCvgOpt 0
+n@_opt
+Z5 OL;O;2021.1;73
+R1
+T_opt1
+!s110 1751405208
+VnVk2E>9Ue4_UCnHgK=Fcd0
+04 17 4 work pointwise_conv_tb fast 0
+=1-c8f7501db222-68645298-1f8-5ab4
+R2
+R3
+R4
+n@_opt1
+R5
+T_opt2
+!s110 1751404357
+VT=lP]87Aj`PNh_hWcTU<R1
+04 28 4 work pointwise_conv_comparison_tb fast 0
+=1-c8f7501db222-68644f44-2e1-6e7c
+R2
+R3
+R4
+n@_opt2
+R5
+R1
+vpointwise_conv
+Z6 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+!s110 1751404875
+!i10b 1
+!s100 GndUAzN;ahhz[EaJ0k`K^1
+IoPnHc96:9Xa8b20?enjGb0
+S1
+R1
+w1751383513
+8pointwise_conv.sv
+Fpointwise_conv.sv
+!i122 6
+L0 1 306
+Z7 VDg1SIo80bB@j0V0VzS_@n1
+Z8 OL;L;2021.1;73
+r1
+!s85 0
+31
+!s108 1751404875.000000
+!s107 pointwise_conv_optimized_v2.sv|pointwise_conv.sv|
+!s90 -sv|pointwise_conv.sv|pointwise_conv_optimized_v2.sv|
+!i113 0
+Z9 o-sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R4
+vpointwise_conv_comparison_tb
+R6
+Z10 !s110 1751404313
+!i10b 1
+!s100 lAXg[X;<b2oDSinoo1hNo0
+ISdYFMeAJ6oTGibHXEMAN31
+S1
+R1
+w1751404089
+8pointwise_conv_comparison_tb.sv
+Fpointwise_conv_comparison_tb.sv
+!i122 5
+L0 10 296
+R7
+R8
+r1
+!s85 0
+31
+Z11 !s108 1751404312.000000
+Z12 !s107 pointwise_conv_comparison_tb.sv|pointwise_conv_optimized.sv|pointwise_conv.sv|
+Z13 !s90 -sv|pointwise_conv.sv|pointwise_conv_optimized.sv|pointwise_conv_comparison_tb.sv|
+!i113 0
+R9
+R4
+vpointwise_conv_optimized
+R6
+R10
+!i10b 1
+!s100 Co?lzYR09eYZ3NNePcNA?1
+I?09;[jX?8OgPhV[g<M3[U1
+S1
+R1
+w1751404255
+8pointwise_conv_optimized.sv
+Fpointwise_conv_optimized.sv
+!i122 5
+L0 1 262
+R7
+R8
+r1
+!s85 0
+31
+R11
+R12
+R13
+!i113 0
+R9
+R4
+vpointwise_conv_optimized_test
+R6
+!s110 1751404924
+!i10b 1
+!s100 Yi4g5mCJDEA>zehU<EKQ>0
+IVAb@kmZS7II<FbG:hino:2
+S1
+R1
+w1751404908
+8pointwise_conv_optimized_test.sv
+Fpointwise_conv_optimized_test.sv
+!i122 7
+L0 4 182
+R7
+R8
+r1
+!s85 0
+31
+!s108 1751404924.000000
+!s107 pointwise_conv_optimized_test.sv|pointwise_conv_optimized_v2.sv|
+!s90 -sv|pointwise_conv_optimized_v2.sv|pointwise_conv_optimized_test.sv|
+!i113 0
+R9
+R4
+vpointwise_conv_optimized_v2
+R6
+Z14 !s110 1751405054
+!i10b 1
+!s100 >2[N_GkoCilK?1M`zQ3?c0
+IdhdedbCOe_ie]Y^B`Bdn<2
+S1
+R1
+w1751404730
+8pointwise_conv_optimized_v2.sv
+Fpointwise_conv_optimized_v2.sv
+!i122 8
+L0 1 307
+R7
+R8
+r1
+!s85 0
+31
+Z15 !s108 1751405054.000000
+Z16 !s107 pointwise_conv_tb.sv|pointwise_conv_optimized_v2.sv|
+Z17 !s90 -sv|pointwise_conv_optimized_v2.sv|pointwise_conv_tb.sv|
+!i113 0
+R9
+R4
+vpointwise_conv_tb
+R6
+R14
+!i10b 1
+!s100 PcI2e4_5<hkf97:7K<<aN1
+IOcXd0X@CS;0f=HAR]e_eX3
+S1
+R1
+w1751405033
+8pointwise_conv_tb.sv
+Fpointwise_conv_tb.sv
+!i122 8
+L0 15 334
+R7
+R8
+r1
+!s85 0
+31
+R15
+R16
+R17
+!i113 0
+R9
+R4
+vtest_readmem
+R6
+!s110 1751402587
+!i10b 1
+!s100 ?@4BH4_<YVJ=M[a9FFE:[3
+I4b18UVAbfjn^2okzRUb[>3
+S1
+R1
+w1751402565
+8test_readmem.sv
+Ftest_readmem.sv
+!i122 2
+L0 2 25
+R7
+R8
+r1
+!s85 0
+31
+!s108 1751402587.000000
+!s107 test_readmem.sv|
+!s90 -sv|test_readmem.sv|
+!i113 0
+R9
+R4

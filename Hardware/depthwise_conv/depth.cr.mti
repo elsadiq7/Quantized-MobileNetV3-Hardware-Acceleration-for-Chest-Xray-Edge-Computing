@@ -1,0 +1,22 @@
+C:/intelFPGA/Final_Project/depth/depthwise_conv.sv {1 {vlog -work work -vopt -sv -stats=none C:/intelFPGA/Final_Project/depth/depthwise_conv.sv
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module depthwise_conv
+
+Top level modules:
+	depthwise_conv
+
+} {} {}} C:/intelFPGA/Final_Project/depth/depthwise_conv_simple.sv {1 {vlog -work work -vopt -sv -stats=none C:/intelFPGA/Final_Project/depth/depthwise_conv_simple.sv
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module depthwise_conv_simple
+
+Top level modules:
+	depthwise_conv_simple
+
+} {} {}} C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv {1 {vlog -work work -vopt -sv -stats=none C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module depthwise_conv_winograd
+
+Top level modules:
+	depthwise_conv_winograd
+
+} {} {}}

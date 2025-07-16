@@ -1,0 +1,662 @@
+# vsim -c -do "run -all; quit" work.tb_top_all_layers 
+# Start time: 20:55:29 on Jun 24,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# //  Questa Sim-64
+# //  Version 2021.1 win64 Jan 19 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.tb_top_all_layers(fast)
+# run -all
+# 
+# 
+# ========================================
+#    SE MODULE SIMPLE TEST
+# ========================================
+# Configuration:
+#   IN_CHANNELS: 16
+#   REDUCTION: 4
+#   INPUT SIZE: 8x8
+#   TOTAL PIXELS: 1024
+# ========================================
+# 
+# === INITIALIZATION ===
+# Resetting module...
+# Reset complete.
+# === INITIALIZATION COMPLETE ===
+# 
+# 
+# === LOADING KERNELS ===
+# Loading Conv1 kernels (64 weights)...
+# 🔄 Conv2D State: IDLE -> LOADING_KERNEL
+# 🔧 Starting kernel loading...
+# 🔧 Loaded kernel[0][0] = 0 (addr=0)
+#   Conv1 weight[0] = 256 (sent)
+# 🔧 Loaded kernel[0][1] = 0 (addr=1)
+#   Conv1 weight[1] = 256 (sent)
+# 🔧 Loaded kernel[0][2] = 0 (addr=2)
+#   Conv1 weight[2] = 256 (sent)
+# 🔧 Loaded kernel[0][3] = 0 (addr=3)
+#   Conv1 weight[3] = 256 (sent)
+# 🔧 Loaded kernel[0][4] = 0 (addr=4)
+#   Conv1 weight[4] = 256 (sent)
+# 🔧 Loaded kernel[0][5] = 0 (addr=5)
+# 🔧 Loaded kernel[0][6] = 0 (addr=6)
+# 🔧 Loaded kernel[0][7] = 0 (addr=7)
+# 🔧 Loaded kernel[0][8] = 0 (addr=8)
+# 🔧 Loaded kernel[0][9] = 0 (addr=9)
+# 🔧 Loaded kernel[0][10] = 0 (addr=10)
+# 🔧 Loaded kernel[0][11] = 0 (addr=11)
+# 🔧 Loaded kernel[0][12] = 0 (addr=12)
+# 🔧 Loaded kernel[0][13] = 0 (addr=13)
+# 🔧 Loaded kernel[0][14] = 0 (addr=14)
+# 🔧 Loaded kernel[0][15] = 0 (addr=15)
+# 🔧 Loaded kernel[1][0] = 0 (addr=16)
+# 🔧 Loaded kernel[1][1] = 0 (addr=17)
+# 🔧 Loaded kernel[1][2] = 0 (addr=18)
+# 🔧 Loaded kernel[1][3] = 0 (addr=19)
+# 🔧 Loaded kernel[1][4] = 0 (addr=20)
+# 🔧 Loaded kernel[1][5] = 0 (addr=21)
+# 🔧 Loaded kernel[1][6] = 0 (addr=22)
+# 🔧 Loaded kernel[1][7] = 0 (addr=23)
+# 🔧 Loaded kernel[1][8] = 0 (addr=24)
+# 🔧 Loaded kernel[1][9] = 0 (addr=25)
+# 🔧 Loaded kernel[1][10] = 0 (addr=26)
+# 🔧 Loaded kernel[1][11] = 0 (addr=27)
+# 🔧 Loaded kernel[1][12] = 0 (addr=28)
+# 🔧 Loaded kernel[1][13] = 0 (addr=29)
+# 🔧 Loaded kernel[1][14] = 0 (addr=30)
+# 🔧 Loaded kernel[1][15] = 0 (addr=31)
+# 🔧 Loaded kernel[2][0] = 0 (addr=32)
+# 🔧 Loaded kernel[2][1] = 0 (addr=33)
+# 🔧 Loaded kernel[2][2] = 0 (addr=34)
+# 🔧 Loaded kernel[2][3] = 0 (addr=35)
+# 🔧 Loaded kernel[2][4] = 0 (addr=36)
+# 🔧 Loaded kernel[2][5] = 0 (addr=37)
+# 🔧 Loaded kernel[2][6] = 0 (addr=38)
+# 🔧 Loaded kernel[2][7] = 0 (addr=39)
+# 🔧 Loaded kernel[2][8] = 0 (addr=40)
+# 🔧 Loaded kernel[2][9] = 0 (addr=41)
+# 🔧 Loaded kernel[2][10] = 0 (addr=42)
+# 🔧 Loaded kernel[2][11] = 0 (addr=43)
+# 🔧 Loaded kernel[2][12] = 0 (addr=44)
+# 🔧 Loaded kernel[2][13] = 0 (addr=45)
+# 🔧 Loaded kernel[2][14] = 0 (addr=46)
+# 🔧 Loaded kernel[2][15] = 0 (addr=47)
+# 🔧 Loaded kernel[3][0] = 0 (addr=48)
+# 🔧 Loaded kernel[3][1] = 0 (addr=49)
+# 🔧 Loaded kernel[3][2] = 0 (addr=50)
+# 🔧 Loaded kernel[3][3] = 0 (addr=51)
+# 🔧 Loaded kernel[3][4] = 0 (addr=52)
+# 🔧 Loaded kernel[3][5] = 0 (addr=53)
+# 🔧 Loaded kernel[3][6] = 0 (addr=54)
+# 🔧 Loaded kernel[3][7] = 0 (addr=55)
+# 🔧 Loaded kernel[3][8] = 0 (addr=56)
+# 🔧 Loaded kernel[3][9] = 0 (addr=57)
+# 🔧 Loaded kernel[3][10] = 0 (addr=58)
+# 🔧 Loaded kernel[3][11] = 0 (addr=59)
+# 🔧 Loaded kernel[3][12] = 0 (addr=60)
+# 🔧 Loaded kernel[3][13] = 0 (addr=61)
+# 🔧 Loaded kernel[3][14] = 0 (addr=62)
+# 🔄 Conv2D State: LOADING_KERNEL -> IDLE
+# 🔧 Loaded kernel[3][15] = 0 (addr=63)
+# ✅ Kernel loading complete - 64 weights loaded
+# Conv1 kernels loaded.
+# Loading Conv2 kernels (64 weights)...
+# 🔧 Starting kernel loading...
+# 🔄 Conv2D State: IDLE -> LOADING_KERNEL
+# 🔧 Starting kernel loading...
+#   Conv2 weight[0] = 256 (sent)
+# 🔧 Loaded kernel[0][0] = 0 (addr=0)
+#   Conv2 weight[1] = 256 (sent)
+# 🔧 Loaded kernel[0][1] = 0 (addr=1)
+#   Conv2 weight[2] = 256 (sent)
+# 🔧 Loaded kernel[0][2] = 0 (addr=2)
+#   Conv2 weight[3] = 256 (sent)
+# 🔧 Loaded kernel[0][3] = 0 (addr=3)
+#   Conv2 weight[4] = 256 (sent)
+# 🔧 Loaded kernel[1][0] = 0 (addr=4)
+# 🔧 Loaded kernel[1][1] = 0 (addr=5)
+# 🔧 Loaded kernel[1][2] = 0 (addr=6)
+# 🔧 Loaded kernel[1][3] = 0 (addr=7)
+# 🔧 Loaded kernel[2][0] = 0 (addr=8)
+# 🔧 Loaded kernel[2][1] = 0 (addr=9)
+# 🔧 Loaded kernel[2][2] = 0 (addr=10)
+# 🔧 Loaded kernel[2][3] = 0 (addr=11)
+# 🔧 Loaded kernel[3][0] = 0 (addr=12)
+# 🔧 Loaded kernel[3][1] = 0 (addr=13)
+# 🔧 Loaded kernel[3][2] = 0 (addr=14)
+# 🔧 Loaded kernel[3][3] = 0 (addr=15)
+# 🔧 Loaded kernel[4][0] = 0 (addr=16)
+# 🔧 Loaded kernel[4][1] = 0 (addr=17)
+# 🔧 Loaded kernel[4][2] = 0 (addr=18)
+# 🔧 Loaded kernel[4][3] = 0 (addr=19)
+# 🔧 Loaded kernel[5][0] = 0 (addr=20)
+# 🔧 Loaded kernel[5][1] = 0 (addr=21)
+# 🔧 Loaded kernel[5][2] = 0 (addr=22)
+# 🔧 Loaded kernel[5][3] = 0 (addr=23)
+# 🔧 Loaded kernel[6][0] = 0 (addr=24)
+# 🔧 Loaded kernel[6][1] = 0 (addr=25)
+# 🔧 Loaded kernel[6][2] = 0 (addr=26)
+# 🔧 Loaded kernel[6][3] = 0 (addr=27)
+# 🔧 Loaded kernel[7][0] = 0 (addr=28)
+# 🔧 Loaded kernel[7][1] = 0 (addr=29)
+# 🔧 Loaded kernel[7][2] = 0 (addr=30)
+# 🔧 Loaded kernel[7][3] = 0 (addr=31)
+# 🔧 Loaded kernel[8][0] = 0 (addr=32)
+# 🔧 Loaded kernel[8][1] = 0 (addr=33)
+# 🔧 Loaded kernel[8][2] = 0 (addr=34)
+# 🔧 Loaded kernel[8][3] = 0 (addr=35)
+# 🔧 Loaded kernel[9][0] = 0 (addr=36)
+# 🔧 Loaded kernel[9][1] = 0 (addr=37)
+# 🔧 Loaded kernel[9][2] = 0 (addr=38)
+# 🔧 Loaded kernel[9][3] = 0 (addr=39)
+# 🔧 Loaded kernel[10][0] = 0 (addr=40)
+# 🔧 Loaded kernel[10][1] = 0 (addr=41)
+# 🔧 Loaded kernel[10][2] = 0 (addr=42)
+# 🔧 Loaded kernel[10][3] = 0 (addr=43)
+# 🔧 Loaded kernel[11][0] = 0 (addr=44)
+# 🔧 Loaded kernel[11][1] = 0 (addr=45)
+# 🔧 Loaded kernel[11][2] = 0 (addr=46)
+# 🔧 Loaded kernel[11][3] = 0 (addr=47)
+# 🔧 Loaded kernel[12][0] = 0 (addr=48)
+# 🔧 Loaded kernel[12][1] = 0 (addr=49)
+# 🔧 Loaded kernel[12][2] = 0 (addr=50)
+# 🔧 Loaded kernel[12][3] = 0 (addr=51)
+# 🔧 Loaded kernel[13][0] = 0 (addr=52)
+# 🔧 Loaded kernel[13][1] = 0 (addr=53)
+# 🔧 Loaded kernel[13][2] = 0 (addr=54)
+# 🔧 Loaded kernel[13][3] = 0 (addr=55)
+# 🔧 Loaded kernel[14][0] = 0 (addr=56)
+# 🔧 Loaded kernel[14][1] = 0 (addr=57)
+# 🔧 Loaded kernel[14][2] = 0 (addr=58)
+# 🔧 Loaded kernel[14][3] = 0 (addr=59)
+# 🔧 Loaded kernel[15][0] = 0 (addr=60)
+# 🔧 Loaded kernel[15][1] = 0 (addr=61)
+# 🔧 Loaded kernel[15][2] = 0 (addr=62)
+# 🔄 Conv2D State: LOADING_KERNEL -> IDLE
+# 🔧 Loaded kernel[15][3] = 0 (addr=63)
+# ✅ Kernel loading complete - 64 weights loaded
+# Conv2 kernels loaded.
+# === KERNEL LOADING COMPLETE ===
+# 
+# 
+# 
+# ========================================
+#    RUNNING TEST
+# ========================================
+# 
+# === SENDING TEST DATA ===
+# Input value: 100
+# Total pixels to send: 1024
+# DEBUG INPUT: count=0, data=100
+#   Input[0] = 100
+# 🔢 AdaptiveAvgPool2d: input[1] = 101 for channel[0], sum=201
+# DEBUG INPUT: count=1, data=101
+#   Input[1] = 101
+# DEBUG INPUT: count=2, data=102
+# 🔢 AdaptiveAvgPool2d: input[2] = 102 for channel[0], sum=303
+#   Input[2] = 102
+# 🔢 AdaptiveAvgPool2d: input[3] = 103 for channel[0], sum=406
+# DEBUG INPUT: count=3, data=103
+#   Input[3] = 103
+# DEBUG INPUT: count=4, data=104
+# 🔢 AdaptiveAvgPool2d: input[4] = 104 for channel[0], sum=510
+#   Input[4] = 104
+# DEBUG INPUT: count=5, data=105
+#   ... (sending 1014 more pixels) ...
+# DEBUG INPUT: count=6, data=106
+# DEBUG INPUT: count=7, data=107
+# DEBUG INPUT: count=8, data=108
+# DEBUG INPUT: count=9, data=109
+# 🔢 AdaptiveAvgPool2d: input[1019] = 111 for channel[15], sum=6426
+#   Input[1019] = 111
+# DEBUG INPUT: count=1020, data=112
+# 🔢 AdaptiveAvgPool2d: input[1020] = 112 for channel[15], sum=6538
+#   Input[1020] = 112
+# 🔢 AdaptiveAvgPool2d: input[1021] = 113 for channel[15], sum=6651
+# DEBUG INPUT: count=1021, data=113
+#   Input[1021] = 113
+# DEBUG INPUT: count=1022, data=114
+# 🔢 AdaptiveAvgPool2d: input[1022] = 114 for channel[15], sum=6765
+#   Input[1022] = 114
+# 🔢 AdaptiveAvgPool2d: input[1023] = 115 for channel[15], sum=6880
+# 🎯 AdaptiveAvgPool2d: All 1024 inputs received, starting output phase
+# DEBUG INPUT: count=1023, data=115
+# DEBUG: inputs_complete set to 1, total inputs received: 1024
+#   Input[1023] = 115
+# All input data sent.
+# === INPUT SENDING COMPLETE ===
+# 
+# 
+# === WAITING FOR OUTPUTS (UNLIMITED TIME) ===
+# Expecting 1024 outputs...
+# Will run indefinitely until all outputs are received...
+# 🏊 AdaptiveAvgPool2d: Output channel 0 = 108 (sum=6880, avg=108)
+# PIPELINE: Pool output = 108
+# 🔄 Conv2D State: IDLE -> COLLECTING_INPUTS
+# 📥 Starting input collection...
+# 🏊 AdaptiveAvgPool2d: Output channel 1 = 108 (sum=6880, avg=108)
+# 🏊 AdaptiveAvgPool2d: Output channel 2 = 108 (sum=6880, avg=108)
+# 📥 Collected input[0] = 108 (total needed: 16)
+# 📥 Collected input[1] = 108 (total needed: 16)
+# 🏊 AdaptiveAvgPool2d: Output channel 3 = 108 (sum=6880, avg=108)
+# 🏊 AdaptiveAvgPool2d: Output channel 4 = 108 (sum=6880, avg=108)
+# 📥 Collected input[2] = 108 (total needed: 16)
+# 📥 Collected input[3] = 108 (total needed: 16)
+# 🏊 AdaptiveAvgPool2d: Output channel 5 = 108 (sum=6880, avg=108)
+# 🏊 AdaptiveAvgPool2d: Output channel 6 = 108 (sum=6880, avg=108)
+# 📥 Collected input[4] = 108 (total needed: 16)
+# 📥 Collected input[5] = 108 (total needed: 16)
+# 🏊 AdaptiveAvgPool2d: Output channel 7 = 108 (sum=6880, avg=108)
+# 🏊 AdaptiveAvgPool2d: Output channel 8 = 108 (sum=6880, avg=108)
+# 📥 Collected input[6] = 108 (total needed: 16)
+# 📥 Collected input[7] = 108 (total needed: 16)
+# 🏊 AdaptiveAvgPool2d: Output channel 9 = 108 (sum=6880, avg=108)
+# 🏊 AdaptiveAvgPool2d: Output channel 10 = 108 (sum=6880, avg=108)
+# 📥 Collected input[8] = 108 (total needed: 16)
+# 📥 Collected input[9] = 108 (total needed: 16)
+# 🏊 AdaptiveAvgPool2d: Output channel 11 = 108 (sum=6880, avg=108)
+# 🏊 AdaptiveAvgPool2d: Output channel 12 = 108 (sum=6880, avg=108)
+# 📥 Collected input[10] = 108 (total needed: 16)
+# 📥 Collected input[11] = 108 (total needed: 16)
+# 🏊 AdaptiveAvgPool2d: Output channel 13 = 108 (sum=6880, avg=108)
+# 🏊 AdaptiveAvgPool2d: Output channel 14 = 108 (sum=6880, avg=108)
+# 📥 Collected input[12] = 108 (total needed: 16)
+# 📥 Collected input[13] = 108 (total needed: 16)
+# 🏊 AdaptiveAvgPool2d: Output channel 15 = 108 (sum=6880, avg=108)
+# ✅ AdaptiveAvgPool2d: Last channel 15 output, will complete next cycle
+# ✅ AdaptiveAvgPool2d: All 16 channels output complete
+# 📥 Collected input[14] = 108 (total needed: 16)
+# 🔧 FORCED: Using duplicate last input for missing input[15], starting computation
+# 🔄 Conv2D State: COLLECTING_INPUTS -> COMPUTING
+# 🧮 MAC[0]: 108 * 0 = 0, acc=0
+# 🧮 MAC[1]: 108 * 0 = 0, acc=0
+# 🧮 MAC[2]: 108 * 0 = 0, acc=0
+# 🧮 MAC[3]: 108 * 0 = 0, acc=0
+# 🧮 MAC[4]: 108 * 0 = 0, acc=0
+# 🧮 MAC[5]: 108 * 0 = 0, acc=0
+# 🧮 MAC[6]: 108 * 0 = 0, acc=0
+# 🧮 MAC[7]: 108 * 0 = 0, acc=0
+# 🧮 MAC[8]: 108 * 0 = 0, acc=0
+# 🧮 MAC[9]: 108 * 0 = 0, acc=0
+# 🧮 MAC[10]: 108 * 0 = 0, acc=0
+# 🧮 MAC[11]: 108 * 0 = 0, acc=0
+# 🧮 MAC[12]: 108 * 0 = 0, acc=0
+# 🧮 MAC[13]: 108 * 0 = 0, acc=0
+# 🧮 MAC[14]: 108 * 0 = 0, acc=0
+# 🧮 MAC[15]: 108 * 0 = 0, acc=0
+# 🔄 Conv2D State: COMPUTING -> OUTPUT
+# 🔄 Conv2D State: OUTPUT -> COMPUTING
+# 📤 Outputting channel 0: acc=0, scaled=0, final=0
+# ➡️  Moving to next output channel 1
+# 🧮 MAC[0]: 108 * 0 = 0, acc=0
+# 🧮 MAC[1]: 108 * 0 = 0, acc=0
+# 🧮 MAC[2]: 108 * 0 = 0, acc=0
+# 🧮 MAC[3]: 108 * 0 = 0, acc=0
+# 🔄 Conv2D State: IDLE -> COLLECTING_INPUTS
+# 📥 Starting input collection...
+# 🧮 MAC[4]: 108 * 0 = 0, acc=0
+# 🧮 MAC[5]: 108 * 0 = 0, acc=0
+# 📥 Collected input[0] = 0 (total needed: 4)
+# 📥 Collected input[1] = 0 (total needed: 4)
+# 🧮 MAC[6]: 108 * 0 = 0, acc=0
+# 🧮 MAC[7]: 108 * 0 = 0, acc=0
+# 📥 Collected input[2] = 0 (total needed: 4)
+# 📥 Collected input[3] = 0 (total needed: 4)
+# ✅ All 4 inputs collected, starting computation
+# 🧮 MAC[8]: 108 * 0 = 0, acc=0
+# 🧮 MAC[9]: 108 * 0 = 0, acc=0
+# 🔄 Conv2D State: COLLECTING_INPUTS -> COMPUTING
+# 🧮 MAC[0]: 0 * 0 = 0, acc=0
+# 🧮 MAC[10]: 108 * 0 = 0, acc=0
+# 🧮 MAC[11]: 108 * 0 = 0, acc=0
+# 🧮 MAC[1]: 0 * 0 = 0, acc=0
+# 🧮 MAC[2]: 0 * 0 = 0, acc=0
+# 🧮 MAC[12]: 108 * 0 = 0, acc=0
+# 🧮 MAC[13]: 108 * 0 = 0, acc=0
+# 🧮 MAC[3]: 0 * 0 = 0, acc=0
+# 🔄 Conv2D State: COMPUTING -> OUTPUT
+# 🧮 MAC[14]: 108 * 0 = 0, acc=0
+# 🧮 MAC[15]: 108 * 0 = 0, acc=0
+# 🔄 Conv2D State: OUTPUT -> COMPUTING
+# 📤 Outputting channel 0: acc=0, scaled=0, final=0
+# ➡️  Moving to next output channel 1
+# 🧮 MAC[0]: 0 * 0 = 0, acc=0
+# 🔄 Conv2D State: COMPUTING -> OUTPUT
+# 🔄 Conv2D State: OUTPUT -> COMPUTING
+# 📤 Outputting channel 1: acc=0, scaled=0, final=0
+# ➡️  Moving to next output channel 2
+# 🧮 MAC[1]: 0 * 0 = 0, acc=0
+# 🧮 MAC[2]: 0 * 0 = 0, acc=0
+# 🧮 MAC[0]: 108 * 0 = 0, acc=0
+# 🧮 MAC[1]: 108 * 0 = 0, acc=0
+# 🧮 MAC[3]: 0 * 0 = 0, acc=0
+# 🔄 Conv2D State: COMPUTING -> OUTPUT
+# 🧮 MAC[2]: 108 * 0 = 0, acc=0
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🧮 MAC[3]: 108 * 0 = 0, acc=0
+# 🔄 Conv2D State: OUTPUT -> COMPUTING
+# 📤 Outputting channel 1: acc=0, scaled=0, final=0
+# ➡️  Moving to next output channel 2
+# PIPELINE: HSigmoid output = 128
+# 🎯 SE Scale computed: 256 (hsigmoid_out: 128)
+# 🧮 MAC[0]: 0 * 0 = 0, acc=0
+# 🧮 MAC[4]: 108 * 0 = 0, acc=0
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🚀 Starting SE output generation with scale: 128
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🧮 MAC[5]: 108 * 0 = 0, acc=0
+# 🧮 MAC[1]: 0 * 0 = 0, acc=0
+# 🧮 MAC[2]: 0 * 0 = 0, acc=0
+# 🧮 MAC[6]: 108 * 0 = 0, acc=0
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 📤 SE Output[0]: input=100 * scale=128 = 50
+# OUTPUT[1]: 50
+# 📤 SE Output[1]: input=101 * scale=128 = 50
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🧮 MAC[7]: 108 * 0 = 0, acc=0
+# 🧮 MAC[3]: 0 * 0 = 0, acc=0
+# 🔄 Conv2D State: COMPUTING -> OUTPUT
+# 🧮 MAC[8]: 108 * 0 = 0, acc=0
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 📤 SE Output[2]: input=102 * scale=128 = 51
+# OUTPUT[2]: 50
+# OUTPUT[3]: 51
+# 📤 SE Output[3]: input=103 * scale=128 = 51
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🧮 MAC[9]: 108 * 0 = 0, acc=0
+# 🔄 Conv2D State: OUTPUT -> COMPUTING
+# 📤 Outputting channel 2: acc=0, scaled=0, final=0
+# ➡️  Moving to next output channel 3
+# 🧮 MAC[0]: 0 * 0 = 0, acc=0
+# 🧮 MAC[10]: 108 * 0 = 0, acc=0
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 📤 SE Output[4]: input=104 * scale=128 = 52
+# OUTPUT[4]: 51
+# OUTPUT[5]: 52
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🧮 MAC[11]: 108 * 0 = 0, acc=0
+# 🧮 MAC[1]: 0 * 0 = 0, acc=0
+# 🧮 MAC[2]: 0 * 0 = 0, acc=0
+# 🧮 MAC[12]: 108 * 0 = 0, acc=0
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# OUTPUT[6]: 52
+# OUTPUT[7]: 53
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🧮 MAC[13]: 108 * 0 = 0, acc=0
+# 🧮 MAC[3]: 0 * 0 = 0, acc=0
+# 🔄 Conv2D State: COMPUTING -> OUTPUT
+# 🧮 MAC[14]: 108 * 0 = 0, acc=0
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# OUTPUT[8]: 53
+# OUTPUT[9]: 54
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🧮 MAC[15]: 108 * 0 = 0, acc=0
+# 🔄 Conv2D State: OUTPUT -> COMPUTING
+# 📤 Outputting channel 3: acc=0, scaled=0, final=0
+# ➡️  Moving to next output channel 4
+# 🧮 MAC[0]: 0 * 0 = 0, acc=0
+# 🔄 Conv2D State: COMPUTING -> OUTPUT
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# OUTPUT[10]: 54
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🔄 Conv2D State: OUTPUT -> COMPUTING
+# 📤 Outputting channel 2: acc=0, scaled=0, final=0
+# ➡️  Moving to next output channel 3
+# 🧮 MAC[1]: 0 * 0 = 0, acc=0
+# 🧮 MAC[2]: 0 * 0 = 0, acc=0
+# 🧮 MAC[0]: 108 * 0 = 0, acc=0
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🧮 MAC[1]: 108 * 0 = 0, acc=0
+# 🧮 MAC[3]: 0 * 0 = 0, acc=0
+# 🔄 Conv2D State: COMPUTING -> OUTPUT
+# 🧮 MAC[2]: 108 * 0 = 0, acc=0
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🧮 MAC[3]: 108 * 0 = 0, acc=0
+# 🔄 Conv2D State: OUTPUT -> COMPUTING
+# 📤 Outputting channel 4: acc=0, scaled=0, final=0
+# ➡️  Moving to next output channel 5
+# 🧮 MAC[0]: 0 * 0 = 0, acc=0
+# 🧮 MAC[4]: 108 * 0 = 0, acc=0
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🧮 MAC[5]: 108 * 0 = 0, acc=0
+# 🧮 MAC[1]: 0 * 0 = 0, acc=0
+# 🧮 MAC[2]: 0 * 0 = 0, acc=0
+# 🧮 MAC[6]: 108 * 0 = 0, acc=0
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🧮 MAC[7]: 108 * 0 = 0, acc=0
+# 🧮 MAC[3]: 0 * 0 = 0, acc=0
+# 🔄 Conv2D State: COMPUTING -> OUTPUT
+# 🧮 MAC[8]: 108 * 0 = 0, acc=0
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🧮 MAC[9]: 108 * 0 = 0, acc=0
+# 🔄 Conv2D State: OUTPUT -> COMPUTING
+# 📤 Outputting channel 5: acc=0, scaled=0, final=0
+# ➡️  Moving to next output channel 6
+# 🧮 MAC[0]: 0 * 0 = 0, acc=0
+# 🧮 MAC[10]: 108 * 0 = 0, acc=0
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🧮 MAC[11]: 108 * 0 = 0, acc=0
+# 🧮 MAC[1]: 0 * 0 = 0, acc=0
+# 🧮 MAC[2]: 0 * 0 = 0, acc=0
+# 🧮 MAC[12]: 108 * 0 = 0, acc=0
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🧮 MAC[13]: 108 * 0 = 0, acc=0
+# 🧮 MAC[3]: 0 * 0 = 0, acc=0
+# 🔄 Conv2D State: COMPUTING -> OUTPUT
+# 🧮 MAC[14]: 108 * 0 = 0, acc=0
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🧮 MAC[15]: 108 * 0 = 0, acc=0
+# 🔄 Conv2D State: OUTPUT -> COMPUTING
+# 📤 Outputting channel 6: acc=0, scaled=0, final=0
+# ➡️  Moving to next output channel 7
+# 🧮 MAC[0]: 0 * 0 = 0, acc=0
+# 🔄 Conv2D State: COMPUTING -> OUTPUT
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🔄 Conv2D State: OUTPUT -> IDLE
+# 📤 Outputting channel 3: acc=0, scaled=0, final=0
+# ✅ All outputs complete
+# 🧮 MAC[1]: 0 * 0 = 0, acc=0
+# 🧮 MAC[2]: 0 * 0 = 0, acc=0
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🧮 MAC[3]: 0 * 0 = 0, acc=0
+# 🔄 Conv2D State: COMPUTING -> OUTPUT
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🔄 Conv2D State: OUTPUT -> COMPUTING
+# 📤 Outputting channel 7: acc=0, scaled=0, final=0
+# ➡️  Moving to next output channel 8
+# 🧮 MAC[0]: 0 * 0 = 0, acc=0
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🧮 MAC[1]: 0 * 0 = 0, acc=0
+# 🧮 MAC[2]: 0 * 0 = 0, acc=0
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🧮 MAC[3]: 0 * 0 = 0, acc=0
+# 🔄 Conv2D State: COMPUTING -> OUTPUT
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🔄 Conv2D State: OUTPUT -> COMPUTING
+# 📤 Outputting channel 8: acc=0, scaled=0, final=0
+# ➡️  Moving to next output channel 9
+# 🧮 MAC[0]: 0 * 0 = 0, acc=0
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🧮 MAC[1]: 0 * 0 = 0, acc=0
+# 🧮 MAC[2]: 0 * 0 = 0, acc=0
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🧮 MAC[3]: 0 * 0 = 0, acc=0
+# 🔄 Conv2D State: COMPUTING -> OUTPUT
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🔄 Conv2D State: OUTPUT -> COMPUTING
+# 📤 Outputting channel 9: acc=0, scaled=0, final=0
+# ➡️  Moving to next output channel 10
+# 🧮 MAC[0]: 0 * 0 = 0, acc=0
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🧮 MAC[1]: 0 * 0 = 0, acc=0
+# 🧮 MAC[2]: 0 * 0 = 0, acc=0
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🧮 MAC[3]: 0 * 0 = 0, acc=0
+# 🔄 Conv2D State: COMPUTING -> OUTPUT
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🔄 Conv2D State: OUTPUT -> COMPUTING
+# 📤 Outputting channel 10: acc=0, scaled=0, final=0
+# ➡️  Moving to next output channel 11
+# 🧮 MAC[0]: 0 * 0 = 0, acc=0
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🧮 MAC[1]: 0 * 0 = 0, acc=0
+# 🧮 MAC[2]: 0 * 0 = 0, acc=0
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🧮 MAC[3]: 0 * 0 = 0, acc=0
+# 🔄 Conv2D State: COMPUTING -> OUTPUT
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🔄 Conv2D State: OUTPUT -> COMPUTING
+# 📤 Outputting channel 11: acc=0, scaled=0, final=0
+# ➡️  Moving to next output channel 12
+# 🧮 MAC[0]: 0 * 0 = 0, acc=0
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🧮 MAC[1]: 0 * 0 = 0, acc=0
+# 🧮 MAC[2]: 0 * 0 = 0, acc=0
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🧮 MAC[3]: 0 * 0 = 0, acc=0
+# 🔄 Conv2D State: COMPUTING -> OUTPUT
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🔄 Conv2D State: OUTPUT -> COMPUTING
+# 📤 Outputting channel 12: acc=0, scaled=0, final=0
+# ➡️  Moving to next output channel 13
+# 🧮 MAC[0]: 0 * 0 = 0, acc=0
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🧮 MAC[1]: 0 * 0 = 0, acc=0
+# 🧮 MAC[2]: 0 * 0 = 0, acc=0
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🧮 MAC[3]: 0 * 0 = 0, acc=0
+# 🔄 Conv2D State: COMPUTING -> OUTPUT
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🔄 Conv2D State: OUTPUT -> COMPUTING
+# 📤 Outputting channel 13: acc=0, scaled=0, final=0
+# ➡️  Moving to next output channel 14
+# 🧮 MAC[0]: 0 * 0 = 0, acc=0
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🧮 MAC[1]: 0 * 0 = 0, acc=0
+# 🧮 MAC[2]: 0 * 0 = 0, acc=0
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🧮 MAC[3]: 0 * 0 = 0, acc=0
+# 🔄 Conv2D State: COMPUTING -> OUTPUT
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🔄 Conv2D State: OUTPUT -> COMPUTING
+# 📤 Outputting channel 14: acc=0, scaled=0, final=0
+# ➡️  Moving to next output channel 15
+# 🧮 MAC[0]: 0 * 0 = 0, acc=0
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🧮 MAC[1]: 0 * 0 = 0, acc=0
+# 🧮 MAC[2]: 0 * 0 = 0, acc=0
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🧮 MAC[3]: 0 * 0 = 0, acc=0
+# 🔄 Conv2D State: COMPUTING -> OUTPUT
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🔄 Conv2D State: OUTPUT -> IDLE
+# 📤 Outputting channel 15: acc=0, scaled=0, final=0
+# ✅ All outputs complete
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 🔵 HardSigmoid: relu6_result=768, hsigmoid_temp=768, hsig_div=128, final=128
+# 📤 SE Output[100]: input=104 * scale=128 = 52
+# OUTPUT[100]: 51
+#   MILESTONE: 100 outputs received at cycle 162
+# 📤 SE Output[200]: input=108 * scale=128 = 54
+# OUTPUT[200]: 53
+#   MILESTONE: 200 outputs received at cycle 262
+# 📤 SE Output[300]: input=112 * scale=128 = 56
+# OUTPUT[300]: 55
+#   MILESTONE: 300 outputs received at cycle 362
+# 📤 SE Output[400]: input=100 * scale=128 = 50
+# OUTPUT[400]: 57
+#   MILESTONE: 400 outputs received at cycle 462
+#   Cycle 500: Received 438/1024 outputs
+# 📤 SE Output[500]: input=104 * scale=128 = 52
+# OUTPUT[500]: 51
+#   MILESTONE: 500 outputs received at cycle 562
+# 📤 SE Output[600]: input=108 * scale=128 = 54
+# OUTPUT[600]: 53
+#   MILESTONE: 600 outputs received at cycle 662
+# 📤 SE Output[700]: input=112 * scale=128 = 56
+# OUTPUT[700]: 55
+#   MILESTONE: 700 outputs received at cycle 762
+# 📤 SE Output[800]: input=100 * scale=128 = 50
+# OUTPUT[800]: 57
+#   MILESTONE: 800 outputs received at cycle 862
+# 📤 SE Output[900]: input=104 * scale=128 = 52
+# OUTPUT[900]: 51
+#   MILESTONE: 900 outputs received at cycle 962
+#   Cycle 1000: Received 938/1024 outputs
+# 📤 SE Output[1000]: input=108 * scale=128 = 54
+# OUTPUT[1000]: 53
+#   MILESTONE: 1000 outputs received at cycle 1062
+# DEBUG: Reset for next frame
+# 📤 SE Output[0]: input=100 * scale=128 = 50
+# 
+# === OUTPUT COLLECTION RESULTS ===
+# Cycles waited: 1086
+# Outputs received: 1024/1024
+# SUCCESS: All outputs received!
+# === END OUTPUT RESULTS ===
+# 
+# 
+# 
+# ========================================
+#    FINAL TEST SUMMARY
+# ========================================
+# Input value used: 100
+# Expected outputs: 1024
+# Actual outputs: 1024
+# RESULT: PASS - SE module is working!
+# ========================================
+# ** Note: $finish    : tb_top_all_layers.sv(239)
+#    Time: 22525 ns  Iteration: 1  Instance: /tb_top_all_layers
+# End time: 20:55:30 on Jun 24,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0

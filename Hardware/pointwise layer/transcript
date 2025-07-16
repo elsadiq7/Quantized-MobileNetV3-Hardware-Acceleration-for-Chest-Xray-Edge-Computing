@@ -1,0 +1,413 @@
+# vsim -c -do "run -all; quit" pointwise_conv_tb 
+# Start time: 00:26:47 on Jul 02,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# //  Questa Sim-64
+# //  Version 2021.1 win64 Jan 19 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.pointwise_conv_tb(fast)
+# run -all
+# Loading input test data...
+# Loading weight data...
+# Test data loaded successfully
+# Input samples loaded: 1024
+# Weights loaded: 1920
+# === Pointwise Convolution Testbench Started ===
+# Time: 0
+# Phase 0: Reset sequence
+# Phase 1: Enable module and start processing
+# Loaded 1920 weights for optimized pointwise convolution
+# State transition: IDLE -> PROCESSING at time 165000
+# Weights loaded successfully at time 165000
+# Phase 2: Input stimulus
+# Starting input stimulus process at time 170000
+# Starting output monitor process at time 170000
+# Input[1]: Channel=0, Data=0x0100, Time=175000
+# Pipeline Stage 1 active: data=0x0100, in_ch=0, group=0
+# Sequential Accumulation: OutCh=0 processed
+# Input[2]: Channel=0, Data=0x0200, Time=205000
+# Input[3]: Channel=0, Data=0x0300, Time=215000
+# Pipeline Stage 1 active: data=0x0200, in_ch=0, group=0
+# Sequential Accumulation: OutCh=1 processed
+# Input[4]: Channel=0, Data=0x0400, Time=225000
+# Pipeline Stage 1 active: data=0x0300, in_ch=0, group=0
+# Sequential Input[0]: Data=0x0400, InCh=0, Group=0
+# Sequential Accumulation: OutCh=2 processed
+# Pipeline Stage 1 active: data=0x0400, in_ch=0, group=0
+# Sequential Accumulation: OutCh=3 processed
+# Input[5]: Channel=0, Data=0x0500, Time=255000
+# Input[6]: Channel=0, Data=0x0080, Time=265000
+# Pipeline Stage 1 active: data=0x0500, in_ch=0, group=1
+# Sequential Accumulation: OutCh=4 processed
+# Input[7]: Channel=0, Data=0x0180, Time=275000
+# Pipeline Stage 1 active: data=0x0080, in_ch=0, group=1
+# Sequential Accumulation: OutCh=5 processed
+# Pipeline Stage 1 active: data=0x0180, in_ch=0, group=1
+# Sequential Accumulation: OutCh=6 processed
+# Input[8]: Channel=0, Data=0x0280, Time=305000
+# Sequential Input[1]: Data=0x0280, InCh=0, Group=1
+# Input[9]: Channel=0, Data=0x0380, Time=315000
+# Pipeline Stage 1 active: data=0x0280, in_ch=0, group=1
+# Sequential Accumulation: OutCh=7 processed
+# Input[10]: Channel=0, Data=0x0480, Time=325000
+# Pipeline Stage 1 active: data=0x0380, in_ch=0, group=2
+# Sequential Accumulation: OutCh=8 processed
+# Pipeline Stage 1 active: data=0x0480, in_ch=0, group=2
+# Sequential Accumulation: OutCh=9 processed
+# Input[11]: Channel=1, Data=0x0100, Time=355000
+# Pipeline Stage 1 active: data=0x0100, in_ch=1, group=2
+# Sequential Accumulation: OutCh=10 processed
+# Input[12]: Channel=1, Data=0xff00, Time=385000
+# Sequential Input[2]: Data=0xff00, InCh=1, Group=2
+# Input[13]: Channel=1, Data=0x0200, Time=395000
+# Pipeline Stage 1 active: data=0xff00, in_ch=1, group=2
+# Sequential Accumulation: OutCh=11 processed
+# Input[14]: Channel=1, Data=0xfe00, Time=405000
+# Pipeline Stage 1 active: data=0x0200, in_ch=1, group=3
+# Sequential Accumulation: OutCh=12 processed
+# Pipeline Stage 1 active: data=0xfe00, in_ch=1, group=3
+# Sequential Accumulation: OutCh=13 processed
+# Input[15]: Channel=1, Data=0x0300, Time=435000
+# Input[16]: Channel=1, Data=0xfd00, Time=445000
+# Pipeline Stage 1 active: data=0x0300, in_ch=1, group=3
+# Sequential Input[3]: Data=0xfd00, InCh=1, Group=3
+# Sequential Accumulation: OutCh=14 processed
+# Input[17]: Channel=1, Data=0x0400, Time=455000
+# Pipeline Stage 1 active: data=0xfd00, in_ch=1, group=3
+# Sequential Accumulation: OutCh=15 processed
+# Pipeline Stage 1 active: data=0x0400, in_ch=1, group=4
+# Sequential Accumulation: OutCh=16 processed
+# Input[18]: Channel=1, Data=0xfc00, Time=485000
+# Input[19]: Channel=1, Data=0x0500, Time=495000
+# Pipeline Stage 1 active: data=0xfc00, in_ch=1, group=4
+# Sequential Accumulation: OutCh=17 processed
+# Input[20]: Channel=1, Data=0xfb00, Time=505000
+# Pipeline Stage 1 active: data=0x0500, in_ch=1, group=4
+# Sequential Input[4]: Data=0xfb00, InCh=1, Group=4
+# Sequential Accumulation: OutCh=18 processed
+# Pipeline Stage 1 active: data=0xfb00, in_ch=1, group=4
+# Sequential Accumulation: OutCh=19 processed
+# Input[21]: Channel=2, Data=0x0040, Time=535000
+# Pipeline Stage 1 active: data=0x0040, in_ch=2, group=5
+# Sequential Accumulation: OutCh=20 processed
+# Input[22]: Channel=2, Data=0x0080, Time=565000
+# Input[23]: Channel=2, Data=0x00c0, Time=575000
+# Pipeline Stage 1 active: data=0x0080, in_ch=2, group=5
+# Sequential Accumulation: OutCh=21 processed
+# Input[24]: Channel=2, Data=0x0020, Time=585000
+# Pipeline Stage 1 active: data=0x00c0, in_ch=2, group=5
+# Sequential Input[5]: Data=0x0020, InCh=2, Group=5
+# Sequential Accumulation: OutCh=22 processed
+# Pipeline Stage 1 active: data=0x0020, in_ch=2, group=5
+# Sequential Accumulation: OutCh=23 processed
+# Input[25]: Channel=2, Data=0x0060, Time=615000
+# Input[26]: Channel=2, Data=0x00a0, Time=625000
+# Pipeline Stage 1 active: data=0x0060, in_ch=2, group=6
+# Sequential Accumulation: OutCh=24 processed
+# Input[27]: Channel=2, Data=0x00e0, Time=635000
+# Pipeline Stage 1 active: data=0x00a0, in_ch=2, group=6
+# Sequential Accumulation: OutCh=25 processed
+# Pipeline Stage 1 active: data=0x00e0, in_ch=2, group=6
+# Sequential Accumulation: OutCh=26 processed
+# Input[28]: Channel=2, Data=0x0010, Time=665000
+# Sequential Input[6]: Data=0x0010, InCh=2, Group=6
+# Input[29]: Channel=2, Data=0x0030, Time=675000
+# Pipeline Stage 1 active: data=0x0010, in_ch=2, group=6
+# Sequential Accumulation: OutCh=27 processed
+# Input[30]: Channel=2, Data=0x0050, Time=685000
+# Pipeline Stage 1 active: data=0x0030, in_ch=2, group=7
+# Sequential Accumulation: OutCh=28 processed
+# Pipeline Stage 1 active: data=0x0050, in_ch=2, group=7
+# Sequential Accumulation: OutCh=29 processed
+# Input[31]: Channel=3, Data=0x7fff, Time=715000
+# Pipeline Stage 1 active: data=0x7fff, in_ch=3, group=7
+# Sequential Accumulation: OutCh=30 processed
+# Input[32]: Channel=3, Data=0x8000, Time=745000
+# Sequential Input[7]: Data=0x8000, InCh=3, Group=7
+# Input[33]: Channel=3, Data=0x0001, Time=755000
+# Pipeline Stage 1 active: data=0x8000, in_ch=3, group=7
+# Sequential Accumulation: OutCh=31 processed
+# Input[34]: Channel=3, Data=0xffff, Time=765000
+# Pipeline Stage 1 active: data=0x0001, in_ch=3, group=8
+# Sequential Accumulation: OutCh=32 processed
+# Pipeline Stage 1 active: data=0xffff, in_ch=3, group=8
+# Sequential Accumulation: OutCh=33 processed
+# Input[35]: Channel=3, Data=0x0000, Time=795000
+# Input[36]: Channel=3, Data=0x0100, Time=805000
+# Pipeline Stage 1 active: data=0x0000, in_ch=3, group=8
+# Sequential Input[8]: Data=0x0100, InCh=3, Group=8
+# Sequential Accumulation: OutCh=34 processed
+# Input[37]: Channel=3, Data=0xff00, Time=815000
+# Pipeline Stage 1 active: data=0x0100, in_ch=3, group=8
+# Sequential Accumulation: OutCh=35 processed
+# Pipeline Stage 1 active: data=0xff00, in_ch=3, group=9
+# Sequential Accumulation: OutCh=36 processed
+# Input[38]: Channel=3, Data=0x0200, Time=845000
+# Input[39]: Channel=3, Data=0xfe00, Time=855000
+# Pipeline Stage 1 active: data=0x0200, in_ch=3, group=9
+# Sequential Accumulation: OutCh=37 processed
+# Input[40]: Channel=3, Data=0x0300, Time=865000
+# Pipeline Stage 1 active: data=0xfe00, in_ch=3, group=9
+# Sequential Input[9]: Data=0x0300, InCh=3, Group=9
+# Sequential Accumulation: OutCh=38 processed
+# Pipeline Stage 1 active: data=0x0300, in_ch=3, group=9
+# Input[41]: Channel=4, Data=0x0234, Time=895000
+# Pipeline Stage 1 active: data=0x0234, in_ch=4, group=10
+# Input[42]: Channel=4, Data=0x0567, Time=925000
+# Input[43]: Channel=4, Data=0x089a, Time=935000
+# Pipeline Stage 1 active: data=0x0567, in_ch=4, group=10
+# Input[44]: Channel=4, Data=0x0bcd, Time=945000
+# Pipeline Stage 1 active: data=0x089a, in_ch=4, group=10
+# Pipeline Stage 1 active: data=0x0bcd, in_ch=4, group=10
+# Input[45]: Channel=4, Data=0x0ef0, Time=975000
+# Input[46]: Channel=4, Data=0x0123, Time=985000
+# Pipeline Stage 1 active: data=0x0ef0, in_ch=4, group=11
+# Input[47]: Channel=4, Data=0x0456, Time=995000
+# Pipeline Stage 1 active: data=0x0123, in_ch=4, group=11
+# Pipeline Stage 1 active: data=0x0456, in_ch=4, group=11
+# Input[48]: Channel=4, Data=0x0789, Time=1025000
+# Input[49]: Channel=4, Data=0x0abc, Time=1035000
+# Pipeline Stage 1 active: data=0x0789, in_ch=4, group=11
+# Input[50]: Channel=4, Data=0x0def, Time=1045000
+# Pipeline Stage 1 active: data=0x0abc, in_ch=4, group=0
+# Pipeline Stage 1 active: data=0x0def, in_ch=4, group=0
+# Input[51]: Channel=5, Data=0x0150, Time=1075000
+# Pipeline Stage 1 active: data=0x0150, in_ch=5, group=0
+# Input[52]: Channel=5, Data=0x0250, Time=1105000
+# Input[53]: Channel=5, Data=0x0350, Time=1115000
+# Pipeline Stage 1 active: data=0x0250, in_ch=5, group=0
+# Input[54]: Channel=5, Data=0x0450, Time=1125000
+# Pipeline Stage 1 active: data=0x0350, in_ch=5, group=1
+# Pipeline Stage 1 active: data=0x0450, in_ch=5, group=1
+# Input[55]: Channel=5, Data=0x0550, Time=1155000
+# Input[56]: Channel=5, Data=0x0160, Time=1165000
+# Pipeline Stage 1 active: data=0x0550, in_ch=5, group=1
+# Input[57]: Channel=5, Data=0x0260, Time=1175000
+# Pipeline Stage 1 active: data=0x0160, in_ch=5, group=1
+# Pipeline Stage 1 active: data=0x0260, in_ch=5, group=2
+# Input[58]: Channel=5, Data=0x0360, Time=1205000
+# Input[59]: Channel=5, Data=0x0460, Time=1215000
+# Pipeline Stage 1 active: data=0x0360, in_ch=5, group=2
+# Input[60]: Channel=5, Data=0x0560, Time=1225000
+# Pipeline Stage 1 active: data=0x0460, in_ch=5, group=2
+# Pipeline Stage 1 active: data=0x0560, in_ch=5, group=2
+# Input[61]: Channel=6, Data=0x0170, Time=1255000
+# Pipeline Stage 1 active: data=0x0170, in_ch=6, group=3
+# Input[62]: Channel=6, Data=0x0270, Time=1285000
+# Input[63]: Channel=6, Data=0x0370, Time=1295000
+# Pipeline Stage 1 active: data=0x0270, in_ch=6, group=3
+# Input[64]: Channel=6, Data=0x0470, Time=1305000
+# Pipeline Stage 1 active: data=0x0370, in_ch=6, group=3
+# Pipeline Stage 1 active: data=0x0470, in_ch=6, group=3
+# Input[65]: Channel=6, Data=0x0570, Time=1335000
+# Input[66]: Channel=6, Data=0x0180, Time=1345000
+# Pipeline Stage 1 active: data=0x0570, in_ch=6, group=4
+# Input[67]: Channel=6, Data=0x0280, Time=1355000
+# Pipeline Stage 1 active: data=0x0180, in_ch=6, group=4
+# Pipeline Stage 1 active: data=0x0280, in_ch=6, group=4
+# Input[68]: Channel=6, Data=0x0380, Time=1385000
+# Input[69]: Channel=6, Data=0x0480, Time=1395000
+# Pipeline Stage 1 active: data=0x0380, in_ch=6, group=4
+# Input[70]: Channel=6, Data=0x0580, Time=1405000
+# Pipeline Stage 1 active: data=0x0480, in_ch=6, group=5
+# Pipeline Stage 1 active: data=0x0580, in_ch=6, group=5
+# Input[71]: Channel=7, Data=0x0190, Time=1435000
+# Pipeline Stage 1 active: data=0x0190, in_ch=7, group=5
+# Input[72]: Channel=7, Data=0x0290, Time=1465000
+# Input[73]: Channel=7, Data=0x0390, Time=1475000
+# Pipeline Stage 1 active: data=0x0290, in_ch=7, group=5
+# Input[74]: Channel=7, Data=0x0490, Time=1485000
+# Pipeline Stage 1 active: data=0x0390, in_ch=7, group=6
+# Pipeline Stage 1 active: data=0x0490, in_ch=7, group=6
+# Input[75]: Channel=7, Data=0x0590, Time=1515000
+# Input[76]: Channel=7, Data=0x01a0, Time=1525000
+# Pipeline Stage 1 active: data=0x0590, in_ch=7, group=6
+# Input[77]: Channel=7, Data=0x02a0, Time=1535000
+# Pipeline Stage 1 active: data=0x01a0, in_ch=7, group=6
+# Pipeline Stage 1 active: data=0x02a0, in_ch=7, group=7
+# Input[78]: Channel=7, Data=0x03a0, Time=1565000
+# Input[79]: Channel=7, Data=0x04a0, Time=1575000
+# Pipeline Stage 1 active: data=0x03a0, in_ch=7, group=7
+# Input[80]: Channel=7, Data=0x05a0, Time=1585000
+# Pipeline Stage 1 active: data=0x04a0, in_ch=7, group=7
+# Pipeline Stage 1 active: data=0x05a0, in_ch=7, group=7
+# Input[81]: Channel=8, Data=0x01b0, Time=1615000
+# Pipeline Stage 1 active: data=0x01b0, in_ch=8, group=8
+# Input[82]: Channel=8, Data=0x02b0, Time=1645000
+# Input[83]: Channel=8, Data=0x03b0, Time=1655000
+# Pipeline Stage 1 active: data=0x02b0, in_ch=8, group=8
+# Input[84]: Channel=8, Data=0x04b0, Time=1665000
+# Pipeline Stage 1 active: data=0x03b0, in_ch=8, group=8
+# Pipeline Stage 1 active: data=0x04b0, in_ch=8, group=8
+# Input[85]: Channel=8, Data=0x05b0, Time=1695000
+# Input[86]: Channel=8, Data=0x01c0, Time=1705000
+# Pipeline Stage 1 active: data=0x05b0, in_ch=8, group=9
+# Input[87]: Channel=8, Data=0x02c0, Time=1715000
+# Pipeline Stage 1 active: data=0x01c0, in_ch=8, group=9
+# Pipeline Stage 1 active: data=0x02c0, in_ch=8, group=9
+# Input[88]: Channel=8, Data=0x03c0, Time=1745000
+# Input[89]: Channel=8, Data=0x04c0, Time=1755000
+# Pipeline Stage 1 active: data=0x03c0, in_ch=8, group=9
+# Input[90]: Channel=8, Data=0x05c0, Time=1765000
+# Pipeline Stage 1 active: data=0x04c0, in_ch=8, group=10
+# Pipeline Stage 1 active: data=0x05c0, in_ch=8, group=10
+# Input[91]: Channel=9, Data=0x01d0, Time=1795000
+# Pipeline Stage 1 active: data=0x01d0, in_ch=9, group=10
+# Input[92]: Channel=9, Data=0x02d0, Time=1825000
+# Input[93]: Channel=9, Data=0x03d0, Time=1835000
+# Pipeline Stage 1 active: data=0x02d0, in_ch=9, group=10
+# Input[94]: Channel=9, Data=0x04d0, Time=1845000
+# Pipeline Stage 1 active: data=0x03d0, in_ch=9, group=11
+# Pipeline Stage 1 active: data=0x04d0, in_ch=9, group=11
+# Input[95]: Channel=9, Data=0x05d0, Time=1875000
+# Input[96]: Channel=9, Data=0x01e0, Time=1885000
+# Pipeline Stage 1 active: data=0x05d0, in_ch=9, group=11
+# Input[97]: Channel=9, Data=0x02e0, Time=1895000
+# Pipeline Stage 1 active: data=0x01e0, in_ch=9, group=11
+# Pipeline Stage 1 active: data=0x02e0, in_ch=9, group=0
+# Input[98]: Channel=9, Data=0x03e0, Time=1925000
+# Input[99]: Channel=9, Data=0x04e0, Time=1935000
+# Pipeline Stage 1 active: data=0x03e0, in_ch=9, group=0
+# Input[100]: Channel=9, Data=0x05e0, Time=1945000
+# Pipeline Stage 1 active: data=0x04e0, in_ch=9, group=0
+# Pipeline Stage 1 active: data=0x05e0, in_ch=9, group=0
+# Input stimulus completed. Total inputs: 100
+# Phase 3: Waiting for completion
+# State transition: PROCESSING -> ACCUMULATING at time 2125000
+# Sequential Output[0]: Data=0x0000, Channel=0, Accumulator=0x17ffd
+# Sequential Output[1]: Data=0x7fff, Channel=1, Accumulator=0x17ffd
+# Output[1]: Channel=0, Data=0x7fff, Time=2145000
+# Sequential Output[2]: Data=0x7fff, Channel=2, Accumulator=0x17ffd
+# Output[2]: Channel=1, Data=0x7fff, Time=2155000
+# Sequential Output[3]: Data=0x7fff, Channel=3, Accumulator=0x1003e
+# Output[3]: Channel=2, Data=0x7fff, Time=2165000
+# Sequential Output[4]: Data=0x7fff, Channel=4, Accumulator=0x08002
+# Output[4]: Channel=3, Data=0x7fff, Time=2175000
+# Sequential Output[5]: Data=0x7fff, Channel=5, Accumulator=0x0fffe
+# Output[5]: Channel=4, Data=0x7fff, Time=2185000
+# Sequential Output[6]: Data=0x7fff, Channel=6, Accumulator=0x08017
+# Output[6]: Channel=5, Data=0x7fff, Time=2195000
+# Sequential Output[7]: Data=0x7fff, Channel=7, Accumulator=0x0803b
+# Output[7]: Channel=6, Data=0x7fff, Time=2205000
+# Sequential Output[8]: Data=0x7fff, Channel=8, Accumulator=0x0806f
+# Output[8]: Channel=7, Data=0x7fff, Time=2215000
+# Sequential Output[9]: Data=0x7fff, Channel=9, Accumulator=0x07fff
+# Output[9]: Channel=8, Data=0x7fff, Time=2225000
+# Sequential Output[10]: Data=0x7fff, Channel=10, Accumulator=0x0803f
+# Output[10]: Channel=9, Data=0x7fff, Time=2235000
+# Sequential Output[11]: Data=0x7fff, Channel=11, Accumulator=0x07fb7
+# Output[11]: Channel=10, Data=0x7fff, Time=2245000
+# Sequential Output[12]: Data=0x7fb7, Channel=12, Accumulator=0x0fffe
+# Output[12]: Channel=11, Data=0x7fb7, Time=2255000
+# Sequential Output[13]: Data=0x7fff, Channel=13, Accumulator=0xf8000
+# Output[13]: Channel=12, Data=0x7fff, Time=2265000
+# Sequential Output[14]: Data=0x8000, Channel=14, Accumulator=0x0fffe
+# Output[14]: Channel=13, Data=0x8000, Time=2275000
+# Sequential Output[15]: Data=0x7fff, Channel=15, Accumulator=0xfffff
+# Output[15]: Channel=14, Data=0x7fff, Time=2285000
+# Sequential Output[16]: Data=0xffff, Channel=16, Accumulator=0x0fffe
+# Output[16]: Channel=15, Data=0xffff, Time=2295000
+# Sequential Output[17]: Data=0x7fff, Channel=17, Accumulator=0xfffff
+# Output[17]: Channel=16, Data=0x7fff, Time=2305000
+# Sequential Output[18]: Data=0xffff, Channel=18, Accumulator=0x07fff
+# Output[18]: Channel=17, Data=0xffff, Time=2315000
+# Sequential Output[19]: Data=0x7fff, Channel=19, Accumulator=0xfffff
+# Output[19]: Channel=18, Data=0x7fff, Time=2325000
+# Sequential Output[20]: Data=0xffff, Channel=20, Accumulator=0x0801f
+# Output[20]: Channel=19, Data=0xffff, Time=2335000
+# Sequential Output[21]: Data=0x7fff, Channel=21, Accumulator=0x08043
+# Output[21]: Channel=20, Data=0x7fff, Time=2345000
+# Sequential Output[22]: Data=0x7fff, Channel=22, Accumulator=0x0006c
+# Output[22]: Channel=21, Data=0x7fff, Time=2355000
+# Sequential Output[23]: Data=0x006c, Channel=23, Accumulator=0x08012
+# Output[23]: Channel=22, Data=0x006c, Time=2365000
+# Sequential Output[24]: Data=0x7fff, Channel=24, Accumulator=0x0fffe
+# Output[24]: Channel=23, Data=0x7fff, Time=2375000
+# Sequential Output[25]: Data=0x7fff, Channel=25, Accumulator=0x0fffe
+# Output[25]: Channel=24, Data=0x7fff, Time=2385000
+# Sequential Output[26]: Data=0x7fff, Channel=26, Accumulator=0x0fffe
+# Output[26]: Channel=25, Data=0x7fff, Time=2395000
+# Sequential Output[27]: Data=0x7fff, Channel=27, Accumulator=0x07fff
+# Output[27]: Channel=26, Data=0x7fff, Time=2405000
+# Sequential Output[28]: Data=0x7fff, Channel=28, Accumulator=0x08047
+# Output[28]: Channel=27, Data=0x7fff, Time=2415000
+# Sequential Output[29]: Data=0x7fff, Channel=29, Accumulator=0x08079
+# Output[29]: Channel=28, Data=0x7fff, Time=2425000
+# Sequential Output[30]: Data=0x7fff, Channel=30, Accumulator=0x0fffe
+# Output[30]: Channel=29, Data=0x7fff, Time=2435000
+# Sequential Output[31]: Data=0x7fff, Channel=31, Accumulator=0xfffff
+# Output[31]: Channel=30, Data=0x7fff, Time=2445000
+# Sequential Output[32]: Data=0xffff, Channel=32, Accumulator=0x07fff
+# Output[32]: Channel=31, Data=0xffff, Time=2455000
+# Sequential Output[33]: Data=0x7fff, Channel=33, Accumulator=0x07ffe
+# Output[33]: Channel=32, Data=0x7fff, Time=2465000
+# Sequential Output[34]: Data=0x7ffe, Channel=34, Accumulator=0x07fff
+# Output[34]: Channel=33, Data=0x7ffe, Time=2475000
+# Sequential Output[35]: Data=0x7fff, Channel=35, Accumulator=0x0fffe
+# Output[35]: Channel=34, Data=0x7fff, Time=2485000
+# Sequential Output[36]: Data=0x7fff, Channel=36, Accumulator=0x07fff
+# Output[36]: Channel=35, Data=0x7fff, Time=2495000
+# Sequential Output[37]: Data=0x7fff, Channel=37, Accumulator=0x0fffe
+# Output[37]: Channel=36, Data=0x7fff, Time=2505000
+# Sequential Output[38]: Data=0x7fff, Channel=38, Accumulator=0xfffff
+# Output[38]: Channel=37, Data=0x7fff, Time=2515000
+# Sequential Output[39]: Data=0xffff, Channel=39, Accumulator=0x0fffe
+# Output[39]: Channel=38, Data=0xffff, Time=2525000
+# Sequential Output[40]: Data=0x7fff, Channel=40, Accumulator=0x0fffe
+# Output[40]: Channel=39, Data=0x7fff, Time=2535000
+# Sequential Output[41]: Data=0x7fff, Channel=41, Accumulator=0x07fff
+# Output[41]: Channel=40, Data=0x7fff, Time=2545000
+# Sequential Output[42]: Data=0x7fff, Channel=42, Accumulator=0x0fffe
+# Output[42]: Channel=41, Data=0x7fff, Time=2555000
+# Sequential Output[43]: Data=0x7fff, Channel=43, Accumulator=0x0fffe
+# Output[43]: Channel=42, Data=0x7fff, Time=2565000
+# Sequential Output[44]: Data=0x7fff, Channel=44, Accumulator=0x0fffe
+# Output[44]: Channel=43, Data=0x7fff, Time=2575000
+# Sequential Output[45]: Data=0x7fff, Channel=45, Accumulator=0x07fff
+# Output[45]: Channel=44, Data=0x7fff, Time=2585000
+# Sequential Output[46]: Data=0x7fff, Channel=46, Accumulator=0x0fffe
+# Output[46]: Channel=45, Data=0x7fff, Time=2595000
+# State transition: ACCUMULATING -> DONE_STATE at time 2605000
+# Sequential Output[47]: Data=0x7fff, Channel=47, Accumulator=0x0fffe
+# Optimized pointwise convolution completed at time 2605000
+# Output[47]: Channel=46, Data=0x7fff, Time=2605000
+# Output[48]: Channel=47, Data=0x7fff, Time=2615000
+# Phase 4: Test completion and results
+# 
+# === TEST SUMMARY ===
+# Test Status: PASSED
+# Total Inputs Sent: 100
+# Total Outputs Received: 48
+# Error Count: 0
+# Simulation Time: 2705000
+# 
+# First few outputs:
+#   Channel 0: 0x7fff
+#   Channel 1: 0x7fff
+#   Channel 2: 0x7fff
+#   Channel 3: 0x7fff
+#   Channel 4: 0x7fff
+#   Channel 5: 0x7fff
+#   Channel 6: 0x7fff
+#   Channel 7: 0x7fff
+# 
+# ✓ All basic checks passed
+# Output results saved to: conv_actual_out.mem
+# ====================
+# 
+# === Testbench Completed ===
+# ** Note: $finish    : pointwise_conv_tb.sv(180)
+#    Time: 2705 ns  Iteration: 0  Instance: /pointwise_conv_tb
+# End time: 00:27:04 on Jul 02,2025, Elapsed time: 0:00:17
+# Errors: 0, Warnings: 0

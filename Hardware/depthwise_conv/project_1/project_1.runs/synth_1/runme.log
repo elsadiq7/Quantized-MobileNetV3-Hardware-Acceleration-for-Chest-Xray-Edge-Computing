@@ -1,0 +1,733 @@
+
+*** Running vivado
+    with args -log depthwise_conv_winograd.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source depthwise_conv_winograd.tcl
+
+
+****** Vivado v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source depthwise_conv_winograd.tcl -notrace
+Command: synth_design -top depthwise_conv_winograd -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 11440 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 688.195 ; gain = 236.805
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'depthwise_conv_winograd' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:16]
+	Parameter N bound to: 16 - type: integer 
+	Parameter Q bound to: 8 - type: integer 
+	Parameter IN_WIDTH bound to: 112 - type: integer 
+	Parameter IN_HEIGHT bound to: 112 - type: integer 
+	Parameter CHANNELS bound to: 16 - type: integer 
+	Parameter KERNEL_SIZE bound to: 3 - type: integer 
+	Parameter STRIDE bound to: 1 - type: integer 
+	Parameter PADDING bound to: 1 - type: integer 
+	Parameter PARALLELISM bound to: 1 - type: integer 
+	Parameter OUT_WIDTH bound to: 112 - type: integer 
+	Parameter OUT_HEIGHT bound to: 112 - type: integer 
+	Parameter TILE_SIZE bound to: 4 - type: integer 
+	Parameter OUTPUT_TILE_SIZE bound to: 2 - type: integer 
+	Parameter TILES_X bound to: 56 - type: integer 
+	Parameter TILES_Y bound to: 56 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:313]
+WARNING: [Synth 8-5856] 3D RAM kernel_weights_reg  for this pattern/configuration is not supported. This will most likely be implemented in registers
+WARNING: [Synth 8-5856] 3D RAM transformed_weights_reg  for this pattern/configuration is not supported. This will most likely be implemented in registers
+WARNING: [Synth 8-5856] 3D RAM line_buffer_reg  for this pattern/configuration is not supported. This will most likely be implemented in registers
+WARNING: [Synth 8-5856] 3D RAM input_tile_reg  for this pattern/configuration is not supported. This will most likely be implemented in registers
+WARNING: [Synth 8-5856] 3D RAM transformed_input_reg  for this pattern/configuration is not supported. This will most likely be implemented in registers
+WARNING: [Synth 8-5856] 3D RAM element_product_reg  for this pattern/configuration is not supported. This will most likely be implemented in registers
+WARNING: [Synth 8-5856] 3D RAM output_tile_reg  for this pattern/configuration is not supported. This will most likely be implemented in registers
+WARNING: [Synth 8-6014] Unused sequential element kernel_weights_reg[0][2] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:146]
+WARNING: [Synth 8-6014] Unused sequential element kernel_weights_reg[1][2] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:146]
+WARNING: [Synth 8-6014] Unused sequential element kernel_weights_reg[2][0] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:146]
+WARNING: [Synth 8-6014] Unused sequential element kernel_weights_reg[2][1] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:146]
+WARNING: [Synth 8-6014] Unused sequential element kernel_weights_reg[2][2] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:146]
+WARNING: [Synth 8-6014] Unused sequential element transformed_weights_reg[0][2] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:157]
+WARNING: [Synth 8-6014] Unused sequential element transformed_weights_reg[0][3] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:157]
+WARNING: [Synth 8-6014] Unused sequential element transformed_weights_reg[1][2] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:157]
+WARNING: [Synth 8-6014] Unused sequential element transformed_weights_reg[1][3] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:157]
+WARNING: [Synth 8-6014] Unused sequential element transformed_weights_reg[2][0] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:157]
+WARNING: [Synth 8-6014] Unused sequential element transformed_weights_reg[2][1] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:157]
+WARNING: [Synth 8-6014] Unused sequential element transformed_weights_reg[2][2] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:157]
+WARNING: [Synth 8-6014] Unused sequential element transformed_weights_reg[2][3] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:157]
+WARNING: [Synth 8-6014] Unused sequential element transformed_weights_reg[3][0] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:157]
+WARNING: [Synth 8-6014] Unused sequential element transformed_weights_reg[3][1] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:157]
+WARNING: [Synth 8-6014] Unused sequential element transformed_weights_reg[3][2] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:157]
+WARNING: [Synth 8-6014] Unused sequential element transformed_weights_reg[3][3] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:157]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][0] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][1] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][2] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][3] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][4] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][5] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][6] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][7] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][8] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][9] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][10] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][11] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][12] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][13] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][14] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][15] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][16] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][17] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][18] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][19] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][20] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][21] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][22] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][23] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][24] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][25] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][26] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][27] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][28] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][29] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][30] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][31] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][32] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][33] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][34] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][35] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][36] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][37] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][38] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][39] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][40] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][41] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][42] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][43] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][44] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][45] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][46] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][47] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][48] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][49] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][50] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][51] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][52] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][53] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][54] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][55] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][56] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][57] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][58] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][59] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][60] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][61] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][62] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][63] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][64] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][65] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][66] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][67] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][68] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][69] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][70] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][71] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][72] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][73] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][74] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][75] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][76] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][77] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][78] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][79] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][80] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][81] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_reg[2][82] was removed.  [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:177]
+INFO: [Common 17-14] Message 'Synth 8-6014' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-6155] done synthesizing module 'depthwise_conv_winograd' (1#1) [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:16]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[143]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[142]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[141]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[140]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[139]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[138]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[137]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[136]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[135]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[134]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[133]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[132]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[131]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[130]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[129]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[128]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[127]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[126]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[125]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[124]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[123]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[122]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[121]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[120]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[119]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[118]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[117]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[116]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[115]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[114]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[113]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[112]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[111]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[110]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[109]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[108]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[107]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[106]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[105]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[104]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[103]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[102]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[101]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[100]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[99]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[98]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[97]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[96]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[95]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[94]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[93]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[92]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[91]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[90]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[89]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[88]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[87]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[86]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[85]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[84]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[83]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[82]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[81]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[80]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[47]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[46]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[45]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[44]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[43]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[42]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[41]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[40]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[39]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[38]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[37]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[36]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[35]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[34]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[33]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[32]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 760.344 ; gain = 308.953
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 760.344 ; gain = 308.953
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 760.344 ; gain = 308.953
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Synth 8-5544] ROM "transform_step" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 767.566 ; gain = 316.176
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 2     
+	   2 Input      6 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 2     
++---Registers : 
+	               16 Bit    Registers := 225   
+	                7 Bit    Registers := 2     
+	                6 Bit    Registers := 4     
+	                4 Bit    Registers := 5     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 13    
+	   4 Input     16 Bit        Muxes := 1     
+	  10 Input      6 Bit        Muxes := 2     
+	   2 Input      6 Bit        Muxes := 2     
+	  10 Input      4 Bit        Muxes := 2     
+	  17 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 15    
+	   3 Input      1 Bit        Muxes := 2     
+	  10 Input      1 Bit        Muxes := 7     
+	   4 Input      1 Bit        Muxes := 5     
+	  14 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module depthwise_conv_winograd 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 2     
+	   2 Input      6 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 2     
++---Registers : 
+	               16 Bit    Registers := 225   
+	                7 Bit    Registers := 2     
+	                6 Bit    Registers := 4     
+	                4 Bit    Registers := 5     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 13    
+	   4 Input     16 Bit        Muxes := 1     
+	  10 Input      6 Bit        Muxes := 2     
+	   2 Input      6 Bit        Muxes := 2     
+	  10 Input      4 Bit        Muxes := 2     
+	  17 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 15    
+	   3 Input      1 Bit        Muxes := 2     
+	  10 Input      1 Bit        Muxes := 7     
+	   4 Input      1 Bit        Muxes := 5     
+	  14 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-4471] merging register 'tile_x_reg[5:0]' into 'tile_x_reg[5:0]' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:287]
+INFO: [Synth 8-4471] merging register 'tile_x_reg[5:0]' into 'tile_x_reg[5:0]' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:287]
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[143]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[142]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[141]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[140]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[139]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[138]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[137]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[136]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[135]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[134]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[133]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[132]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[131]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[130]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[129]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[128]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[127]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[126]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[125]
+WARNING: [Synth 8-3331] design depthwise_conv_winograd has unconnected port weights[124]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'transform_step_reg[3]' (FDRE) to 'transform_step_reg[2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\transform_step_reg[2] )
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'output_tile_reg[1][1][15]/Q' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'output_tile_reg[1][1][14]/Q' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'output_tile_reg[1][1][13]/Q' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'output_tile_reg[1][1][12]/Q' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'output_tile_reg[1][1][11]/Q' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'output_tile_reg[1][1][10]/Q' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'output_tile_reg[1][1][9]/Q' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'output_tile_reg[1][1][8]/Q' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'output_tile_reg[1][1][7]/Q' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'output_tile_reg[1][1][6]/Q' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'output_tile_reg[1][1][5]/Q' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'output_tile_reg[1][1][4]/Q' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'output_tile_reg[1][1][3]/Q' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'output_tile_reg[1][1][2]/Q' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'output_tile_reg[1][1][1]/Q' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'output_tile_reg[1][1][0]/Q' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'output_tile_reg[1][0][15]/Q' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'output_tile_reg[1][0][14]/Q' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'output_tile_reg[1][0][13]/Q' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'output_tile_reg[1][0][12]/Q' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'output_tile_reg[1][0][11]/Q' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'output_tile_reg[1][0][10]/Q' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'output_tile_reg[1][0][9]/Q' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'output_tile_reg[1][0][8]/Q' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'output_tile_reg[1][0][7]/Q' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'output_tile_reg[1][0][6]/Q' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'output_tile_reg[1][0][5]/Q' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'output_tile_reg[1][0][4]/Q' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'output_tile_reg[1][0][3]/Q' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'output_tile_reg[1][0][2]/Q' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'output_tile_reg[1][0][1]/Q' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'output_tile_reg[1][0][0]/Q' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'output_tile_reg[0][1][15]/Q' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'output_tile_reg[0][1][14]/Q' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'output_tile_reg[0][1][13]/Q' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'output_tile_reg[0][1][12]/Q' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'output_tile_reg[0][1][11]/Q' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'output_tile_reg[0][1][10]/Q' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'output_tile_reg[0][1][9]/Q' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'output_tile_reg[0][1][8]/Q' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'output_tile_reg[0][1][7]/Q' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'output_tile_reg[0][1][6]/Q' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'output_tile_reg[0][1][5]/Q' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'output_tile_reg[0][1][4]/Q' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'output_tile_reg[0][1][3]/Q' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'output_tile_reg[0][1][2]/Q' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'output_tile_reg[0][1][1]/Q' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'output_tile_reg[0][1][0]/Q' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'output_tile_reg[0][0][15]/Q' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'output_tile_reg[0][0][14]/Q' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+INFO: [Common 17-14] Message 'Synth 8-6859' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:307]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:296]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:296]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:296]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:296]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:296]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:296]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:296]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:296]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:296]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:296]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:296]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:296]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:296]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:296]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:296]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:296]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:296]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:296]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:296]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:296]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:296]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:296]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:296]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:296]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:296]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:296]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:296]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:296]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:296]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:296]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:296]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:296]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:296]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:296]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:296]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/intelFPGA/Final_Project/depth/depthwise_conv_winograd.sv:296]
+INFO: [Common 17-14] Message 'Synth 8-6858' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:13 . Memory (MB): peak = 947.727 ; gain = 496.336
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping	Report (see note below)
++------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name             | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|depthwise_conv_winograd | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|depthwise_conv_winograd | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|depthwise_conv_winograd | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|depthwise_conv_winograd | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 953.852 ; gain = 502.461
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 954.051 ; gain = 502.660
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:17 . Memory (MB): peak = 954.051 ; gain = 502.660
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:17 . Memory (MB): peak = 954.051 ; gain = 502.660
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:17 . Memory (MB): peak = 954.051 ; gain = 502.660
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:17 . Memory (MB): peak = 954.051 ; gain = 502.660
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:17 . Memory (MB): peak = 954.051 ; gain = 502.660
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:17 . Memory (MB): peak = 954.051 ; gain = 502.660
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |BUFG |     1|
+|2     |LUT1 |     4|
+|3     |LUT2 |     9|
+|4     |LUT3 |     6|
+|5     |LUT4 |    15|
+|6     |LUT5 |    16|
+|7     |LUT6 |    27|
+|8     |FDRE |    48|
+|9     |IBUF |     8|
+|10    |OBUF |    22|
++------+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |   156|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:17 . Memory (MB): peak = 954.051 ; gain = 502.660
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 960 critical warnings and 507 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:17 . Memory (MB): peak = 954.051 ; gain = 502.660
+Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:17 . Memory (MB): peak = 954.051 ; gain = 502.660
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1004.535 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1085.582 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+19 Infos, 207 Warnings, 200 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1085.582 ; gain = 659.066
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1085.582 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/intelFPGA/Final_Project/depth/project_1/project_1.runs/synth_1/depthwise_conv_winograd.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file depthwise_conv_winograd_utilization_synth.rpt -pb depthwise_conv_winograd_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Jul 11 14:46:33 2025...

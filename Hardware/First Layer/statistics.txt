@@ -1,0 +1,31 @@
+COMPREHENSIVE STATISTICS
+========================
+
+OUTPUT STATISTICS:
+Total outputs: 200704
+Non-zero outputs: 200704 (100.00%)
+Min value: 0006
+Max value: fff8
+
+CHANNEL DISTRIBUTION:
+Channel 0: 12544 outputs
+Channel 1: 12544 outputs
+Channel 2: 12544 outputs
+Channel 3: 12544 outputs
+Channel 4: 12544 outputs
+Channel 5: 12544 outputs
+Channel 6: 12544 outputs
+Channel 7: 12544 outputs
+Channel 8: 12544 outputs
+Channel 9: 12544 outputs
+Channel 10: 12544 outputs
+Channel 11: 12544 outputs
+Channel 12: 12544 outputs
+Channel 13: 12544 outputs
+Channel 14: 12544 outputs
+Channel 15: 12544 outputs
+
+ACCURACY METRICS:
+Overall accuracy: 100.0000%
+Precision: 100.0000%
+Error rate: 0.0000%

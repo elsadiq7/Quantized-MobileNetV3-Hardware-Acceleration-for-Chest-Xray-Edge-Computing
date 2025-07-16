@@ -1,0 +1,269 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+!s11f vlog 2021.1 2021.01, Jan 19 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dC:/intelFPGA/Final_Project/secondblock
+T_opt
+!s110 1750619009
+Vj4hQJYd^iT<IJO=a=_OZe2
+Z2 04 23 4 work BottleNeck_fullimage_tb fast 0
+=3-c8f7501db222-68585381-1c3-2580
+Z3 !s124 OEM100
+Z4 o-quiet -auto_acc_if_foreign -work work +acc
+Z5 tCvgOpt 0
+n@_opt
+Z6 OL;O;2021.1;73
+R1
+T_opt1
+!s110 1750679408
+VIEm1<T5lH@4j>XKlj3O093
+R2
+=3-c8f7501db222-68593f6f-3dd-15bc
+R3
+R4
+R5
+n@_opt1
+R6
+vbatchnorm
+Z7 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z8 !s110 1750679407
+!i10b 1
+!s100 NFNDz1>23fKOBUI28ThY71
+I6MPFj=LQ=3[Og3gm>KnJb2
+S1
+R1
+w1750611156
+8batchnorm.sv
+Fbatchnorm.sv
+!i122 218
+L0 1 197
+Z9 VDg1SIo80bB@j0V0VzS_@n1
+Z10 OL;L;2021.1;73
+r1
+!s85 0
+31
+Z11 !s108 1750679407.000000
+Z12 !s107 pointwise_conv.sv|depthwise_conv.sv|batchnorm.sv|Relu.sv|BottleNeck_fullimage_tb.sv|BottleNeck.sv|
+Z13 !s90 -reportprogress|300|BottleNeck.sv|BottleNeck_fullimage_tb.sv|Relu.sv|batchnorm.sv|depthwise_conv.sv|pointwise_conv.sv|
+!i113 0
+Z14 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R5
+vBottleNeck
+R7
+R8
+!i10b 1
+!s100 _bY3Zm`N2N5Y4j_WdMA:H2
+IcYWiJWSJ^]1fTT>eIg<YK2
+S1
+R1
+w1750613439
+8BottleNeck.sv
+FBottleNeck.sv
+!i122 218
+L0 1 505
+R9
+R10
+r1
+!s85 0
+31
+R11
+R12
+R13
+!i113 0
+R14
+R5
+n@bottle@neck
+vBottleNeck_fullimage_tb
+R7
+R8
+!i10b 1
+!s100 F:6FY<KAgd4a?gjW:a:VK1
+ImhbnU>c]GKLFcPSn1lUOP1
+S1
+R1
+w1750608241
+8BottleNeck_fullimage_tb.sv
+FBottleNeck_fullimage_tb.sv
+!i122 218
+L0 1 386
+R9
+R10
+r1
+!s85 0
+31
+R11
+R12
+R13
+!i113 0
+R14
+R5
+n@bottle@neck_fullimage_tb
+vdepthwise_conv
+R7
+R8
+!i10b 1
+!s100 00:VUoS881]hO;T3<fP;N1
+I@n`j]C]58Xi9FMe2?2B[h1
+S1
+R1
+w1750679377
+8depthwise_conv.sv
+Fdepthwise_conv.sv
+!i122 218
+L0 1 312
+R9
+R10
+r1
+!s85 0
+31
+R11
+R12
+R13
+!i113 0
+R14
+R5
+vdepthwise_conv_optimized
+R7
+!s110 1750609268
+!i10b 1
+!s100 k9E=>CdIe0:G1i[Oi7hg@3
+IL`kkV1mYPaD3_VV[4mjXl1
+S1
+R1
+w1750609205
+Z15 8C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv
+Z16 FC:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv
+!i122 47
+L0 1 209
+R9
+R10
+r1
+!s85 0
+31
+!s108 1750609268.000000
+Z17 !s107 C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv|
+Z18 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv|
+!i113 0
+Z19 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R5
+vdepthwise_conv_winograd
+R7
+Z20 !s110 1750609633
+!i10b 1
+!s100 P?=Y8JRC`9gRb?C_M4E]G0
+If@^Gd>MW6gz6WJTF4<dhn0
+S1
+R1
+w1750609613
+R15
+R16
+!i122 64
+L0 1 174
+R9
+R10
+r1
+!s85 0
+31
+Z21 !s108 1750609633.000000
+R17
+R18
+!i113 0
+R19
+R5
+vpointwise_conv
+R7
+R8
+!i10b 1
+!s100 QNSMg_252Qg17N5oNifVW1
+IB8?CZC]TnC1SA_N>ck9b83
+S1
+R1
+w1750613606
+8pointwise_conv.sv
+Fpointwise_conv.sv
+!i122 218
+L0 1 124
+R9
+R10
+r1
+!s85 0
+31
+R11
+R12
+R13
+!i113 0
+R14
+R5
+vpointwise_conv_optimized
+R7
+R20
+!i10b 1
+!s100 7ejVk>El;5i`RDmN4;Ho63
+IIn0J2[=jW]<^TibdD@iR62
+S1
+R1
+w1750609259
+8C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv
+FC:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv
+!i122 65
+L0 1 150
+R9
+R10
+r1
+!s85 0
+31
+R21
+!s107 C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv|
+!i113 0
+R19
+R5
+vRelu
+R7
+R8
+!i10b 1
+!s100 Mn2jjY`cN30UjjWH9j`SK0
+I`7gB7;]IXNP1T]YoOG[Ne2
+S1
+R1
+w1750611174
+8Relu.sv
+FRelu.sv
+!i122 218
+L0 1 74
+R9
+R10
+r1
+!s85 0
+31
+R11
+R12
+R13
+!i113 0
+R14
+R5
+n@relu

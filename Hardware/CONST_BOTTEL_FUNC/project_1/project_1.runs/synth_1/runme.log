@@ -1,0 +1,1318 @@
+
+*** Running vivado
+    with args -log BottleNeck.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source BottleNeck.tcl
+
+
+****** Vivado v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source BottleNeck.tcl -notrace
+Command: synth_design -top BottleNeck -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 2880 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 688.133 ; gain = 238.875
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'BottleNeck' [C:/intelFPGA/Final_Project/secondblock/BottleNeck.sv:1]
+	Parameter N bound to: 16 - type: integer 
+	Parameter Q bound to: 8 - type: integer 
+	Parameter IN_CHANNELS bound to: 16 - type: integer 
+	Parameter EXPAND_CHANNELS bound to: 64 - type: integer 
+	Parameter OUT_CHANNELS bound to: 16 - type: integer 
+	Parameter FEATURE_SIZE bound to: 112 - type: integer 
+	Parameter KERNEL_SIZE bound to: 3 - type: integer 
+	Parameter STRIDE bound to: 1 - type: integer 
+	Parameter PADDING bound to: 1 - type: integer 
+	Parameter BATCH_SIZE bound to: 10 - type: integer 
+	Parameter PIPELINE_DEPTH bound to: 2 - type: integer 
+	Parameter DATA_PARALLELISM bound to: 4 - type: integer 
+	Parameter SPATIAL_PARALLEL bound to: 2 - type: integer 
+	Parameter CHANNEL_PARALLEL bound to: 4 - type: integer 
+	Parameter PW_PARALLEL bound to: 2 - type: integer 
+	Parameter DW_PARALLEL bound to: 2 - type: integer 
+	Parameter BN_PARALLEL bound to: 2 - type: integer 
+	Parameter USE_DSP_OPT bound to: 1 - type: integer 
+	Parameter USE_BRAM_OPT bound to: 1 - type: integer 
+	Parameter TOTAL_PIXEL_GROUPS bound to: 6272 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'pointwise_conv' [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:1]
+	Parameter N bound to: 16 - type: integer 
+	Parameter Q bound to: 8 - type: integer 
+	Parameter IN_CHANNELS bound to: 16 - type: integer 
+	Parameter OUT_CHANNELS bound to: 64 - type: integer 
+	Parameter FEATURE_SIZE bound to: 112 - type: integer 
+	Parameter PARALLELISM bound to: 4 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:63]
+INFO: [Common 17-14] Message 'Synth 8-311' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-6014] Unused sequential element channel_count_reg was removed.  [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:76]
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+WARNING: [Synth 8-3848] Net weight_memory in module/entity pointwise_conv does not have driver. [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:29]
+INFO: [Common 17-14] Message 'Synth 8-3848' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-6155] done synthesizing module 'pointwise_conv' (1#1) [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'batchnorm' [C:/intelFPGA/Final_Project/secondblock/batchnorm.sv:1]
+	Parameter WIDTH bound to: 16 - type: integer 
+	Parameter FRAC bound to: 8 - type: integer 
+	Parameter CHANNELS bound to: 64 - type: integer 
+	Parameter EPSILON bound to: 16'sb0000000000010000 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [C:/intelFPGA/Final_Project/secondblock/batchnorm.sv:26]
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [C:/intelFPGA/Final_Project/secondblock/batchnorm.sv:27]
+WARNING: [Synth 8-6014] Unused sequential element x_reg_reg[2] was removed.  [C:/intelFPGA/Final_Project/secondblock/batchnorm.sv:89]
+WARNING: [Synth 8-6014] Unused sequential element x_reg_reg[3] was removed.  [C:/intelFPGA/Final_Project/secondblock/batchnorm.sv:89]
+WARNING: [Synth 8-6014] Unused sequential element gamma_reg_reg[2] was removed.  [C:/intelFPGA/Final_Project/secondblock/batchnorm.sv:94]
+WARNING: [Synth 8-6014] Unused sequential element scaled_extended_reg was removed.  [C:/intelFPGA/Final_Project/secondblock/batchnorm.sv:102]
+INFO: [Synth 8-6155] done synthesizing module 'batchnorm' (2#1) [C:/intelFPGA/Final_Project/secondblock/batchnorm.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'Relu' [C:/intelFPGA/Final_Project/secondblock/Relu.sv:1]
+	Parameter N bound to: 16 - type: integer 
+	Parameter CHANNELS bound to: 64 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Relu' (3#1) [C:/intelFPGA/Final_Project/secondblock/Relu.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'depthwise_conv' [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:1]
+	Parameter N bound to: 16 - type: integer 
+	Parameter Q bound to: 8 - type: integer 
+	Parameter IN_WIDTH bound to: 112 - type: integer 
+	Parameter IN_HEIGHT bound to: 112 - type: integer 
+	Parameter CHANNELS bound to: 64 - type: integer 
+	Parameter KERNEL_SIZE bound to: 3 - type: integer 
+	Parameter STRIDE bound to: 1 - type: integer 
+	Parameter PADDING bound to: 1 - type: integer 
+	Parameter PARALLELISM bound to: 4 - type: integer 
+	Parameter OUT_WIDTH bound to: 112 - type: integer 
+	Parameter OUT_HEIGHT bound to: 112 - type: integer 
+	Parameter TOTAL_INPUTS bound to: 200704 - type: integer 
+	Parameter TOTAL_OUTPUTS bound to: 200704 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:46]
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:49]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:198]
+WARNING: [Synth 8-5856] 3D RAM weight_memory_reg  for this pattern/configuration is not supported. This will most likely be implemented in registers
+WARNING: [Synth 8-5856] 3D RAM line_buffer_mem_reg  for this pattern/configuration is not supported. This will most likely be implemented in registers
+WARNING: [Synth 8-5856] 3D RAM window_data_reg  for this pattern/configuration is not supported. This will most likely be implemented in registers
+WARNING: [Synth 8-6014] Unused sequential element weight_memory_reg[1][0] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:100]
+WARNING: [Synth 8-6014] Unused sequential element weight_memory_reg[1][1] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:100]
+WARNING: [Synth 8-6014] Unused sequential element weight_memory_reg[1][2] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:100]
+WARNING: [Synth 8-6014] Unused sequential element weight_memory_reg[1][3] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:100]
+WARNING: [Synth 8-6014] Unused sequential element weight_memory_reg[1][4] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:100]
+WARNING: [Synth 8-6014] Unused sequential element weight_memory_reg[1][5] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:100]
+WARNING: [Synth 8-6014] Unused sequential element weight_memory_reg[1][6] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:100]
+WARNING: [Synth 8-6014] Unused sequential element weight_memory_reg[1][7] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:100]
+WARNING: [Synth 8-6014] Unused sequential element weight_memory_reg[1][8] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:100]
+WARNING: [Synth 8-6014] Unused sequential element weight_memory_reg[2][0] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:100]
+WARNING: [Synth 8-6014] Unused sequential element weight_memory_reg[2][1] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:100]
+WARNING: [Synth 8-6014] Unused sequential element weight_memory_reg[2][2] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:100]
+WARNING: [Synth 8-6014] Unused sequential element weight_memory_reg[2][3] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:100]
+WARNING: [Synth 8-6014] Unused sequential element weight_memory_reg[2][4] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:100]
+WARNING: [Synth 8-6014] Unused sequential element weight_memory_reg[2][5] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:100]
+WARNING: [Synth 8-6014] Unused sequential element weight_memory_reg[2][6] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:100]
+WARNING: [Synth 8-6014] Unused sequential element weight_memory_reg[2][7] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:100]
+WARNING: [Synth 8-6014] Unused sequential element weight_memory_reg[2][8] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:100]
+WARNING: [Synth 8-6014] Unused sequential element weight_memory_reg[3][0] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:100]
+WARNING: [Synth 8-6014] Unused sequential element weight_memory_reg[3][1] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:100]
+WARNING: [Synth 8-6014] Unused sequential element weight_memory_reg[3][2] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:100]
+WARNING: [Synth 8-6014] Unused sequential element weight_memory_reg[3][3] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:100]
+WARNING: [Synth 8-6014] Unused sequential element weight_memory_reg[3][4] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:100]
+WARNING: [Synth 8-6014] Unused sequential element weight_memory_reg[3][5] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:100]
+WARNING: [Synth 8-6014] Unused sequential element weight_memory_reg[3][6] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:100]
+WARNING: [Synth 8-6014] Unused sequential element weight_memory_reg[3][7] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:100]
+WARNING: [Synth 8-6014] Unused sequential element weight_memory_reg[3][8] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:100]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][0] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][1] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][2] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][3] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][4] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][5] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][6] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][7] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][8] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][9] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][10] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][11] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][12] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][13] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][14] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][15] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][16] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][17] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][18] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][19] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][20] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][21] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][22] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][23] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][24] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][25] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][26] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][27] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][28] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][29] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][30] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][31] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][32] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][33] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][34] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][35] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][36] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][37] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][38] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][39] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][40] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][41] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][42] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][43] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][44] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][45] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][46] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][47] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][48] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][49] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][50] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][51] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][52] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][53] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][54] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][55] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][56] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][57] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][58] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][59] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][60] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][61] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][62] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][63] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][64] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][65] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][66] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+WARNING: [Synth 8-6014] Unused sequential element line_buffer_mem_reg[1][67] was removed.  [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:129]
+INFO: [Common 17-14] Message 'Synth 8-6014' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-6155] done synthesizing module 'depthwise_conv' (4#1) [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:1]
+WARNING: [Synth 8-689] width (9216) of port connection 'weights' does not match port width (576) of module 'depthwise_conv' [C:/intelFPGA/Final_Project/secondblock/BottleNeck.sv:359]
+WARNING: [Synth 8-689] width (9216) of port connection 'weights' does not match port width (576) of module 'depthwise_conv' [C:/intelFPGA/Final_Project/secondblock/BottleNeck.sv:359]
+INFO: [Synth 8-6157] synthesizing module 'pointwise_conv__parameterized0' [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:1]
+	Parameter N bound to: 16 - type: integer 
+	Parameter Q bound to: 8 - type: integer 
+	Parameter IN_CHANNELS bound to: 64 - type: integer 
+	Parameter OUT_CHANNELS bound to: 16 - type: integer 
+	Parameter FEATURE_SIZE bound to: 112 - type: integer 
+	Parameter PARALLELISM bound to: 4 - type: integer 
+
+Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+INFO: [Synth 8-6155] done synthesizing module 'pointwise_conv__parameterized0' (4#1) [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'batchnorm__parameterized0' [C:/intelFPGA/Final_Project/secondblock/batchnorm.sv:1]
+	Parameter WIDTH bound to: 16 - type: integer 
+	Parameter FRAC bound to: 8 - type: integer 
+	Parameter CHANNELS bound to: 16 - type: integer 
+	Parameter EPSILON bound to: 16'sb0000000000010000 
+INFO: [Synth 8-6155] done synthesizing module 'batchnorm__parameterized0' (4#1) [C:/intelFPGA/Final_Project/secondblock/batchnorm.sv:1]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/intelFPGA/Final_Project/secondblock/BottleNeck.sv:188]
+INFO: [Synth 8-6155] done synthesizing module 'BottleNeck' (5#1) [C:/intelFPGA/Final_Project/secondblock/BottleNeck.sv:1]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16383]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16382]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16381]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16380]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16379]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16378]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16377]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16376]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16375]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16374]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16373]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16372]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16371]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16370]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16369]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16368]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16367]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16366]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16365]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16364]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16363]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16362]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16361]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16360]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16359]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16358]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16357]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16356]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16355]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16354]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16353]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16352]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16351]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16350]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16349]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16348]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16347]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16346]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16345]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16344]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16343]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16342]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16341]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16340]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16339]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16338]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16337]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16336]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16335]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16334]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16333]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16332]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16331]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16330]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16329]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16328]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16327]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16326]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16325]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16324]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16323]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16322]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16321]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16320]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16319]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16318]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16317]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16316]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16315]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16314]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16313]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16312]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16311]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16310]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16309]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16308]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16307]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16306]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16305]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16304]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16303]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16302]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16301]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16300]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16299]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16298]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16297]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16296]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16295]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16294]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16293]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16292]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16291]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16290]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16289]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16288]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16287]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16286]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16285]
+WARNING: [Synth 8-3331] design pointwise_conv__parameterized0 has unconnected port weights[16284]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 832.035 ; gain = 382.777
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 832.035 ; gain = 382.777
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 832.035 ; gain = 382.777
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:198]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <multiplier> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:198]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <multiplier> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:198]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <multiplier> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:198]
+INFO: [Synth 8-802] inferred FSM for state register 'pipeline_stage_reg' in module 'depthwise_conv'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'depthwise_conv'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'BottleNeck'
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:198]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <multiplier> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:198]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <multiplier> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:198]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <multiplier> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:198]
+INFO: [Synth 8-802] inferred FSM for state register 'pipeline_stage_reg' in module 'depthwise_conv__hierPathDup__1'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'depthwise_conv__hierPathDup__1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                               00
+                 iSTATE0 |                              010 |                               01
+                 iSTATE1 |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'pipeline_stage_reg' using encoding 'one-hot' in module 'depthwise_conv__hierPathDup__1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                               00 |                               00
+            LOAD_WEIGHTS |                               01 |                               01
+              PROCESSING |                               10 |                               10
+               COMPLETED |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'depthwise_conv__hierPathDup__1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                               00
+                 iSTATE0 |                              010 |                               01
+                 iSTATE1 |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'pipeline_stage_reg' using encoding 'one-hot' in module 'depthwise_conv'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                               00 |                               00
+            LOAD_WEIGHTS |                               01 |                               01
+              PROCESSING |                               10 |                               10
+               COMPLETED |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'depthwise_conv'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                              000 |                              000
+              PROCESSING |                              100 |                              001
+              COMPLETING |                              011 |                              010
+              DONE_STATE |                              010 |                              011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'BottleNeck'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:31 ; elapsed = 00:00:30 . Memory (MB): peak = 1131.477 ; gain = 682.219
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-----------------------------------------------+------------+----------+
+|      |RTL Partition                                  |Replication |Instances |
++------+-----------------------------------------------+------------+----------+
+|1     |depthwise_conv__hierPathDup__1__GB0            |           1|     35185|
+|2     |depthwise_conv__hierPathDup__1__GB1            |           1|     10720|
+|3     |depthwise_conv__hierPathDup__1__GB2            |           1|     15209|
+|4     |depthwise_conv__hierPathDup__1__GB3            |           1|     16501|
+|5     |depthwise_conv__GB0                            |           1|     34267|
+|6     |depthwise_conv__GB1                            |           1|     10827|
+|7     |depthwise_conv__GB2                            |           1|     16084|
+|8     |depthwise_conv__GB3                            |           1|     16437|
+|9     |BottleNeck__GCB0                               |           1|     19195|
+|10    |pointwise_conv__parameterized0__hierPathDup__1 |           1|     16560|
+|11    |BottleNeck__GCB2                               |           1|     17946|
+|12    |BottleNeck__GCB3                               |           1|     33255|
++------+-----------------------------------------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     40 Bit       Adders := 2     
+	   2 Input     32 Bit       Adders := 2     
+	   2 Input     18 Bit       Adders := 2     
+	   2 Input     16 Bit       Adders := 6     
+	   2 Input     14 Bit       Adders := 4     
+	   2 Input     13 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 2     
+	   2 Input      7 Bit       Adders := 10    
+	   2 Input      6 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 14    
++---XORs : 
+	                8 Bit    Wide XORs := 4     
++---Registers : 
+	               40 Bit    Registers := 2     
+	               18 Bit    Registers := 2     
+	               16 Bit    Registers := 1332  
+	               14 Bit    Registers := 4     
+	               13 Bit    Registers := 2     
+	                7 Bit    Registers := 14    
+	                6 Bit    Registers := 32    
+	                4 Bit    Registers := 30    
+	                1 Bit    Registers := 72    
++---Muxes : 
+	   3 Input     40 Bit        Muxes := 2     
+	   4 Input     18 Bit        Muxes := 2     
+	   3 Input     16 Bit        Muxes := 20    
+	   2 Input     16 Bit        Muxes := 44    
+	   4 Input     16 Bit        Muxes := 2     
+	   5 Input     16 Bit        Muxes := 6     
+	   2 Input     14 Bit        Muxes := 4     
+	   4 Input     13 Bit        Muxes := 2     
+	   2 Input      9 Bit        Muxes := 6     
+	   2 Input      7 Bit        Muxes := 4     
+	   4 Input      7 Bit        Muxes := 4     
+	   2 Input      6 Bit        Muxes := 10    
+	   2 Input      4 Bit        Muxes := 8     
+	   4 Input      4 Bit        Muxes := 2     
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 3     
+	   4 Input      2 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 776   
+	   3 Input      1 Bit        Muxes := 8     
+	   4 Input      1 Bit        Muxes := 22    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module BottleNeck 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     13 Bit       Adders := 2     
++---Registers : 
+	               13 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   4 Input     13 Bit        Muxes := 2     
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 3     
+	   4 Input      1 Bit        Muxes := 6     
+Module depthwise_conv__hierPathDup__1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     40 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     18 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 5     
+	   2 Input      4 Bit       Adders := 6     
++---Registers : 
+	               40 Bit    Registers := 1     
+	               18 Bit    Registers := 1     
+	               16 Bit    Registers := 346   
+	                7 Bit    Registers := 7     
+	                4 Bit    Registers := 7     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   3 Input     40 Bit        Muxes := 1     
+	   4 Input     18 Bit        Muxes := 1     
+	   3 Input     16 Bit        Muxes := 7     
+	   2 Input     16 Bit        Muxes := 9     
+	   4 Input     16 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 2     
+	   4 Input      7 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 354   
+	   3 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 8     
+Module depthwise_conv 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     40 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     18 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 5     
+	   2 Input      4 Bit       Adders := 6     
++---Registers : 
+	               40 Bit    Registers := 1     
+	               18 Bit    Registers := 1     
+	               16 Bit    Registers := 346   
+	                7 Bit    Registers := 7     
+	                4 Bit    Registers := 7     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   3 Input     40 Bit        Muxes := 1     
+	   4 Input     18 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 9     
+	   3 Input     16 Bit        Muxes := 7     
+	   4 Input     16 Bit        Muxes := 1     
+	   4 Input      7 Bit        Muxes := 2     
+	   2 Input      7 Bit        Muxes := 2     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 354   
+	   4 Input      1 Bit        Muxes := 8     
+	   3 Input      1 Bit        Muxes := 2     
+Module pointwise_conv__parameterized0__hierPathDup__1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     14 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---XORs : 
+	                8 Bit    Wide XORs := 1     
++---Registers : 
+	               16 Bit    Registers := 2     
+	               14 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 2     
+	   2 Input     14 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 11    
+	   3 Input      1 Bit        Muxes := 1     
+Module batchnorm__parameterized0__1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 40    
+	                4 Bit    Registers := 5     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 3     
+	   3 Input     16 Bit        Muxes := 1     
+	   5 Input     16 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+Module batchnorm__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 40    
+	                4 Bit    Registers := 5     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 3     
+	   3 Input     16 Bit        Muxes := 1     
+	   5 Input     16 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+Module pointwise_conv__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     14 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---XORs : 
+	                8 Bit    Wide XORs := 1     
++---Registers : 
+	               16 Bit    Registers := 2     
+	               14 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 2     
+	   2 Input     14 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 11    
+	   3 Input      1 Bit        Muxes := 1     
+Module Relu__1 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 2     
+	                6 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module Relu__2 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 2     
+	                6 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module batchnorm__1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 136   
+	                6 Bit    Registers := 5     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 3     
+	   3 Input     16 Bit        Muxes := 1     
+	   5 Input     16 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+Module batchnorm__2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 136   
+	                6 Bit    Registers := 5     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 3     
+	   3 Input     16 Bit        Muxes := 1     
+	   5 Input     16 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+Module batchnorm__3 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 136   
+	                6 Bit    Registers := 5     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 3     
+	   3 Input     16 Bit        Muxes := 1     
+	   5 Input     16 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+Module batchnorm 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 136   
+	                6 Bit    Registers := 5     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 3     
+	   3 Input     16 Bit        Muxes := 1     
+	   5 Input     16 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+Module Relu__3 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 2     
+	                6 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module Relu 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 2     
+	                6 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module pointwise_conv 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     14 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
++---XORs : 
+	                8 Bit    Wide XORs := 1     
++---Registers : 
+	               16 Bit    Registers := 2     
+	               14 Bit    Registers := 1     
+	                6 Bit    Registers := 2     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 2     
+	   2 Input     14 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 11    
+	   3 Input      1 Bit        Muxes := 1     
+Module pointwise_conv__hierPathDup__1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     14 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
++---XORs : 
+	                8 Bit    Wide XORs := 1     
++---Registers : 
+	               16 Bit    Registers := 2     
+	               14 Bit    Registers := 1     
+	                6 Bit    Registers := 2     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 2     
+	   2 Input     14 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 11    
+	   3 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 2 processes.
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4471] merging register 'output_x_reg[6:0]' into 'output_x_reg[6:0]' [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:241]
+INFO: [Synth 8-4471] merging register 'output_x_reg[6:0]' into 'output_x_reg[6:0]' [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:241]
+INFO: [Synth 8-4471] merging register 'output_x_reg[6:0]' into 'output_x_reg[6:0]' [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:241]
+INFO: [Synth 8-4471] merging register 'input_x_reg[6:0]' into 'input_x_reg[6:0]' [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:120]
+INFO: [Synth 8-4471] merging register 'output_x_reg[6:0]' into 'output_x_reg[6:0]' [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:241]
+INFO: [Synth 8-4471] merging register 'output_x_reg[6:0]' into 'output_x_reg[6:0]' [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:241]
+INFO: [Synth 8-4471] merging register 'output_x_reg[6:0]' into 'output_x_reg[6:0]' [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:241]
+INFO: [Synth 8-4471] merging register 'output_x_reg[6:0]' into 'output_x_reg[6:0]' [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:241]
+INFO: [Synth 8-4471] merging register 'output_x_reg[6:0]' into 'output_x_reg[6:0]' [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:241]
+INFO: [Synth 8-4471] merging register 'output_x_reg[6:0]' into 'output_x_reg[6:0]' [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:241]
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+INFO: [Synth 8-4471] merging register 'weight_k_reg[3:0]' into 'weight_k_reg[3:0]' [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:97]
+INFO: [Synth 8-4471] merging register 'weight_ch_group_reg[3:0]' into 'weight_ch_group_reg[3:0]' [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:96]
+INFO: [Synth 8-3886] merging instance 'channel_out_reg[0]' (FDRE) to 'channel_out_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\channel_out_reg[1] )
+INFO: [Synth 8-4471] merging register 'output_x_reg[6:0]' into 'output_x_reg[6:0]' [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:241]
+INFO: [Synth 8-4471] merging register 'output_x_reg[6:0]' into 'output_x_reg[6:0]' [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:241]
+INFO: [Synth 8-4471] merging register 'output_x_reg[6:0]' into 'output_x_reg[6:0]' [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:241]
+INFO: [Synth 8-4471] merging register 'output_x_reg[6:0]' into 'output_x_reg[6:0]' [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:241]
+INFO: [Synth 8-4471] merging register 'output_x_reg[6:0]' into 'output_x_reg[6:0]' [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:241]
+INFO: [Synth 8-4471] merging register 'output_x_reg[6:0]' into 'output_x_reg[6:0]' [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:241]
+INFO: [Synth 8-3886] merging instance 'channel_out_reg[0]' (FDRE) to 'channel_out_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\channel_out_reg[1] )
+INFO: [Synth 8-4471] merging register 'input_x_reg[6:0]' into 'input_x_reg[6:0]' [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:120]
+INFO: [Synth 8-4471] merging register 'weight_ch_group_reg[3:0]' into 'weight_ch_group_reg[3:0]' [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:96]
+INFO: [Synth 8-4471] merging register 'weight_k_reg[3:0]' into 'weight_k_reg[3:0]' [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:97]
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+INFO: [Synth 8-4471] merging register 'output_x_reg[6:0]' into 'output_x_reg[6:0]' [C:/intelFPGA/Final_Project/secondblock/depthwise_conv.sv:241]
+INFO: [Synth 8-4471] merging register 'out_ch_count_reg[3:0]' into 'out_ch_count_reg[3:0]' [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:74]
+DSP Report: Generating DSP mult_reg_reg, operation Mode is: (A2*B2)'.
+DSP Report: register mult_b_reg is absorbed into DSP mult_reg_reg.
+DSP Report: register mult_a_reg is absorbed into DSP mult_reg_reg.
+DSP Report: register mult_reg_reg is absorbed into DSP mult_reg_reg.
+DSP Report: operator mult_result is absorbed into DSP mult_reg_reg.
+DSP Report: Generating DSP gen_bn3[0].bn3_inst/mult_result_reg, operation Mode is: (A''*B2)'.
+DSP Report: register gen_bn3[0].bn3_inst/gamma_reg_reg[1] is absorbed into DSP gen_bn3[0].bn3_inst/mult_result_reg.
+DSP Report: register gen_bn3[0].bn3_inst/x_reg_reg[0] is absorbed into DSP gen_bn3[0].bn3_inst/mult_result_reg.
+DSP Report: register gen_bn3[0].bn3_inst/x_reg_reg[1] is absorbed into DSP gen_bn3[0].bn3_inst/mult_result_reg.
+DSP Report: register gen_bn3[0].bn3_inst/mult_result_reg is absorbed into DSP gen_bn3[0].bn3_inst/mult_result_reg.
+DSP Report: operator gen_bn3[0].bn3_inst/mult_result0 is absorbed into DSP gen_bn3[0].bn3_inst/mult_result_reg.
+DSP Report: Generating DSP gen_bn3[1].bn3_inst/mult_result_reg, operation Mode is: (A''*B2)'.
+DSP Report: register gen_bn3[1].bn3_inst/gamma_reg_reg[1] is absorbed into DSP gen_bn3[1].bn3_inst/mult_result_reg.
+DSP Report: register gen_bn3[1].bn3_inst/x_reg_reg[0] is absorbed into DSP gen_bn3[1].bn3_inst/mult_result_reg.
+DSP Report: register gen_bn3[1].bn3_inst/x_reg_reg[1] is absorbed into DSP gen_bn3[1].bn3_inst/mult_result_reg.
+DSP Report: register gen_bn3[1].bn3_inst/mult_result_reg is absorbed into DSP gen_bn3[1].bn3_inst/mult_result_reg.
+DSP Report: operator gen_bn3[1].bn3_inst/mult_result0 is absorbed into DSP gen_bn3[1].bn3_inst/mult_result_reg.
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'gen_bn3[0].bn3_inst/memory_initialized_reg' (FDRE) to 'gen_bn3[1].bn3_inst/memory_initialized_reg'
+INFO: [Synth 8-4471] merging register 'out_ch_count_reg[3:0]' into 'out_ch_count_reg[3:0]' [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:74]
+DSP Report: Generating DSP mult_reg_reg, operation Mode is: (A2*B2)'.
+DSP Report: register mult_b_reg is absorbed into DSP mult_reg_reg.
+DSP Report: register mult_a_reg is absorbed into DSP mult_reg_reg.
+DSP Report: register mult_reg_reg is absorbed into DSP mult_reg_reg.
+DSP Report: operator mult_result is absorbed into DSP mult_reg_reg.
+DSP Report: Generating DSP mult_result_reg, operation Mode is: (A''*B2)'.
+DSP Report: register gamma_reg_reg[1] is absorbed into DSP mult_result_reg.
+DSP Report: register x_reg_reg[0] is absorbed into DSP mult_result_reg.
+DSP Report: register x_reg_reg[1] is absorbed into DSP mult_result_reg.
+DSP Report: register mult_result_reg is absorbed into DSP mult_result_reg.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result_reg.
+DSP Report: Generating DSP mult_result_reg, operation Mode is: (A''*B2)'.
+DSP Report: register gamma_reg_reg[1] is absorbed into DSP mult_result_reg.
+DSP Report: register x_reg_reg[0] is absorbed into DSP mult_result_reg.
+DSP Report: register x_reg_reg[1] is absorbed into DSP mult_result_reg.
+DSP Report: register mult_result_reg is absorbed into DSP mult_result_reg.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result_reg.
+DSP Report: Generating DSP mult_result_reg, operation Mode is: (A''*B2)'.
+DSP Report: register gamma_reg_reg[1] is absorbed into DSP mult_result_reg.
+DSP Report: register x_reg_reg[0] is absorbed into DSP mult_result_reg.
+DSP Report: register x_reg_reg[1] is absorbed into DSP mult_result_reg.
+DSP Report: register mult_result_reg is absorbed into DSP mult_result_reg.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result_reg.
+DSP Report: Generating DSP mult_result_reg, operation Mode is: (A''*B2)'.
+DSP Report: register gamma_reg_reg[1] is absorbed into DSP mult_result_reg.
+DSP Report: register x_reg_reg[0] is absorbed into DSP mult_result_reg.
+DSP Report: register x_reg_reg[1] is absorbed into DSP mult_result_reg.
+DSP Report: register mult_result_reg is absorbed into DSP mult_result_reg.
+DSP Report: operator mult_result0 is absorbed into DSP mult_result_reg.
+INFO: [Synth 8-4471] merging register 'gen_pw_conv1[1].pw_conv1_inst/out_ch_count_reg[5:0]' into 'gen_pw_conv1[1].pw_conv1_inst/out_ch_count_reg[5:0]' [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:74]
+INFO: [Synth 8-4471] merging register 'gen_pw_conv1[0].pw_conv1_inst/out_ch_count_reg[5:0]' into 'gen_pw_conv1[0].pw_conv1_inst/out_ch_count_reg[5:0]' [C:/intelFPGA/Final_Project/secondblock/pointwise_conv.sv:74]
+DSP Report: Generating DSP gen_pw_conv1[1].pw_conv1_inst/mult_reg_reg, operation Mode is: (A2*B2)'.
+DSP Report: register gen_pw_conv1[1].pw_conv1_inst/mult_b_reg is absorbed into DSP gen_pw_conv1[1].pw_conv1_inst/mult_reg_reg.
+DSP Report: register gen_pw_conv1[1].pw_conv1_inst/mult_a_reg is absorbed into DSP gen_pw_conv1[1].pw_conv1_inst/mult_reg_reg.
+DSP Report: register gen_pw_conv1[1].pw_conv1_inst/mult_reg_reg is absorbed into DSP gen_pw_conv1[1].pw_conv1_inst/mult_reg_reg.
+DSP Report: operator gen_pw_conv1[1].pw_conv1_inst/mult_result is absorbed into DSP gen_pw_conv1[1].pw_conv1_inst/mult_reg_reg.
+DSP Report: Generating DSP gen_pw_conv1[0].pw_conv1_inst/mult_reg_reg, operation Mode is: (A2*B2)'.
+DSP Report: register gen_pw_conv1[0].pw_conv1_inst/mult_b_reg is absorbed into DSP gen_pw_conv1[0].pw_conv1_inst/mult_reg_reg.
+DSP Report: register gen_pw_conv1[0].pw_conv1_inst/mult_a_reg is absorbed into DSP gen_pw_conv1[0].pw_conv1_inst/mult_reg_reg.
+DSP Report: register gen_pw_conv1[0].pw_conv1_inst/mult_reg_reg is absorbed into DSP gen_pw_conv1[0].pw_conv1_inst/mult_reg_reg.
+DSP Report: operator gen_pw_conv1[0].pw_conv1_inst/mult_result is absorbed into DSP gen_pw_conv1[0].pw_conv1_inst/mult_reg_reg.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:42 ; elapsed = 00:02:26 . Memory (MB): peak = 1135.285 ; gain = 686.027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping	Report (see note below)
++---------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name    | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++---------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|depthwise_conv | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|depthwise_conv | PCIN+A*B    | 16     | 16     | -      | -      | 40     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|depthwise_conv | PCIN+A*B    | 16     | 16     | -      | -      | 40     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|depthwise_conv | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|depthwise_conv | PCIN+A*B    | 16     | 16     | -      | -      | 40     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|depthwise_conv | PCIN+A*B    | 16     | 16     | -      | -      | 40     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|pointwise_conv | (A2*B2)'    | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|batchnorm      | (A''*B2)'   | 16     | 16     | -      | -      | 32     | 2    | 1    | -    | -    | -     | 1    | 0    | 
+|batchnorm      | (A''*B2)'   | 16     | 16     | -      | -      | 32     | 2    | 1    | -    | -    | -     | 1    | 0    | 
+|pointwise_conv | (A2*B2)'    | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|batchnorm      | (A''*B2)'   | 16     | 16     | -      | -      | 32     | 2    | 1    | -    | -    | -     | 1    | 0    | 
+|batchnorm      | (A''*B2)'   | 16     | 16     | -      | -      | 32     | 2    | 1    | -    | -    | -     | 1    | 0    | 
+|batchnorm      | (A''*B2)'   | 16     | 16     | -      | -      | 32     | 2    | 1    | -    | -    | -     | 1    | 0    | 
+|batchnorm      | (A''*B2)'   | 16     | 16     | -      | -      | 32     | 2    | 1    | -    | -    | -     | 1    | 0    | 
+|pointwise_conv | (A2*B2)'    | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|pointwise_conv | (A2*B2)'    | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 1    | 0    | 
++---------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-----------------------------------------------+------------+----------+
+|      |RTL Partition                                  |Replication |Instances |
++------+-----------------------------------------------+------------+----------+
+|1     |depthwise_conv__hierPathDup__1__GB0            |           1|     23883|
+|2     |depthwise_conv__hierPathDup__1__GB1            |           1|     10720|
+|3     |depthwise_conv__hierPathDup__1__GB2            |           1|     11144|
+|4     |depthwise_conv__hierPathDup__1__GB3            |           1|       777|
+|5     |depthwise_conv__GB0                            |           1|     19467|
+|6     |depthwise_conv__GB1                            |           1|      6266|
+|7     |depthwise_conv__GB2                            |           1|     13449|
+|8     |depthwise_conv__GB3                            |           1|       712|
+|9     |BottleNeck__GCB0                               |           1|      3687|
+|10    |pointwise_conv__parameterized0__hierPathDup__1 |           1|       145|
+|11    |BottleNeck__GCB2                               |           1|     17597|
+|12    |BottleNeck__GCB3                               |           1|       437|
++------+-----------------------------------------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:46 ; elapsed = 00:02:31 . Memory (MB): peak = 1135.285 ; gain = 686.027
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-----------------------------------------------+------------+----------+
+|      |RTL Partition                                  |Replication |Instances |
++------+-----------------------------------------------+------------+----------+
+|1     |depthwise_conv__hierPathDup__1__GB0            |           1|     23883|
+|2     |depthwise_conv__hierPathDup__1__GB1            |           1|      6016|
+|3     |depthwise_conv__hierPathDup__1__GB2            |           1|     11144|
+|4     |depthwise_conv__hierPathDup__1__GB3            |           1|       777|
+|5     |depthwise_conv__GB0                            |           1|     19467|
+|6     |depthwise_conv__GB1                            |           1|      6264|
+|7     |depthwise_conv__GB2                            |           1|     13449|
+|8     |depthwise_conv__GB3                            |           1|       712|
+|9     |BottleNeck__GCB0                               |           1|      3687|
+|10    |pointwise_conv__parameterized0__hierPathDup__1 |           1|       145|
+|11    |BottleNeck__GCB2                               |           1|     11273|
+|12    |BottleNeck__GCB3                               |           1|       437|
++------+-----------------------------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'i_1/gen_bn2[0].bn2_inst/memory_initialized_reg' (FDRE) to 'i_1/gen_bn1[0].bn1_inst/memory_initialized_reg'
+INFO: [Synth 8-3886] merging instance 'i_1/gen_bn2[1].bn2_inst/memory_initialized_reg' (FDRE) to 'i_1/gen_bn1[0].bn1_inst/memory_initialized_reg'
+INFO: [Synth 8-3886] merging instance 'i_1/gen_bn1[0].bn1_inst/memory_initialized_reg' (FDRE) to 'i_1/gen_bn1[1].bn1_inst/memory_initialized_reg'
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:58 ; elapsed = 00:02:44 . Memory (MB): peak = 1149.680 ; gain = 700.422
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-----------------------------------------------+------------+----------+
+|      |RTL Partition                                  |Replication |Instances |
++------+-----------------------------------------------+------------+----------+
+|1     |depthwise_conv__hierPathDup__1__GB0            |           1|     15145|
+|2     |depthwise_conv__hierPathDup__1__GB1            |           1|      2592|
+|3     |depthwise_conv__hierPathDup__1__GB2            |           1|      8224|
+|4     |depthwise_conv__hierPathDup__1__GB3            |           1|       310|
+|5     |depthwise_conv__GB0                            |           1|     12568|
+|6     |depthwise_conv__GB1                            |           1|      4904|
+|7     |depthwise_conv__GB2                            |           1|      8943|
+|8     |depthwise_conv__GB3                            |           1|       257|
+|9     |BottleNeck__GCB0                               |           1|      1958|
+|10    |pointwise_conv__parameterized0__hierPathDup__1 |           1|       107|
+|11    |BottleNeck__GCB2                               |           1|      8294|
+|12    |BottleNeck__GCB3                               |           1|       323|
++------+-----------------------------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'gen_dw_conv[1].dw_conv_inst/output_x_reg[5]__1' (FDRE) to 'gen_dw_conv[1].dw_conv_inst/output_x_reg[5]__0'
+INFO: [Synth 8-3886] merging instance 'gen_dw_conv[1].dw_conv_inst/output_x_reg[6]__1' (FDRE) to 'gen_dw_conv[1].dw_conv_inst/output_x_reg[6]__0'
+INFO: [Synth 8-3886] merging instance 'gen_dw_conv[1].dw_conv_inst/output_x_reg[1]__1' (FDRE) to 'gen_dw_conv[1].dw_conv_inst/output_x_reg[1]__0'
+INFO: [Synth 8-3886] merging instance 'gen_dw_conv[1].dw_conv_inst/output_x_reg[2]__1' (FDRE) to 'gen_dw_conv[1].dw_conv_inst/output_x_reg[2]__0'
+INFO: [Synth 8-3886] merging instance 'gen_dw_conv[1].dw_conv_inst/output_x_reg[3]__1' (FDRE) to 'gen_dw_conv[1].dw_conv_inst/output_x_reg[3]__0'
+INFO: [Synth 8-3886] merging instance 'gen_dw_conv[1].dw_conv_inst/output_x_reg[0]__1' (FDRE) to 'gen_dw_conv[1].dw_conv_inst/output_x_reg[0]__0'
+INFO: [Synth 8-3886] merging instance 'gen_dw_conv[1].dw_conv_inst/output_x_reg[4]' (FDRE) to 'gen_dw_conv[1].dw_conv_inst/output_x_reg[4]__1'
+INFO: [Synth 8-3886] merging instance 'gen_dw_conv[1].dw_conv_inst/output_x_reg[4]__1' (FDRE) to 'gen_dw_conv[1].dw_conv_inst/output_x_reg[4]__0'
+INFO: [Synth 8-3886] merging instance 'gen_dw_conv[1].dw_conv_inst/output_x_reg[5]' (FDRE) to 'gen_dw_conv[1].dw_conv_inst/output_x_reg[5]__0'
+INFO: [Synth 8-3886] merging instance 'gen_dw_conv[1].dw_conv_inst/output_x_reg[6]' (FDRE) to 'gen_dw_conv[1].dw_conv_inst/output_x_reg[6]__0'
+INFO: [Synth 8-3886] merging instance 'gen_dw_conv[1].dw_conv_inst/output_x_reg[1]' (FDRE) to 'gen_dw_conv[1].dw_conv_inst/output_x_reg[1]__0'
+INFO: [Synth 8-3886] merging instance 'gen_dw_conv[1].dw_conv_inst/output_x_reg[2]' (FDRE) to 'gen_dw_conv[1].dw_conv_inst/output_x_reg[2]__0'
+INFO: [Synth 8-3886] merging instance 'gen_dw_conv[1].dw_conv_inst/output_x_reg[3]' (FDRE) to 'gen_dw_conv[1].dw_conv_inst/output_x_reg[3]__0'
+INFO: [Synth 8-3886] merging instance 'gen_dw_conv[1].dw_conv_inst/output_x_reg[0]' (FDRE) to 'gen_dw_conv[1].dw_conv_inst/output_x_reg[0]__0'
+INFO: [Synth 8-3886] merging instance 'gen_dw_conv[0].dw_conv_inst/output_ch_group_reg[3]' (FDRE) to 'gen_dw_conv[0].dw_conv_inst/output_ch_group_reg[3]__0'
+INFO: [Synth 8-3886] merging instance 'gen_dw_conv[0].dw_conv_inst/output_ch_group_reg[0]' (FDRE) to 'gen_dw_conv[0].dw_conv_inst/output_ch_group_reg[0]__0'
+INFO: [Synth 8-3886] merging instance 'gen_dw_conv[0].dw_conv_inst/output_ch_group_reg[1]' (FDRE) to 'gen_dw_conv[0].dw_conv_inst/output_ch_group_reg[1]__0'
+INFO: [Synth 8-3886] merging instance 'gen_dw_conv[0].dw_conv_inst/output_ch_group_reg[2]' (FDRE) to 'gen_dw_conv[0].dw_conv_inst/output_ch_group_reg[2]__0'
+INFO: [Synth 8-3886] merging instance 'gen_dw_conv[1].dw_conv_inst/output_ch_group_reg[3]__0' (FDRE) to 'gen_dw_conv[1].dw_conv_inst/output_ch_group_reg[3]'
+INFO: [Synth 8-3886] merging instance 'gen_dw_conv[1].dw_conv_inst/output_ch_group_reg[2]__0' (FDRE) to 'gen_dw_conv[1].dw_conv_inst/output_ch_group_reg[2]'
+INFO: [Synth 8-3886] merging instance 'gen_dw_conv[1].dw_conv_inst/output_ch_group_reg[0]__0' (FDRE) to 'gen_dw_conv[1].dw_conv_inst/output_ch_group_reg[0]'
+INFO: [Synth 8-3886] merging instance 'gen_dw_conv[1].dw_conv_inst/output_ch_group_reg[1]__0' (FDRE) to 'gen_dw_conv[1].dw_conv_inst/output_ch_group_reg[1]'
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:02:13 ; elapsed = 00:03:00 . Memory (MB): peak = 1154.809 ; gain = 705.551
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:13 ; elapsed = 00:03:00 . Memory (MB): peak = 1154.809 ; gain = 705.551
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:15 ; elapsed = 00:03:02 . Memory (MB): peak = 1154.809 ; gain = 705.551
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:15 ; elapsed = 00:03:02 . Memory (MB): peak = 1154.809 ; gain = 705.551
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:17 ; elapsed = 00:03:04 . Memory (MB): peak = 1154.809 ; gain = 705.551
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:17 ; elapsed = 00:03:05 . Memory (MB): peak = 1154.809 ; gain = 705.551
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG    |     1|
+|2     |CARRY4  |   223|
+|3     |DSP48E1 |    16|
+|4     |LUT1    |    57|
+|5     |LUT2    |   693|
+|6     |LUT3    |  5646|
+|7     |LUT4    |   357|
+|8     |LUT5    |   710|
+|9     |LUT6    | 21128|
+|10    |MUXF7   |  9806|
+|11    |MUXF8   |  3818|
+|12    |FDRE    | 18582|
+|13    |FDSE    |   194|
+|14    |IBUF    |  3699|
+|15    |OBUF    |    70|
++------+--------+------+
+
+Report Instance Areas: 
++------+----------------------------------+-----------------------------------------------+------+
+|      |Instance                          |Module                                         |Cells |
++------+----------------------------------+-----------------------------------------------+------+
+|1     |top                               |                                               | 65000|
+|2     |  \gen_bn1[0].bn1_inst            |batchnorm                                      |  3152|
+|3     |  \gen_bn1[1].bn1_inst            |batchnorm_0                                    |  3184|
+|4     |  \gen_bn2[0].bn2_inst            |batchnorm_1                                    |   881|
+|5     |  \gen_bn2[1].bn2_inst            |batchnorm_2                                    |   881|
+|6     |  \gen_bn3[0].bn3_inst            |batchnorm__parameterized0                      |   901|
+|7     |  \gen_bn3[1].bn3_inst            |batchnorm__parameterized0_3                    |   928|
+|8     |  \gen_dw_conv[0].dw_conv_inst    |depthwise_conv__hierPathDup__1                 | 26397|
+|9     |  \gen_dw_conv[1].dw_conv_inst    |depthwise_conv                                 | 23944|
+|10    |  \gen_pw_conv1[0].pw_conv1_inst  |pointwise_conv__hierPathDup__1                 |   142|
+|11    |  \gen_pw_conv1[1].pw_conv1_inst  |pointwise_conv                                 |   120|
+|12    |  \gen_pw_conv2[0].pw_conv2_inst  |pointwise_conv__parameterized0__hierPathDup__1 |   111|
+|13    |  \gen_pw_conv2[1].pw_conv2_inst  |pointwise_conv__parameterized0                 |    91|
+|14    |  \gen_relu1[0].relu1_inst        |Relu                                           |   132|
+|15    |  \gen_relu1[1].relu1_inst        |Relu_4                                         |   164|
+|16    |  \gen_relu2[0].relu2_inst        |Relu_5                                         |    52|
+|17    |  \gen_relu2[1].relu2_inst        |Relu_6                                         |    52|
++------+----------------------------------+-----------------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:17 ; elapsed = 00:03:05 . Memory (MB): peak = 1154.809 ; gain = 705.551
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 55299 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:17 ; elapsed = 00:03:06 . Memory (MB): peak = 1154.809 ; gain = 705.551
+Synthesis Optimization Complete : Time (s): cpu = 00:02:17 ; elapsed = 00:03:06 . Memory (MB): peak = 1154.809 ; gain = 705.551
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1195.465 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 13863 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 1331.133 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+110 Infos, 405 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:52 ; elapsed = 00:03:44 . Memory (MB): peak = 1331.133 ; gain = 906.734
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 1331.133 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/intelFPGA/Final_Project/secondblock/project_1/project_1.runs/synth_1/BottleNeck.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:11 ; elapsed = 00:00:09 . Memory (MB): peak = 1331.133 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file BottleNeck_utilization_synth.rpt -pb BottleNeck_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Jun 23 22:35:22 2025...

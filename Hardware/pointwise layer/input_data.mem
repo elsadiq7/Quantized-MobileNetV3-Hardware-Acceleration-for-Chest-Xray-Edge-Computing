@@ -1,0 +1,162 @@
+// Input test data for pointwise convolution testbench
+// Format: 16-bit signed values in Q8.8 fixed-point format
+// Each line represents one input sample
+// Total samples: 40 input channels * 14*14 feature map = 7840 samples
+// For testing, we'll use a subset with varied patterns
+
+// Channel 0 data - positive ramp pattern
+0100  // 1.0 in Q8.8
+0200  // 2.0 in Q8.8
+0300  // 3.0 in Q8.8
+0400  // 4.0 in Q8.8
+0500  // 5.0 in Q8.8
+0080  // 0.5 in Q8.8
+0180  // 1.5 in Q8.8
+0280  // 2.5 in Q8.8
+0380  // 3.5 in Q8.8
+0480  // 4.5 in Q8.8
+
+// Channel 1 data - alternating pattern
+0100  // 1.0
+FF00  // -1.0
+0200  // 2.0
+FE00  // -2.0
+0300  // 3.0
+FD00  // -3.0
+0400  // 4.0
+FC00  // -4.0
+0500  // 5.0
+FB00  // -5.0
+
+// Channel 2 data - small values
+0040  // 0.25
+0080  // 0.5
+00C0  // 0.75
+0020  // 0.125
+0060  // 0.375
+00A0  // 0.625
+00E0  // 0.875
+0010  // 0.0625
+0030  // 0.1875
+0050  // 0.3125
+
+// Channel 3 data - edge case values
+7FFF  // Maximum positive
+8000  // Maximum negative
+0001  // Minimum positive
+FFFF  // -1/256
+0000  // Zero
+0100  // 1.0
+FF00  // -1.0
+0200  // 2.0
+FE00  // -2.0
+0300  // 3.0
+
+// Channel 4 data - random-like pattern
+0234  // 2.203125
+0567  // 5.402344
+089A  // 8.601563
+0BCD  // 11.800781
+0EF0  // 15.0
+0123  // 1.136719
+0456  // 4.335938
+0789  // 7.535156
+0ABC  // 10.734375
+0DEF  // 13.933594
+
+// Repeat pattern for remaining channels (simplified for testing)
+// Channel 5-9: Similar patterns with variations
+0150  // 1.3125
+0250  // 2.3125
+0350  // 3.3125
+0450  // 4.3125
+0550  // 5.3125
+0160  // 1.375
+0260  // 2.375
+0360  // 3.375
+0460  // 4.375
+0560  // 5.375
+
+0170  // 1.4375
+0270  // 2.4375
+0370  // 3.4375
+0470  // 4.4375
+0570  // 5.4375
+0180  // 1.5
+0280  // 2.5
+0380  // 3.5
+0480  // 4.5
+0580  // 5.5
+
+0190  // 1.5625
+0290  // 2.5625
+0390  // 3.5625
+0490  // 4.5625
+0590  // 5.5625
+01A0  // 1.625
+02A0  // 2.625
+03A0  // 3.625
+04A0  // 4.625
+05A0  // 5.625
+
+01B0  // 1.6875
+02B0  // 2.6875
+03B0  // 3.6875
+04B0  // 4.6875
+05B0  // 5.6875
+01C0  // 1.75
+02C0  // 2.75
+03C0  // 3.75
+04C0  // 4.75
+05C0  // 5.75
+
+01D0  // 1.8125
+02D0  // 2.8125
+03D0  // 3.8125
+04D0  // 4.8125
+05D0  // 5.8125
+01E0  // 1.875
+02E0  // 2.875
+03E0  // 3.875
+04E0  // 4.875
+05E0  // 5.875
+
+// Additional test patterns for comprehensive coverage
+0000  // Zero
+0001  // Minimum positive
+FFFF  // -1/256
+0100  // 1.0
+FF00  // -1.0
+0200  // 2.0
+FE00  // -2.0
+0300  // 3.0
+FD00  // -3.0
+0400  // 4.0
+
+// Pattern for testing overflow conditions
+7000  // Large positive
+9000  // Large negative
+6000  // Medium positive
+A000  // Medium negative
+5000  // 
+B000  // 
+4000  // 
+C000  // 
+3000  // 
+D000  // 
+
+// Final test values
+0111  // 1.066406
+0222  // 2.132813
+0333  // 3.199219
+0444  // 4.265625
+0555  // 5.332031
+0666  // 6.398438
+0777  // 7.464844
+0888  // 8.531250
+0999  // 9.597656
+0AAA  // 10.664063
+
+// More comprehensive test data would continue here...
+// For a full test, you would need 7840 values (40 channels * 196 pixels)
+// This abbreviated version provides good coverage for initial testing
