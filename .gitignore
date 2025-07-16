@@ -1,8 +1,10 @@
+.wget-hsts
+.windsurf-server
 .lightning_studio
 .keras
 .kaggle
 .idea
-.vscode 
+.vscode
 Software/data
 Software/kaggle_credentials.json
 .cursor-server
