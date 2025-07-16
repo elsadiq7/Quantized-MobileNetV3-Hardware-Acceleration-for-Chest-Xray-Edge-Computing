@@ -3,6 +3,7 @@
 
 🚀 Graduation Project | FPGA-based AI Accelerator
 Proud to share our complete system that integrates FPGA hardware modules and Python-based software tools to accelerate deep learning models for image classification.
+
 🛠️ Developed under the mentorship of the Analog Devices Digital Team – Cairo and Dr. Mohammed Sharaf.
 
 
