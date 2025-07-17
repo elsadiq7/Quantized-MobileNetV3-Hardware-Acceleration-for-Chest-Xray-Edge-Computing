@@ -176,8 +176,8 @@ pip install -r requirements.txt
 ---
 
 ## 🙏 Acknowledgments
-- **[Analog Devices Egypt](https://www.analog.com)
-- **[Dr. Mohammed Sharaf (EJUST)](https://academic-profile.ejust.edu.eg/profile/M-Sharaf)
+- [Analog Devices Egypt](https://www.analog.com)
+- [Dr. Mohammed Sharaf (EJUST)](https://academic-profile.ejust.edu.eg/profile/M-Sharaf)
 - [Xilinx Vivado](https://www.xilinx.com) - FPGA tools
 - [Kaggle](https://www.kaggle.com) - Dataset platform
 - [Gradio](https://www.gradio.app) - ML UI framework
