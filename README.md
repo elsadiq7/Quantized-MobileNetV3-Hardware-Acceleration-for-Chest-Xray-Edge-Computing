@@ -6,6 +6,11 @@ Complete system integrating **FPGA hardware modules** and **Python-based softwar
 
 > 🛠️ Developed under mentorship of **Analog Devices Digital Team – Cairo** and **Dr. Mohammed Sharaf**.
 
+## 📊 Project Presentation
+
+You can view the full project presentation here:  
+[🔗 Project PPT](https://www.canva.com/design/DAGU_Fm6mp4/1G64pP4Juk6iQo0NkmAvOw/edit?utm_content=DAGU_Fm6mp4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+
 ---
 
 ## 📁 Repository Structure
@@ -184,3 +189,5 @@ pip install -r requirements.txt
 
 ## 📜 License
 **MIT License** - See [LICENSE](LICENSE)
+
+
