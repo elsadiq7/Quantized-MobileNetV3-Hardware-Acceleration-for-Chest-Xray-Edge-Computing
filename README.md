@@ -46,6 +46,7 @@ Full ML pipeline from data preparation to FPGA deployment.
 ### 🧠 Model Training
 - Lightweight **MobileNetV3-Small** based CNN
 - Tracks training/validation performance
+- Achieved an F1-score of 82% on the target dataset.
 - Classifies **14 chest conditions** + **"No Finding"**
 
 #### 🩺 Classification Labels
